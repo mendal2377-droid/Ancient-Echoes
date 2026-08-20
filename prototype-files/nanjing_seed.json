@@ -1,0 +1,228 @@
+{
+  "schema_version": "0.1",
+  "default_lang": "zh",
+  "supported_langs": ["zh", "en"],
+  "city": {
+    "id": "city_nanjing",
+    "name": { "zh": "南京", "en": "Nanjing" },
+    "historical_names": { "zh": ["金陵", "建康", "白下", "江宁"], "en": ["Jinling", "Jiankang", "Baixia", "Jiangning"] }
+  },
+
+  "places": [
+    {
+      "id": "place_wuyi_lane",
+      "name": { "zh": "乌衣巷", "en": "Black-robe Lane" },
+      "coordinates": { "lat": 32.0186, "lng": 118.7889 },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": { "zh": "今秦淮区夫子庙景区内的步行街，仍名乌衣巷。", "en": "A pedestrian street still named Wuyi Lane, inside the Confucius Temple (Qinhuai) scenic area." }
+    },
+    {
+      "id": "place_zhuque_bridge",
+      "name": { "zh": "朱雀桥", "en": "Zhuque (Vermilion Bird) Bridge" },
+      "coordinates": { "lat": 32.0179, "lng": 118.7875 },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": { "zh": "原桥已不存，旧址在今镇淮桥一带。", "en": "Original bridge lost; site lay near today's Zhenhuai Bridge over the Qinhuai." }
+    },
+    {
+      "id": "place_phoenix_terrace",
+      "name": { "zh": "凤凰台", "en": "Phoenix Terrace" },
+      "coordinates": { "lat": 32.0289, "lng": 118.7717 },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": { "zh": "故址在今南京城西南隅凤凰山，台已不存。", "en": "Former site on Phoenix Hill in the city's southwest; the terrace no longer survives." }
+    },
+    {
+      "id": "place_stone_city",
+      "name": { "zh": "石头城", "en": "Stone City" },
+      "coordinates": { "lat": 32.0556, "lng": 118.7400 },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": { "zh": "石头城遗址公园，仍存部分城垣（“鬼脸城”）。", "en": "Stone City Ruins Park; a stretch of the old rampart (the 'Ghost Face Wall') still stands." }
+    },
+    {
+      "id": "place_jinling_wineshop",
+      "name": { "zh": "金陵酒肆（旧址区）", "en": "Jinling Wineshop (district)" },
+      "coordinates": { "lat": 32.0200, "lng": 118.7900 },
+      "coord_precision": "district",
+      "still_exists": false,
+      "modern_status": { "zh": "具体酒肆无考，泛指金陵城内秦淮一带。", "en": "No specific tavern identified; broadly the Qinhuai district of old Jinling." }
+    },
+    {
+      "id": "place_bailu_zhou",
+      "name": { "zh": "白鹭洲", "en": "Egret Isle (Bailuzhou)" },
+      "coordinates": { "lat": 32.0244, "lng": 118.7942 },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": { "zh": "古为长江沙洲，今已与陆地相连，江东门外一带。", "en": "Once a sandbar in the Yangtze, now joined to land near Jiangdongmen." }
+    },
+    {
+      "id": "place_taicheng",
+      "name": { "zh": "台城", "en": "Taicheng (Palace City)" },
+      "coordinates": { "lat": 32.0717, "lng": 118.7906 },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": { "zh": "六朝宫城遗迹，今玄武湖南侧、鸡鸣寺一带。", "en": "Six Dynasties palace-city ruins, near Jiming Temple south of Xuanwu Lake." }
+    }
+  ],
+
+  "poets": [
+    {
+      "id": "poet_li_bai",
+      "name": { "zh": "李白", "en": "Li Bai" },
+      "courtesy_name": { "zh": "太白", "en": "Taibai" },
+      "lifespan": { "born": 701, "died": 762 },
+      "epithet": { "zh": "诗仙", "en": "the Immortal of Poetry" }
+    },
+    {
+      "id": "poet_liu_yuxi",
+      "name": { "zh": "刘禹锡", "en": "Liu Yuxi" },
+      "lifespan": { "born": 772, "died": 842 },
+      "epithet": { "zh": "诗豪", "en": "the Hero of Poetry" }
+    },
+    {
+      "id": "poet_wei_zhuang",
+      "name": { "zh": "韦庄", "en": "Wei Zhuang" },
+      "lifespan": { "born": 836, "died": 910 },
+      "epithet": { "zh": null, "en": null }
+    }
+  ],
+
+  "poems": [
+    {
+      "id": "poem_wuyi_xiang",
+      "title": { "zh": "乌衣巷", "en": "Black-robe Lane" },
+      "author_id": "poet_liu_yuxi",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 826, "precision": "circa" },
+      "body": {
+        "zh": ["朱雀桥边野草花，", "乌衣巷口夕阳斜。", "旧时王谢堂前燕，", "飞入寻常百姓家。"],
+        "en": ["Beside the Zhuque Bridge, wildflowers bloom in the grass;", "at the mouth of Black-robe Lane the setting sun hangs low.", "The swallows that once nested in the halls of the Wang and Xie clans", "now fly into the homes of ordinary folk.", "(prose paraphrase, original translation, license: CC0)"]
+      },
+      "place_links": [
+        {
+          "place_id": "place_wuyi_lane",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": { "attribution": "high", "location": "high", "relation": "high" },
+          "note": { "zh": "刘禹锡作《金陵五题》时自序未曾亲至金陵，乃凭想象与传闻而作——这正是“描写于此”而非“作于此”的典型。", "en": "By his own preface to the Five Themes of Jinling, Liu Yuxi had never visited Jinling — written from imagination. The classic case of 'describes here', not 'written here'." }
+        },
+        { "place_id": "place_zhuque_bridge", "relation": "describes", "is_primary": false, "reliability": { "attribution": "high", "location": "medium", "relation": "high" } }
+      ],
+      "themes": { "zh": ["盛衰无常", "六朝兴废"], "en": ["impermanence", "fallen glory", "ubi sunt"] }
+    },
+    {
+      "id": "poem_jinling_jiusi",
+      "title": { "zh": "金陵酒肆留别", "en": "Parting at a Nanjing Wineshop" },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": { "zh": "古体诗", "en": "gushi (old-style verse)" },
+      "date_composed": { "year": 726, "precision": "circa", "note": { "zh": "开元十四年春离金陵赴扬州时作。", "en": "Written ~726 as Li Bai left Jinling for Yangzhou." } },
+      "body": {
+        "zh": ["风吹柳花满店香，", "吴姬压酒唤客尝。", "金陵子弟来相送，", "欲行不行各尽觞。", "请君试问东流水，", "别意与之谁短长。"],
+        "en": ["Wind blows willow-down, the whole shop sweet with its scent;", "a Wu girl presses the wine and calls the guests to taste.", "The young men of Jinling have come to see me off —", "about to go, not going, each drains his cup.", "Go, ask the east-flowing water:", "between it and a parting's grief, which runs longer?", "(prose paraphrase, original translation, license: CC0)"]
+      },
+      "place_links": [
+        {
+          "place_id": "place_jinling_wineshop",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": { "attribution": "high", "location": "medium", "relation": "high" },
+          "note": { "zh": "作于金陵，但具体酒肆位置无考，故地点可信度为中。", "en": "Composed in Jinling, but the exact tavern is unknown — hence location confidence is medium." }
+        }
+      ],
+      "themes": { "zh": ["送别", "友情"], "en": ["farewell", "friendship"] }
+    },
+    {
+      "id": "poem_deng_fenghuangtai",
+      "title": { "zh": "登金陵凤凰台", "en": "Climbing Phoenix Terrace at Jinling" },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": { "zh": "七言律诗", "en": "qilü (7-char regulated verse)" },
+      "date_composed": { "year": 747, "precision": "disputed", "note": { "zh": "创作背景说法不一：一说天宝年间被排挤离长安南游金陵所作，一说流放夜郎遇赦后作。", "en": "Date disputed: possibly ~747 after being forced from Chang'an, or after his later pardon. Sources disagree." } },
+      "body": {
+        "zh": ["凤凰台上凤凰游，", "凤去台空江自流。", "吴宫花草埋幽径，", "晋代衣冠成古丘。", "三山半落青天外，", "二水中分白鹭洲。", "总为浮云能蔽日，", "长安不见使人愁。"],
+        "en": ["On Phoenix Terrace the phoenixes once roamed;", "the birds are gone, the terrace bare, the river flows on alone.", "The flowers of the Wu palace are buried in shadowed paths,", "the lords of the Jin age are now ancient mounds.", "The Three Peaks fall half beyond the blue sky;", "the river splits in two around Egret Isle.", "It is always the drifting clouds that can hide the sun —", "Chang'an out of sight, and the heart fills with grief.", "(prose paraphrase, original translation, license: CC0)"]
+      },
+      "place_links": [
+        {
+          "place_id": "place_phoenix_terrace",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": { "attribution": "high", "location": "medium", "relation": "medium" },
+          "note": { "zh": "传李白登凤凰台所作，意在与崔颢《黄鹤楼》争胜；台址已不存，且创作年代有争议。", "en": "Traditionally written atop the terrace as a deliberate rival to Cui Hao's Yellow Crane Tower. The terrace is lost and the date is contested." }
+        },
+        { "place_id": "place_bailu_zhou", "relation": "describes", "is_primary": false, "reliability": { "attribution": "high", "location": "medium", "relation": "high" } }
+      ],
+      "themes": { "zh": ["怀古", "忧时", "报国无门"], "en": ["meditation on the past", "political grief"] }
+    },
+    {
+      "id": "poem_shitou_cheng",
+      "title": { "zh": "石头城", "en": "Stone City" },
+      "author_id": "poet_liu_yuxi",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 826, "precision": "circa" },
+      "body": {
+        "zh": ["山围故国周遭在，", "潮打空城寂寞回。", "淮水东边旧时月，", "夜深还过女墙来。"],
+        "en": ["Hills ring the old kingdom, still circling it round;", "the tide beats the empty city and draws back, forlorn.", "East of the Qinhuai the moon of former days", "still climbs, deep in the night, past the battlements.", "(prose paraphrase, original translation, license: CC0)"]
+      },
+      "place_links": [
+        {
+          "place_id": "place_stone_city",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": { "attribution": "high", "location": "high", "relation": "high" },
+          "note": { "zh": "同属《金陵五题》，凭想象而作；但石头城遗址今仍可访，地点可信度高。", "en": "Also from the Five Themes (written from imagination), but the Stone City ruins survive and are visitable — location confidence high." }
+        }
+      ],
+      "themes": { "zh": ["怀古", "兴亡"], "en": ["meditation on the past", "rise and fall of dynasties"] }
+    },
+    {
+      "id": "poem_jinling_tu",
+      "title": { "zh": "金陵图", "en": "A Painting of Jinling" },
+      "author_id": "poet_wei_zhuang",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 887, "precision": "circa" },
+      "body": {
+        "zh": ["谁谓伤心画不成，", "画人心逐世人情。", "君看六幅南朝事，", "老木寒云满故城。"],
+        "en": ["Who said sorrow cannot be painted?", "The painter's heart follows the feeling of the age.", "Look at these six scenes of the Southern Dynasties:", "old trees and cold clouds fill the fallen city.", "(prose paraphrase, original translation, license: CC0)"]
+      },
+      "place_links": [
+        {
+          "place_id": "place_taicheng",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": { "attribution": "high", "location": "medium", "relation": "medium" },
+          "note": { "zh": "题画诗，咏南朝金陵之衰，非实地所作，泛指六朝故城（台城一带）。", "en": "A poem on a painting, lamenting the fallen Southern capital — not written on-site; points broadly to the Six Dynasties palace area." }
+        }
+      ],
+      "themes": { "zh": ["怀古", "六朝", "题画"], "en": ["meditation on the past", "Six Dynasties", "poem on a painting"] }
+    },
+    {
+      "id": "poem_taicheng_weizhuang",
+      "title": { "zh": "台城", "en": "Taicheng" },
+      "author_id": "poet_wei_zhuang",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 887, "precision": "circa" },
+      "body": {
+        "zh": ["江雨霏霏江草齐，", "六朝如梦鸟空啼。", "无情最是台城柳，", "依旧烟笼十里堤。"],
+        "en": ["River rain drifts thin, the river grass grows even;", "the Six Dynasties pass like a dream, birds cry to no one.", "Most heartless of all is the willow of Taicheng —", "still, as ever, it veils ten li of dyke in mist.", "(prose paraphrase, original translation, license: CC0)"]
+      },
+      "place_links": [
+        {
+          "place_id": "place_taicheng",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": { "attribution": "high", "location": "high", "relation": "high" },
+          "note": { "zh": "凭吊台城旧址而作，地点明确。", "en": "An elegy at the Taicheng site; location is clearly identified." }
+        }
+      ],
+      "themes": { "zh": ["怀古", "六朝如梦"], "en": ["meditation on the past", "dream of vanished dynasties"] }
+    }
+  ]
+}

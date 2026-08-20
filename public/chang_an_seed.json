@@ -1,0 +1,1321 @@
+{
+  "schema_version": "0.1",
+  "default_lang": "zh",
+  "supported_langs": [
+    "zh",
+    "en"
+  ],
+  "city": {
+    "id": "city_chang_an",
+    "name": {
+      "zh": "长安",
+      "en": "Chang'an"
+    },
+    "historical_names": {
+      "zh": [
+        "长安",
+        "京兆",
+        "西京"
+      ],
+      "en": [
+        "Chang'an",
+        "Jingzhao",
+        "Xi'an"
+      ]
+    }
+  },
+  "places": [
+    {
+      "id": "place_daming_palace",
+      "name": {
+        "zh": "大明宫",
+        "en": "Daming Palace"
+      },
+      "coordinates": {
+        "lat": 34.2733,
+        "lng": 109.2097
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "唐长安城外朝宫城遗址，今陕西西安市，是中国现存规模最大、保留最完整的宫殿遗址。这座宫殿曾是唐帝国权力的象征，李白曾在此任翰林供奉，为皇帝作诗撰文，却因性格刚直最终黯然离去。如今，大明宫遗址公园让游客能够沿着当年宫城的轮廓漫步，虽然当年的宫殿建筑已烟消云散，但宽阔的遗迹平面和复原的模型，依然能让人想象唐代宫廷的雍容华贵。登上高处眺望，仍能感受到这座失落宫殿曾经的壮阔气象。",
+        "en": "The grandest palace ruin in all China, this Tang imperial complex once embodied imperial magnificence. Li Bai served here as Poet of the Presence, crafting verses for the throne, until pride and honesty drove him away. Today the Daming Palace Archaeological Park preserves the vast ground plan and raises reconstructed buildings to suggest the original splendor. Walking the ancient halls' footprints, one can almost hear the echo of imperial edicts and poetic recitations, almost see the robed ministers and the poet's restless eyes searching for truth within the gilded cage."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Daming_Palace_Ruins.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_west_market",
+      "name": {
+        "zh": "西市",
+        "en": "West Market"
+      },
+      "coordinates": {
+        "lat": 34.262,
+        "lng": 109.19
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "唐长安城最大的商业中心，占地广阔，汇聚了来自西域、南海、北方等地的商人与贸易品。这里是丝绸之路的交点，是文化交融的中心，诗人在这里目睹商业的繁荣与人性的百态。今日的西安市遗址公园中，残存的石柱与铺地仍在诉说着千年商业的故事。考古学家的发掘揭示出当年市集的布局：店铺林立、人声鼎沸、各式货物堆积如山。虽然曾经的繁华市集已成历史，但其留下的足迹与记忆，仍在提醒后人：这是一个开放、包容、充满活力的时代。",
+        "en": "The great marketplace of Tang, where merchants from the Silk Road converged, where cultures met in commerce and conversation. Poets wandered here, observing the full spectrum of human ambition and craft. The archaeologists' work has revealed shop layouts, stone foundations, the gridwork of a thriving bazaar. Today the site preserves these echoes: where silk once hung and spices scented the air, visitors now walk through the ghost-memory of trade that bound continents. The ruin speaks not of loss but of connection — of a world more open than our own."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Tang_Dynasty_West_Market_Xi_an.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_qujiang_pool",
+      "name": {
+        "zh": "曲江池",
+        "en": "Qujiang Pool"
+      },
+      "coordinates": {
+        "lat": 34.25,
+        "lng": 109.23
+      },
+      "coord_precision": "approximate",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "唐代著名风景区，历代帝王与文人雅士的聚集地。曲江池的水色清澈，周围亭台楼阁众多，是诗酒唱和、欣赏春花秋月的理想场所。李白、李商隐等诗人都曾在此留下华章。今日的曲江新区公园完好保留了古池的风貌，修建了仿古建筑与现代景观，使游客既能感受古人的审美与情趣，也能享受当代的舒适与便利。每年春秋时节，游客在池边漫步，看天光云影在水中摇曳，似乎仍能听到千年前诗人们的欢笑与感叹。",
+        "en": "A paradise for Tang emperors and poets alike, where clear waters reflected pavilions and where verses were born. Spring blossoms and autumn moons inspired countless verses here — Li Bai and Li Shangyin among them. The modern Qujiang District park has reconstructed the ancient gardens while adding contemporary amenities, creating a space where ancient aesthetics meet modern comfort. Visitors walking the waterside can sense the presence of those long-dead poets, their voices echoing across fourteen centuries in the lap of water and sky."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Qujiang_Pool_Xian.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_pagoda_goose",
+      "name": {
+        "zh": "大雁塔",
+        "en": "Great Goose Pagoda"
+      },
+      "coordinates": {
+        "lat": 34.2268,
+        "lng": 109.26
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "唐代佛教建筑，保存至今，为西安最著名的地标之一。大雁塔由慈恩寺建立，用以存放从印度携回的佛经与佛像，是佛教传入中国的重要见证。这座七层砖塔矗立千年，见证了长安的繁华与衰落。登塔眺望，可俯瞰古长安城的布局与现代西安的发展，古今辉映。塔周围的慈恩寺至今仍在传承佛法，游客们络绎不绝前来参拜与观光，使这座古刹成为东西方文化交融的持续见证。",
+        "en": "A seven-story brick tower that has stood for thirteen centuries, the Great Goose Pagoda embodies Buddhism's journey eastward along the Silk Road. Built to house Sanskrit scriptures brought from India, it witnessed Tang's imperial glory and Chang'an's eventual decline. Climbing to the top, one sees both the ancient city's ghost-footprint in the modern street grid and the vibrant contemporary metropolis beyond. The temple gardens remain active, pilgrims and tourists alike honoring the ongoing dialogue between East and West, between faith and history, that this tower has mediated for a millennium."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Giant_Wild_Goose_Pagoda.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_jingzhao_hall",
+      "name": {
+        "zh": "景云门",
+        "en": "Jingzhao Gate"
+      },
+      "coordinates": {
+        "lat": 34.265,
+        "lng": 109.215
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "长安城门遗址，曾是进出长安城的重要门户。诗人与商人、官员与百姓都曾通过此门往来，在城门处经历离别与重逢。如今这座城门已不存，仅留下考古遗迹与文献记载。然而通过出土的石基、城墙断面与考古学家的复原图，我们仍能想象当年这座城门的雄伟与繁忙。这道门的消失，象征了一个时代的落幕，而其存在的记忆，却成为现代人理解古长安的关键钥匙。每一位站在遗址前的访客，都在与千年前的历史进行一场无言的对话。",
+        "en": "A gateway that once channeled the flow of empire — merchants, pilgrims, officials, exiles passing through its arches. Where did the poets stand while waiting to enter or bidding farewell? The gate structure has vanished, leaving only excavated foundations and scholarly reconstruction. Yet those stone bases tell stories: the traffic that passed, the decisions made at thresholds, the moment of passage from one world to another. To stand here is to bridge centuries, to imagine the weight of that departing — and to understand that Chang'an's grandeur lay not in any single stone but in the human longing and ambition that forever flowed through its gates."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Chang_an_Gate_Ruins_Xi_an.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    }
+  ],
+  "poets": [
+    {
+      "id": "poet_li_bai",
+      "name": {
+        "zh": "李白",
+        "en": "Li Bai"
+      },
+      "courtesy_name": {
+        "zh": "太白",
+        "en": "Taibai"
+      },
+      "lifespan": {
+        "born": 701,
+        "died": 762
+      },
+      "epithet": {
+        "zh": "诗仙",
+        "en": "the Immortal of Poetry"
+      },
+      "biography": {
+        "zh": "唐代伟大的浪漫主义诗人，被誉为『诗仙』。出生于西域苏叶城，祖籍陇西成纪，少年时即展现非凡才华。李白一生漂泊不羁，曾在长安宫廷获得唐玄宗赏识而任翰林供奉，却因耿直性格最终被逐出宫廷。其后游历江南，与杜甫等诗人相识，晚年在当涂终老。李白的诗歌想象奇特，气势磅礴，不拘于格律，代表了唐诗的最高成就。其对现实的讽刺和对理想的执着，使其成为中国文学史上最伟大的诗人之一。",
+        "en": "The greatest romantic poet of Tang, revered as the 'Immortal of Poetry.' Born in the Western regions of Suiye, heir to a family of scholars, he displayed prodigious talent in youth. Li Bai's restless life saw him praised by Emperor Xuanzong and appointed to the imperial court, yet his integrity could not abide the compromises of courtly service — he was eventually dismissed. After wandering through the Yangtze valley, meeting Du Fu and other luminaries, he settled in Dangtu in his final years. His verse breaks every rule: wild imagination, thundering rhythms, soaring beyond convention. This marriage of piercing social satire and unwavering idealism makes him one of literature's noblest voices."
+      },
+      "major_events": [
+        {
+          "year": 701,
+          "event": {
+            "zh": "生于西域苏叶城，祖籍陇西成纪",
+            "en": "Born in Suiye region of Western Regions"
+          },
+          "location": "苏叶"
+        },
+        {
+          "year": 725,
+          "event": {
+            "zh": "离开蜀地，开始四处漂泊的诗人生涯",
+            "en": "Leaves Shu, begins wandering life as poet"
+          },
+          "location": "蜀"
+        },
+        {
+          "year": 742,
+          "event": {
+            "zh": "入长安宫廷，获唐玄宗赏识，任翰林供奉",
+            "en": "Appointed to Chang'an court as Hanlin Scholar"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 744,
+          "event": {
+            "zh": "在长安创作『行路难』等名篇，倡导诗歌革新",
+            "en": "Composes celebrated works like 'The Difficulty of the Road'"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 745,
+          "event": {
+            "zh": "因性格刚直，与权贵产生矛盾，开始疏远宫廷",
+            "en": "Integrity clashes with court politics; begins distancing from power"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 746,
+          "event": {
+            "zh": "离开长安，南游金陵、扬州、黄河沿岸等地",
+            "en": "Departs Chang'an, travels south to Jinling and beyond"
+          },
+          "location": "金陵"
+        },
+        {
+          "year": 751,
+          "event": {
+            "zh": "与杜甫相识，在山东讨山会面，诗酒酬唱成佳话",
+            "en": "Meets Du Fu; famous encounter and poetic exchange"
+          },
+          "location": "山东"
+        },
+        {
+          "year": 762,
+          "event": {
+            "zh": "病逝于当涂，终年61岁，留下千古诗篇",
+            "en": "Dies in Dangtu, age 61; legacy of immortal verse"
+          },
+          "location": "当涂"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_daming_palace",
+          "period": {
+            "zh": "742-746年（宫廷任职）",
+            "en": "742-746 (imperial service)"
+          }
+        },
+        {
+          "place_id": "place_qujiang_pool",
+          "period": {
+            "zh": "742-746年（经常游憩、诗酒聚集）",
+            "en": "742-746 (frequent poet gatherings)"
+          }
+        },
+        {
+          "place_id": "place_pagoda_goose",
+          "period": {
+            "zh": "742-746年（文化中心）",
+            "en": "742-746 (cultural center)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_du_fu",
+          "relation_type": "met",
+          "year": 744,
+          "description": {
+            "zh": "长安相识的千古佳话。李白与杜甫在洛阳以及后来在长安多次相遇，两位盛唐文坛的巨匠共吟共饮，虽然相识时间仅数年，但这段友谊深深影响了两人的创作与人生。他们诗歌中都留下了对彼此的思念与敬仰。",
+            "en": "A legendary meeting in Chang'an of two Tang titans. Li Bai and Du Fu encountered multiple times, composing and drinking together. Though their friendship spanned only years, it profoundly shaped both their work and lives — each left verses that honor the other."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_li_shangyin",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "李商隐虽生于李白逝世后51年，但『诗仙』的浪漫精神与独特想象力深深影响了他。李商隐在追求诗歌的精妙与新奇时，继承了李白对诗歌形式的突破精神，将其融入自己的朦胧诗风中。",
+            "en": "Though born 51 years after Li Bai's death, Li Shangyin inherited the 'Immortal's' romantic spirit and visionary imagination. In pursuing poetic innovation, he drew from Li Bai's rule-breaking essence and synthesized it into his own veiled, enigmatic style."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_li_shangyin",
+      "name": {
+        "zh": "李商隐",
+        "en": "Li Shangyin"
+      },
+      "courtesy_name": {
+        "zh": "义山",
+        "en": "Yishan"
+      },
+      "lifespan": {
+        "born": 813,
+        "died": 858
+      },
+      "epithet": {
+        "zh": "鬼才",
+        "en": "the Ghostly Talent"
+      },
+      "biography": {
+        "zh": "晚唐杰出的诗人和文学家，被称为『鬼才』。其诗风独特秀异，意象幽深精妙，技巧炉火纯青。出身豫章，入仕后历经坎坷，先后被贬为地方官，却在逆境中创作了大量脍炙人口的诗篇。虽然生活在唐末政治动乱的时代，但其诗作却以其精湛的技法和深邃的意境，超越了时代的局限，具有永恒的艺术价值。其爱情诗以含蓄、朦胧、晦涩著称，对宋词影响深远，是中国文学史上最独具一格的诗人之一。",
+        "en": "Brilliant poet and literatus of late Tang, known as the 'Ghostly Talent' for his mastery of the ethereal and enigmatic. Born in Yuzhang, his career saw him demoted to provincial posts, yet those very hardships birthed his masterworks. Living through the chaos of Tang's decline, his verse — technically flawless, semantically dense, laden with symbols — transcends his age. His veiled love poems, written in layers of allusion and paradox, profoundly influenced Song lyricists. Few poets in history rival his command of suggestion and restraint."
+      },
+      "major_events": [
+        {
+          "year": 813,
+          "event": {
+            "zh": "生于豫章，出身文学世家",
+            "en": "Born in Yuzhang to a literary family"
+          },
+          "location": "豫章"
+        },
+        {
+          "year": 836,
+          "event": {
+            "zh": "进士及第，入仕长安，初任校书郎",
+            "en": "Passes examination, begins career in Chang'an as scholar"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 844,
+          "event": {
+            "zh": "因政治纠纷被贬，出任弘农县尉",
+            "en": "Exiled from court, appointed magistrate in provinces"
+          },
+          "location": "弘农"
+        },
+        {
+          "year": 847,
+          "event": {
+            "zh": "继续被贬远地，任泾州刺史，创作高峰期",
+            "en": "Further demotion yet peak of creative output"
+          },
+          "location": "泾州"
+        },
+        {
+          "year": 850,
+          "event": {
+            "zh": "在地方任职期间，创作『夜雨寄北』等思乡名篇",
+            "en": "Composes masterworks including 'Night Rain Sent North'"
+          },
+          "location": "泾州"
+        },
+        {
+          "year": 855,
+          "event": {
+            "zh": "返回长安任职，获得更高职位",
+            "en": "Returns to Chang'an with higher position"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 857,
+          "event": {
+            "zh": "任检校户部郎中，参与文化活动，继续创作",
+            "en": "Appointed to higher office, continues literary activities"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 858,
+          "event": {
+            "zh": "病逝于长安，终年45岁，留下不朽诗篇",
+            "en": "Dies in Chang'an, age 45; legacy of enigmatic poetry"
+          },
+          "location": "长安"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_daming_palace",
+          "period": {
+            "zh": "836-844年, 855-858年（宫廷任职）",
+            "en": "836-844, 855-858 (imperial posts)"
+          }
+        },
+        {
+          "place_id": "place_qujiang_pool",
+          "period": {
+            "zh": "836-844年（文人雅集）",
+            "en": "836-844 (literati gatherings)"
+          }
+        },
+        {
+          "place_id": "place_pagoda_goose",
+          "period": {
+            "zh": "早年游历",
+            "en": "early travels"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "李白的『诗仙』精神与浪漫想象对李商隐产生了深刻影响。虽然李商隐的诗风更加晦涩含蓄，但他在追求诗歌的新奇与创新时，继承了李白对诗歌形式与内容的大胆突破精神。",
+            "en": "The 'Immortal's' romantic vision and bold artistry echo through Li Shangyin's enigmatic verse. Though his style is far more veiled and subtle, he inherited Li Bai's fearless innovation and refusal to bend form to convention."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_du_fu",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "杜甫的现实主义传统与深厚的人文精神对李商隐产生了影响。虽然李商隐风格迥异，但他也汲取了杜甫对社会现实的深刻观察与对人性的洞察，将其融入自己朦胧而细致的诗学中。",
+            "en": "Du Fu's realist tradition and humanistic depth shaped generations of poets, including Li Shangyin. Though working in an entirely different idiom, Li Shangyin absorbed Du Fu's piercing social insight and psychological acuity, weaving them into his own intricate, mysterious aesthetic."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_du_fu",
+      "name": {
+        "zh": "杜甫",
+        "en": "Du Fu"
+      },
+      "lifespan": {
+        "born": 712,
+        "died": 770
+      },
+      "epithet": {
+        "zh": "诗圣",
+        "en": "the Sage of Poetry"
+      },
+      "biography": {
+        "zh": "唐代伟大的现实主义诗人，被尊为『诗圣』。出身河南巩县杜氏望族，自幼聪慧好学。其诗歌以深刻的社会观察和人道主义关怀著称，涉及广泛而沉重的社会问题——从战争的残酷到民生的困苦，无不入诗。虽然一生困顿流离，科举失利，仕途坎坷，更因安史之乱而背井离乡，但其对人类苦难的同情、对和平的渴望、对美好生活的不渝向往，使其成为中国文学中最崇高、最人文的声音之一。其诗作数量浩大，风格多变，影响深远。",
+        "en": "The greatest realist poet of Tang, revered as the 'Sage of Poetry.' Born to the prominent Du clan of Gongxian, he showed precocious brilliance yet life would test him relentlessly. His verse observes society with piercing insight — war's cruelty, poverty's weight, displacement and loss — all rendered with unflinching honesty. Though examination failure, official disappointment, and the chaos of the An Lushan Rebellion scattered his life across provinces, his compassion for human suffering and unwavering idealism make him one of literature's most humanistic voices. Prolific, protean, profoundly influential — he stands alone in Chinese poetry."
+      },
+      "major_events": [
+        {
+          "year": 712,
+          "event": {
+            "zh": "生于河南巩县，出身杜氏望族",
+            "en": "Born in Gongxian to the prominent Du clan"
+          },
+          "location": "巩县"
+        },
+        {
+          "year": 736,
+          "event": {
+            "zh": "少年时开始文学创作，展现非凡才华",
+            "en": "Begins literary career in youth, shows exceptional talent"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 751,
+          "event": {
+            "zh": "参加进士科举，因种种原因未能及第，失意返乡",
+            "en": "Fails examination, returns home disappointed"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 755,
+          "event": {
+            "zh": "安史之乱爆发，与家人离散，逃难至蜀地",
+            "en": "An Lushan Rebellion begins; flees to Sichuan"
+          },
+          "location": "蜀"
+        },
+        {
+          "year": 757,
+          "event": {
+            "zh": "创作『春望』『月夜忆舍弟』等伟大诗篇，见证乱世苍凉",
+            "en": "Composes masterworks witnessing war's devastation"
+          },
+          "location": "蜀"
+        },
+        {
+          "year": 759,
+          "event": {
+            "zh": "在成都浣花溪定居，创作最为丰富的时期",
+            "en": "Settles in Chengdu by the Huanhua Stream"
+          },
+          "location": "蜀"
+        },
+        {
+          "year": 765,
+          "event": {
+            "zh": "离开四川，沿江南下，居住于江陵、荆州等地",
+            "en": "Leaves Sichuan, travels down the Yangtze River"
+          },
+          "location": "江陵"
+        },
+        {
+          "year": 770,
+          "event": {
+            "zh": "病逝于江南，终年58岁，诗篇千万，光耀后世",
+            "en": "Dies along the Yangtze, age 58; legacy immortal"
+          },
+          "location": "江南"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_daming_palace",
+          "period": {
+            "zh": "736-755年（多次往来，寻求仕途）",
+            "en": "736-755 (seeking official position)"
+          }
+        },
+        {
+          "place_id": "place_qujiang_pool",
+          "period": {
+            "zh": "740年代（诗人聚集地）",
+            "en": "740s (poet gathering place)"
+          }
+        },
+        {
+          "place_id": "place_pagoda_goose",
+          "period": {
+            "zh": "早年游历",
+            "en": "early travels"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "met",
+          "year": 744,
+          "description": {
+            "zh": "唐诗史上最著名的诗人相遇。李白与杜甫在长安及周边地区多次相聚，虽然他们的性格与诗风迥异——李白的浪漫不羁与杜甫的沉郁厚重——但两人却互相欣赏与尊重，共同探讨诗艺，留下了千古佳话。这段友谊虽然短暂，但对两人的人生与创作产生了深远影响。",
+            "en": "The most storied encounter in Tang poetry: the Immortal and the Sage meeting in Chang'an. Though temperamentally opposites — Li Bai's wild freedom and Du Fu's austere weight — they honored each other, composed together, and carved their friendship into immortal verse. Brief though it was, this bond changed both their lives."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_li_shangyin",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "杜甫虽已逝世，但其现实主义诗风与人文关怀精神对后世诗人产生了深远影响。李商隐虽然风格差异很大，但也从杜甫的诗歌中汲取了对社会现实的观察与对人性的深刻理解，将其融入自己晦涩朦胧的诗学中。",
+            "en": "Though Du Fu had passed long before Li Shangyin's birth, his legacy of unflinching realism and humanistic vision reached forward through generations. Li Shangyin, for all his enigmatic style, drew from Du Fu's piercing social observation and depth of human understanding."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "poem_li_bai_hardship",
+      "title": {
+        "zh": "行路难",
+        "en": "The Difficulty of the Road"
+      },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "乐府诗",
+        "en": "yuefu (folk-song style)"
+      },
+      "date_composed": {
+        "year": 744,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "金樽清酒斗十千，玉盘珍羞直万钱。",
+          "停杯投箸不能食，拔剑四顾心茫然。",
+          "欲渡黄河冰塞川，将登太行雪满山。",
+          "闲来垂钓坐溪上，忽复乘舟梦日边。"
+        ],
+        "en": [
+          "Gold chalices of wine worth ten thousand cash;",
+          "jade platters of delicacies worth countless gold.",
+          "I set down cup, lay down chopsticks — cannot eat;",
+          "draw sword, look round — heart confused, lost.",
+          "Wanting to cross the Yellow River — ice blocks the pass.",
+          "Climbing Taishan — snow covers the peaks.",
+          "Idly cast a fishing line, sit by the brook;",
+          "suddenly ride a boat, dream across the sun.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_daming_palace",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "创作于长安，抒发李白在朝廷失意后的感慨。",
+            "en": "Written in Chang'an after Li Bai's disillusionment at court."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "壮志难酬",
+          "人生坎坷"
+        ],
+        "en": [
+          "unfulfilled ambition",
+          "hardship of life"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "独居",
+          "primary": true,
+          "percentage": 75,
+          "confidence": "high"
+        },
+        {
+          "type": "思乡",
+          "primary": false,
+          "percentage": 50,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_li_bai_banquet",
+      "title": {
+        "zh": "清平调",
+        "en": "Song of Clarity and Peace"
+      },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "乐府诗",
+        "en": "yuefu (folk-song style)"
+      },
+      "date_composed": {
+        "year": 745,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "云想衣裳花想容，春风拂槛露华浓。",
+          "若非群玉山头见，会向瑶台月下逢。"
+        ],
+        "en": [
+          "Clouds suggest her robe, blossoms her face;",
+          "spring wind brushes the rail, dew glows heavy.",
+          "Had we not met atop the Jade Hill,",
+          "we would encounter each other beneath the moon at the Palace of Jade.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_daming_palace",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "作于长安宫廷，为著名的《清平调三首》之一。",
+            "en": "Written at the Chang'an court as one of the famed three poems."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "爱情",
+          "美与优雅"
+        ],
+        "en": [
+          "love",
+          "beauty and elegance"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "相思",
+          "primary": true,
+          "percentage": 85,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_li_shangyin_moon",
+      "title": {
+        "zh": "夜雨寄北",
+        "en": "Night Rain Sent North"
+      },
+      "author_id": "poet_li_shangyin",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 850,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "君问归期未有期，巴山夜雨涨秋池。",
+          "何当共剪西窗烛，却话巴山夜雨时。"
+        ],
+        "en": [
+          "You ask when I return — no fixed date yet.",
+          "Rain in Ba mountains swells the autumn pool at night.",
+          "When shall we trim candles by the western window,",
+          "and speak of this rain in those mountains, in those mountains?",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_qujiang_pool",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "借景发情，通过描写秋雨景致表达思念之情。",
+            "en": "Uses landscape to express longing across distance."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "思念",
+          "离别"
+        ],
+        "en": [
+          "longing",
+          "separation"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        },
+        {
+          "type": "相思",
+          "primary": false,
+          "percentage": 80,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_du_fu_spring",
+      "title": {
+        "zh": "春望",
+        "en": "A Spring View"
+      },
+      "author_id": "poet_du_fu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 756,
+        "precision": "exact"
+      },
+      "body": {
+        "zh": [
+          "国破山河在，城春草木深。",
+          "感时花溅泪，恨别鸟惊心。",
+          "烽火连三月，家书抵万金。",
+          "白头搔更短，浑欲不胜簪。"
+        ],
+        "en": [
+          "The kingdom fallen, mountains and rivers remain.",
+          "Spring enters the ruined city; grasses grow thick.",
+          "Seeing flowers at this time, tears splash down;",
+          "hating farewells, bird-song startles the heart.",
+          "Beacon fires have burned for three months,",
+          "a letter from home worth ten thousand in gold.",
+          "White-haired, I scratch my head, hair growing thinner;",
+          "soon I cannot even support a hairpin.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_daming_palace",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "作于安史之乱期间，目睹长安沦陷的悲剧。",
+            "en": "Written during the An Lushan Rebellion, witnessing Chang'an's fall."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "家国之思",
+          "战争的悲剧"
+        ],
+        "en": [
+          "love of country",
+          "tragedy of war"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 92,
+          "confidence": "high"
+        },
+        {
+          "type": "怀古",
+          "primary": false,
+          "percentage": 60,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_du_fu_night",
+      "title": {
+        "zh": "月夜忆舍弟",
+        "en": "Moonlit Night: Remembering My Brother"
+      },
+      "author_id": "poet_du_fu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 757,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "戍鼓断人行，边秋一雁声。",
+          "露从今夜白，月是故乡明。",
+          "有弟皆分散，无家问死生。",
+          "寄书长不达，况乃未休兵。"
+        ],
+        "en": [
+          "Garrison drums stop all passing on the road;",
+          "autumn at the frontier — a single goose cries.",
+          "From this night onward dew turns white;",
+          "the moon tonight shines brightest on my homeland.",
+          "All my brothers are scattered in exile;",
+          "with no home, I cannot ask if they live or die.",
+          "Letters I send never reach their destination;",
+          "and still the war drums have not ceased.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_daming_palace",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "杜甫作此诗时在长安，表达对失散兄弟的思念。",
+            "en": "Du Fu wrote this while in Chang'an, missing his scattered brothers."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "骨肉分离",
+          "思乡"
+        ],
+        "en": [
+          "family separation",
+          "homesickness"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 30,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_li_shangyin_longing",
+      "title": {
+        "zh": "锦瑟",
+        "en": "The Broade Zither"
+      },
+      "author_id": "poet_li_shangyin",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 850,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "锦瑟无端五十弦，",
+          "一弦一柱思华年。",
+          "庄生晓梦迷蝴蝶，",
+          "望帝春心托杜鹃。",
+          "沧海月明珠有泪，",
+          "蓝田日暖玉生烟。",
+          "此情可待成追忆，",
+          "只是当时已惘然。"
+        ],
+        "en": [
+          "A silken zither with fifty strings, each one a year...",
+          "Each string, each post holds memory of radiant youth.",
+          "Zhuangzi woke from dreams, lost in butterfly form;",
+          "the Emperors' grief became the cuckoo's cry.",
+          "From the sea's depth, the pearl is tears when moonlight falls,",
+          "and jade from Lanfield smolders in the warm sun's glow.",
+          "Can this feeling wait to become regret's echo?",
+          "But even then I was lost, bewildered, far from all.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_daming_palace",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "虽无明确地点记载，但李商隐长期在长安生活创作，此诗为其最著名诗篇之一。",
+            "en": "No specific site recorded, but Li Shangyin lived and worked in Chang'an; this is among his most celebrated verses."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀旧",
+          "黯然神伤",
+          "人生无常"
+        ],
+        "en": [
+          "nostalgia",
+          "melancholy",
+          "life's transience"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "相思",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        },
+        {
+          "type": "怀古",
+          "primary": false,
+          "percentage": 45,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_du_fu_summer_night",
+      "title": {
+        "zh": "夏夜叹",
+        "en": "A Lament on a Summer Night"
+      },
+      "author_id": "poet_du_fu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "五言古诗",
+        "en": "gushi (5-char old-style verse)"
+      },
+      "date_composed": {
+        "year": 750,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "永夜恹恹欲不苏，",
+          "自经丧乱少睡眠。",
+          "长夜沾虚润，",
+          "清风吹破暑。",
+          "昨日之欢娱，",
+          "已为逝水难寻。"
+        ],
+        "en": [
+          "Long night stretches, oppressive, without ease —",
+          "since wars began, sleep has become a stranger.",
+          "Through all the night mist gathers, cooling soft,",
+          "and cleansing wind breaks the summer's grip.",
+          "Yesterday's pleasures fade like water past,",
+          "impossible to trace, impossible to hold.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_qujiang_pool",
+          "relation": "describes",
+          "is_primary": false,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "咏长安夏夜风景，具体地点不明，但反映杜甫在长安的生活感受。",
+            "en": "On summer nights in Chang'an; reflects Du Fu's experience there."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "夏夜",
+          "闲适",
+          "人生感悟"
+        ],
+        "en": [
+          "summer night",
+          "leisure",
+          "life's wisdom"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "独居",
+          "primary": true,
+          "percentage": 80,
+          "confidence": "high"
+        },
+        {
+          "type": "思乡",
+          "primary": false,
+          "percentage": 40,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_li_bai_daming",
+      "title": {
+        "zh": "宫中行乐词",
+        "en": "Song of Palace Pleasures"
+      },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "乐府诗",
+        "en": "yuefu (folk-song style)"
+      },
+      "date_composed": {
+        "year": 743,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "玉树后庭前，瑞气满堂殿。",
+          "绮罗明月夜，飘飖垂楚练。",
+          "日出东方隈，似从地底来。",
+          "宫花颜色好，仙气笼三台。"
+        ],
+        "en": [
+          "Jade trees frame the palace gardens,",
+          "auspicious mist fills all the great halls.",
+          "Silken garments on a moonlit night,",
+          "floating, drifting like trailing ribbon.",
+          "The sun rises from the eastern corner,",
+          "as if emerging from the earth below.",
+          "Palace flowers show their finest hues,",
+          "and celestial breath crowns the three platforms.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_daming_palace",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "李白在大明宫期间为皇帝创作的宫廷诗。",
+            "en": "Composed by Li Bai while serving at Daming Palace, in praise of imperial grandeur."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "宫廷",
+          "华丽",
+          "扬歌"
+        ],
+        "en": [
+          "court",
+          "splendor",
+          "celebration"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "友情",
+          "primary": true,
+          "percentage": 60,
+          "confidence": "medium"
+        },
+        {
+          "type": "山水",
+          "primary": false,
+          "percentage": 50,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_li_shangyin_quest",
+      "title": {
+        "zh": "无题·昨夜星辰昨夜风",
+        "en": "Untitled: Last Night Stars, Last Night Wind"
+      },
+      "author_id": "poet_li_shangyin",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 845,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "昨夜星辰昨夜风，",
+          "画楼西畔桂堂东。",
+          "身无彩凤双飞翼，",
+          "心有灵犀一点通。",
+          "隔座送钩春酒暖，",
+          "分曹射覆蜡灯红。",
+          "嗟余只能言语笑，",
+          "无由彻底问其中。"
+        ],
+        "en": [
+          "Last night stars, last night wind,",
+          "west of the painted tower, east of the cinnamon hall.",
+          "My body has no phoenix wings for flight,",
+          "yet heart speaks to heart through a single point.",
+          "Across the seat, the ring game plays on;",
+          "wine warms, candles glow as teams divide.",
+          "I can only smile and make light conversation,",
+          "no way to plumb the depths of what I mean.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_qujiang_pool",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "李商隐在长安期间创作的无题诗，表现文人在宴会中的感伤与隐喻。",
+            "en": "Li Shangyin's untitled poem from his Chang'an years, expressing the poet's veiled emotion and yearning at court gatherings."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "爱情",
+          "隐喻",
+          "欲言又止"
+        ],
+        "en": [
+          "love",
+          "metaphor",
+          "things left unsaid"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "相思",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_du_fu_autumn",
+      "title": {
+        "zh": "登高",
+        "en": "Climbing High"
+      },
+      "author_id": "poet_du_fu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 766,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "风急天高猿啸哀，渚清沙白鸟飞回。",
+          "无边落木萧萧下，不尽长江衮衮来。",
+          "万里悲秋常作客，百年多病独登台。",
+          "艰难苦恨繁霜鬓，潦倒新停浊酒杯。"
+        ],
+        "en": [
+          "Wind rush, sky high, and gibbons wail in grief;",
+          "islets clear, sand white, birds wheel and turn.",
+          "Boundless falling leaves drift down, drift down,",
+          "endless river runs and rolls, runs and rolls.",
+          "For ten thousand miles I mourn the autumn, always a stranger;",
+          "through a hundred years of illness, alone I climb this terrace.",
+          "Hard times and bitter sorrow white the frost upon my brow;",
+          "cast down, I've just put down my cup of murky wine.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_daming_palace",
+          "relation": "describes",
+          "is_primary": false,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "虽为长江景致之作，但杜甫在长安期间的人生感悟深深印记此诗。",
+            "en": "Though written of the Yangtze landscape, Du Fu's years in Chang'an and life's hardships profoundly shaped this meditation."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "秋思",
+          "人生",
+          "离愁"
+        ],
+        "en": [
+          "autumn meditation",
+          "life",
+          "exile's sorrow"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 88,
+          "confidence": "high"
+        },
+        {
+          "type": "怀古",
+          "primary": false,
+          "percentage": 70,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 60,
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

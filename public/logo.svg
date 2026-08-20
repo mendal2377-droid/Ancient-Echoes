@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <linearGradient id="goldDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D9B777"/>
+      <stop offset="100%" stop-color="#C59B55"/>
+    </linearGradient>
+    <linearGradient id="moonInk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E9E2D7"/>
+      <stop offset="100%" stop-color="#BDB6AD"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="1024" fill="#0D1522"/>
+
+  <!-- brush circle -->
+  <path d="M269 752
+           C 206 679, 177 588, 185 491
+           C 194 364, 259 257, 356 195
+           C 458 129, 598 123, 712 164
+           C 816 201, 891 278, 928 390"
+        stroke="url(#moonInk)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" opacity="0.90"/>
+  <path d="M270 753
+           C 210 683, 183 592, 191 497
+           C 201 370, 264 264, 359 203
+           C 459 139, 595 135, 705 174
+           C 805 210, 878 286, 915 394"
+        stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.10"/>
+
+  <!-- moon -->
+  <circle cx="388" cy="276" r="53" fill="url(#goldDark)"/>
+
+  <!-- mountains -->
+  <path d="M467 428
+           C 535 418, 595 385, 659 328
+           C 685 305, 708 290, 731 298
+           C 748 304, 762 318, 775 337
+           C 792 360, 809 370, 831 360
+           C 852 349, 877 349, 901 364
+           C 855 370, 811 367, 760 357
+           C 707 346, 653 348, 594 362
+           C 546 373, 505 385, 467 428 Z"
+        fill="url(#moonInk)" opacity="0.42"/>
+  <path d="M467 426 C 551 425, 633 403, 709 321"
+        stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" opacity="0.18"/>
+
+  <!-- river -->
+  <path d="M529 463
+           C 616 461, 683 468, 733 489
+           C 792 514, 807 557, 778 597
+           C 728 666, 632 677, 531 679
+           C 427 681, 349 698, 285 741"
+        stroke="url(#moonInk)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.88"/>
+  <path d="M532 464
+           C 615 464, 676 470, 723 489
+           C 776 511, 790 550, 762 587
+           C 716 650, 626 661, 531 663
+           C 436 665, 362 680, 300 721"
+        stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/>
+
+  <!-- reflection -->
+  <path d="M460 814 C 512 809, 589 809, 664 814 C 589 826, 514 826, 460 814 Z" fill="url(#goldDark)" opacity="0.92"/>
+  <path d="M498 844 C 540 840, 592 840, 639 844 C 591 853, 541 853, 498 844 Z" fill="url(#goldDark)" opacity="0.88"/>
+  <path d="M523 872 C 555 868, 596 868, 629 872 C 595 880, 557 880, 523 872 Z" fill="url(#goldDark)" opacity="0.84"/>
+  <path d="M544 900 C 567 897, 589 897, 609 900 C 588 907, 567 907, 544 900 Z" fill="url(#goldDark)" opacity="0.80"/>
+  <path d="M563 927 C 576 924, 589 924, 600 927 C 589 932, 576 932, 563 927 Z" fill="url(#goldDark)" opacity="0.76"/>
+</svg>

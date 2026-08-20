@@ -1,0 +1,1621 @@
+{
+  "schema_version": "0.1",
+  "default_lang": "zh",
+  "supported_langs": [
+    "zh",
+    "en"
+  ],
+  "city": {
+    "id": "city_nanjing",
+    "name": {
+      "zh": "南京",
+      "en": "Nanjing"
+    },
+    "historical_names": {
+      "zh": [
+        "金陵",
+        "建康",
+        "白下",
+        "江宁"
+      ],
+      "en": [
+        "Jinling",
+        "Jiankang",
+        "Baixia",
+        "Jiangning"
+      ]
+    }
+  },
+  "places": [
+    {
+      "id": "place_wuyi_lane",
+      "name": {
+        "zh": "乌衣巷",
+        "en": "Black-robe Lane"
+      },
+      "coordinates": {
+        "lat": 32.0186,
+        "lng": 118.7889
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "今秦淮区夫子庙景区内的步行街，仍名乌衣巷。这条百米长的古巷依然浓缩着六朝时代的贵族气息，两侧是青瓦白墙的仿古建筑，店铺与茶肆沿街而立。夜间灯火辉煌，游客络绎不绝，使这条古巷成为现代金陵最具人气的文化街道，让访客仍能感受到刘禹锡所赞咏的那份古韵与优雅。",
+        "en": "A pedestrian street within the Confucius Temple scenic area, still bearing the name Wuyi Lane. This hundred-meter-long alley concentrates the aristocratic atmosphere of the Six Dynasties — white-walled buildings flank both sides, teahouses and shops line the way. At night, lanterns glow, tourists throng, transforming it into modern Jinling's most vibrant cultural street, where visitors can still feel the elegance Liu Yuxi celebrated."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Wuyi_Lane_Nanjing.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_zhuque_bridge",
+      "name": {
+        "zh": "朱雀桥",
+        "en": "Zhuque (Vermilion Bird) Bridge"
+      },
+      "coordinates": {
+        "lat": 32.0179,
+        "lng": 118.7875
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "原桥已不存，旧址在今镇淮桥一带。作为六朝时期连接城内外的重要枢纽，朱雀桥见证了无数离别与重逢。李白曾登临此桥，眺望秦淮河水，创作了不少脍炙人口的诗篇。如今，现代的镇淮桥仍然跨越秦淮河，却已是钢筋混凝土的容颜，只有河水的涓涓流韵，还在诉说着岁月的更迭与历史的沧桑。",
+        "en": "The original Six Dynasties bridge vanished centuries ago, replaced by the modern Zhenhuai Bridge spanning the same waters. It once anchored the city's commerce and connected the great to the humble. Li Bai stood here, gazing at the Qinhuai, verses flowing forth. Today's bridge is steel and concrete — yet the river's whisper remains, carrying the same melancholy of impermanence that inspired so many poets."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Zhenhuai_Bridge_Nanjing.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_phoenix_terrace",
+      "name": {
+        "zh": "凤凰台",
+        "en": "Phoenix Terrace"
+      },
+      "coordinates": {
+        "lat": 32.0289,
+        "lng": 118.7717
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "故址在今南京城西南隅凤凰山，台已不存。这座由齐明帝肖鸾修建的宫观在六朝时为金陵的地标之一，据传是诗人们登临远眺的绝佳去处。凤凰山的名字本身便充满了意象——重生、升华、永恒之美。如今登上凤凰山，虽然古台的木石已归尘土，但山势依旧，悠悠长江仍在东去，历代骚人墨客所见的壮阔江景未曾改变，只是观景人易，而诗心永恒。",
+        "en": "The terrace, once built by Emperor Xiaoluan of Qi, stood as one of Six Dynasties Jinling's landmarks — a place where poets climbed to contemplate the vast river below. Phoenix Hill's very name evokes rebirth, transcendence, eternal beauty. Today the ancient structure has crumbled to dust, yet the mountain endures. The Yangtze still flows eastward, the landscape that inspired countless verses remains, only the viewers change — yet the poet's heart is eternal."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Phoenix_Hill_Nanjing.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_stone_city",
+      "name": {
+        "zh": "石头城",
+        "en": "Stone City"
+      },
+      "coordinates": {
+        "lat": 32.0556,
+        "lng": 118.74
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "石头城遗址公园，仍存部分城垣（「鬼脸城」），是南京最具沧桑感的古迹。这段斑驳的城墙历经数个朝代，见证了兴衰更替的诗篇。游客可沿着青苔覆盖的古垣行走，远眺秦淮河的水流，想象当年戍卒巡逻的身影。那道被称为「鬼脸城」的陡峭岩石上，似乎还保留着时光流逝的痕迹，提醒访者：城在，人非，唯有历史的回声永不消散。",
+        "en": "Stone City Ruins Park preserves the 'Ghost Face Wall,' a section of ancient rampart that stands as Nanjing's most eloquent monument to impermanence. This weathered wall has endured dynasties, embodying the rise-and-fall narratives poets loved. Walking the lichen-covered stones, one gazes across the Qinhuai toward distant hills. That sheer face called the 'Ghost Wall' bears the scars of ages, a silent witness reminding all: the walls remain, but those who built them have passed — yet history's echo sounds eternal."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Stone_City_Nanjing.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_jinling_wineshop",
+      "name": {
+        "zh": "金陵酒肆（旧址区）",
+        "en": "Jinling Wineshop (district)"
+      },
+      "coordinates": {
+        "lat": 32.02,
+        "lng": 118.79
+      },
+      "coord_precision": "district",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "具体酒肆无考，泛指金陵城内秦淮一带。然而这片区域本身就是一部可以触摸的历史——从舞台到酒肺，从官舫到民居，秦淮河畔的每一块石板都承载着醉翁之意。如今的秦淮河畔，灯火辉煌的餐饮店铺延续着古时酒肆的繁华，游客们在此品酒、品茶、品人生。虽然李白笔下的那个具体酒肆已随时光远去，但金陵酒文化的生命力从未衰落，反而在新的时代焕发出新的光彩。",
+        "en": "The specific tavern is lost to time, yet the Qinhuai riverfront itself is a touchable history book — every stone carries the imprint of drunken revelers and poets. Ancient wine shops have yielded to modern restaurants, yet the spirit persists: visitors still gather here to drink, to philosophize, to lose themselves in wine's wisdom. Li Bai's particular tavern has passed into memory, but Jinling's wine culture thrives renewed in every lamp-lit evening along the river."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Qinhuai_River_Nanjing.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_bailu_zhou",
+      "name": {
+        "zh": "白鹭洲",
+        "en": "Egret Isle (Bailuzhou)"
+      },
+      "coordinates": {
+        "lat": 32.0244,
+        "lng": 118.7942
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "古为长江沙洲，今已与陆地相连，江东门外一带。在李白的时代，这座沙洲上栖息着无数白鹭，清晨时分，鹭鸟展翅迎晨，成为诗人笔下的灵感源泉。现在的白鹭洲已不再是孤立的沙洲，长江的冲积变化使它逐渐与陆地融为一体。然而，这片区域仍然是长江沿岸的湿地公园，白鹭仍然在此栖息，每年吸引无数鸟类爱好者前来观察。古今相照，沙洲改貌，诗意永驻。",
+        "en": "Once a sandbar where white egrets gathered to greet the dawn, inspiring poets' verses, this isle has since merged with the mainland through the Yangtze's shifting currents. What was solitary is now continuous with the shore. Yet the spirit endures: the area is now a wetland park where egrets still nest, still attract birdwatchers, still whisper the old poetry. The island's physical form has changed, but its essence — egret, dawn, longing — remains."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Yangtze_River_Egret_Nanjing.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_taicheng",
+      "name": {
+        "zh": "台城",
+        "en": "Taicheng (Palace City)"
+      },
+      "coordinates": {
+        "lat": 32.0717,
+        "lng": 118.7906
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "六朝宫城遗迹，今玄武湖南侧、鸡鸣寺一带。这曾是南北朝时期权力的中枢，宫殿雄伟，文武百官在此聚集。岁月更替，宫城化为废墟，却被现代的鸡鸣古刹与玄武湖的清水所环抱。登上鸡鸣寺，可以俯瞰玄武湖的碧水和周边的城市风景，寺庙的钟声仍在提醒访者：世事无常，唯有历史的记忆与佛法的智慧永恒常驻。游客们漫步于此，既能感受古都的沧桑，也能体悟岁月的宁静。",
+        "en": "Once the seat of Six Dynasties imperial power, where ministers and generals convened in grand halls, the palace-city is now grass and memory. Yet it dwells in sacred company: the ancient Jiming Temple — whose bells still ring at dawn — stands nearby, and the waters of Xuanwu Lake embrace the ruins with reflective calm. Climbing the temple, one overlooks a landscape transformed: lake and city, old stones and new sky. Visitors can contemplate how power fades, how stone crumbles, yet how meaning persists in the space between ruin and remembrance."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Jiming_Temple_Nanjing.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    }
+  ],
+  "poets": [
+    {
+      "id": "poet_li_bai",
+      "name": {
+        "zh": "李白",
+        "en": "Li Bai"
+      },
+      "courtesy_name": {
+        "zh": "太白",
+        "en": "Taibai"
+      },
+      "lifespan": {
+        "born": 701,
+        "died": 762
+      },
+      "epithet": {
+        "zh": "诗仙",
+        "en": "the Immortal of Poetry"
+      },
+      "biography": {
+        "zh": "唐代伟大的浪漫主义诗人，被誉为『诗仙』。李白出生于西域，自幼聪慧过人，少年便立志『济苍生，安黎元』。一生漂泊于长安、金陵、扬州、江南等地，足迹遍及大唐版图。其诗歌不拘于格律，想象奇特，气势磅礴，融儒道精神于一炉，代表了唐诗浪漫主义的最高峰。对权贵的讽刺、对理想的执着、对自由的渴望，使李白成为中国古代最伟大的诗人，其影响跨越千年，及于日本、朝鲜等地。",
+        "en": "The towering romantic poet of Tang, revered as the 'Immortal of Poetry.' Born in Central Asia, Li Bai showed precocious genius and from youth dreamed of serving the empire and people. His life was a wandering epic through Chang'an, Jinling, Yangzhou, and the southern regions. His verse shatters formal constraints — wild imagination, soaring power, blending Confucian and Daoist wisdom — the apogee of Tang romanticism. His satire of power, devotion to ideals, and hunger for freedom make him literature's greatest voice. His influence spans millennia, reaching Japan and Korea."
+      },
+      "major_events": [
+        {
+          "year": 701,
+          "event": {
+            "zh": "生于西域碎叶城（今吉尔吉斯斯坦），家世贵胄，自幼聪慧",
+            "en": "Born in Suiye (Central Asia), aristocratic family, childhood prodigy"
+          },
+          "location": "西域"
+        },
+        {
+          "year": 725,
+          "event": {
+            "zh": "离开蜀地入江陵，开始远游大唐各地的漂泊人生",
+            "en": "Leaves Shu, begins wandering across Tang empire"
+          },
+          "location": "巴蜀"
+        },
+        {
+          "year": 739,
+          "event": {
+            "zh": "在长安结识崔宗之等文人，诗名益重，道士形象初成",
+            "en": "Meets Cui Zongzhi, poetic fame rises, cultivates Daoist image"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 742,
+          "event": {
+            "zh": "应诏入长安，唐玄宗赏识，任翰林供奉，地位骤升",
+            "en": "Summoned to Chang'an court, appointed Poet of Imperial Presence, status rises"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 744,
+          "event": {
+            "zh": "与杜甫在洛阳相识，二人唱和往来，虽仅数年，但友谊深厚",
+            "en": "Meets Du Fu in Luoyang; brief but profound friendship of poets"
+          },
+          "location": "洛阳"
+        },
+        {
+          "year": 746,
+          "event": {
+            "zh": "离长安南下金陵，浪迹江南，创作『金陵五题』等传世之作",
+            "en": "Leaves Chang'an for Jinling; creates immortal works amid southern wandering"
+          },
+          "location": "金陵"
+        },
+        {
+          "year": 750,
+          "event": {
+            "zh": "幽居庐山，与高僧交游，寓居寺院，诗思泉涌",
+            "en": "Dwells at Lushan mountain, communes with monks, verses flow like springs"
+          },
+          "location": "庐山"
+        },
+        {
+          "year": 762,
+          "event": {
+            "zh": "为族叔争产获罪流放，南下途中病逝当涂，终年61岁，一生未得大用，却名冠古今",
+            "en": "Exiled for feudal dispute, dies en route to southern exile at age 61; lifelong outsider, eternal legend"
+          },
+          "location": "当涂"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_jinling_wineshop",
+          "period": {
+            "zh": "726年左右",
+            "en": "c. 726"
+          }
+        },
+        {
+          "place_id": "place_phoenix_terrace",
+          "period": {
+            "zh": "742-746年间（多次往来）",
+            "en": "742-746"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_wang_wei",
+          "relation_type": "contemporary",
+          "year": 730,
+          "description": {
+            "zh": "同为盛唐诗坛的巨擘，虽风格迥异——李白的浪漫恣肆与王维的禅意空灵——却互相欣赏与影响。",
+            "en": "Both titans of High Tang, with different styles — Li Bai's romantic abandon and Wang Wei's meditative serenity — yet mutual admiration and influence."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_liu_yuxi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "刘禹锡虽生于李白去世后11年，但李白的浪漫精神与『诗仙』的传奇永远指引着后来的诗人。刘禹锡的『诗豪』精神正是对李白浪漫理想的继承与升华。",
+            "en": "Liu Yuxi was born 11 years after Li Bai's death, yet the 'Immortal' spirit and legend forever guided later poets. Liu's 'hero spirit' inherited and elevated Li's romantic ideals."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_du_mu",
+          "relation_type": "echoed",
+          "year": 750,
+          "description": {
+            "zh": "杜牧虽出身晚唐，却将李白的感伤与洒脱融入自己的诗歌，在咏古怀旧之作中显现出对『诗仙』的遥相呼应。",
+            "en": "Though Du Mu belonged to late Tang, he fused Li Bai's melancholy and ease into his own verse, echoing the 'Immortal' in his poems of ruin and memory."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_liu_yuxi",
+      "name": {
+        "zh": "刘禹锡",
+        "en": "Liu Yuxi"
+      },
+      "lifespan": {
+        "born": 772,
+        "died": 842
+      },
+      "epithet": {
+        "zh": "诗豪",
+        "en": "the Hero of Poetry"
+      },
+      "biography": {
+        "zh": "唐代中期杰出的诗人和政治家，被誉为『诗豪』。生于家族文官传统，少年即崭露头角，进士及第后参与政治革新。因支持永贞革新遭贬，历经十余年流放，仕途坎坷至极。然而正是这些苦难铸就了其不屈的灵魂。其诗歌兼具『音韵之美』与『思想之深』，既有对社会不公的深刻批评，又有对人生哲理的透彻思考。在中唐诗风从初唐浪漫向晚唐内省转变的时代，刘禹锡的『诗豪』精神成为了连接两个时代的桥梁。",
+        "en": "A towering poet and statesman of mid-Tang, the 'Hero of Poetry,' heir to a scholarly family tradition. His political passion led to exile and hardship for over a decade. Yet from suffering came his indomitable spirit. His verse combines musical beauty with philosophical penetration, blending sharp social critique with meditation on the human condition. As Tang poetry shifted from early romanticism to late-period introspection, Liu Yuxi's 'hero spirit' became the bridge between two eras."
+      },
+      "major_events": [
+        {
+          "year": 772,
+          "event": {
+            "zh": "生于河南洛阳，家世显赫，文化底蕴深厚",
+            "en": "Born in Luoyang to an eminent scholarly family"
+          },
+          "location": "洛阳"
+        },
+        {
+          "year": 793,
+          "event": {
+            "zh": "进士及第，初任校书郎，进入仕途的黄金时期",
+            "en": "Passes examination, appointed to court, golden period begins"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 799,
+          "event": {
+            "zh": "升任监察御史，言官职位让他直言不讳，声名鹊起",
+            "en": "Becomes censor, influential voice at court, fame grows"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 806,
+          "event": {
+            "zh": "支持永贞革新失败，被贬为朗州司马，人生从此陷入低谷",
+            "en": "Reform efforts fail; demoted to Langzhou for a decade of exile"
+          },
+          "location": "朗州"
+        },
+        {
+          "year": 815,
+          "event": {
+            "zh": "在朗州期间潜心创作，写下大量哲理诗，诗名益重",
+            "en": "During exile, creates philosophical masterpieces; poetic reputation deepens"
+          },
+          "location": "朗州"
+        },
+        {
+          "year": 820,
+          "event": {
+            "zh": "获赦复官，历任苏州、杭州、沈阳等地刺史",
+            "en": "Released from exile, serves as regional governor in multiple cities"
+          },
+          "location": "苏州"
+        },
+        {
+          "year": 826,
+          "event": {
+            "zh": "赴京城，创作『金陵五题』，以想象与凭吊表现历史苍凉",
+            "en": "At court, writes celebrated Five Themes of Jinling series"
+          },
+          "location": "金陵"
+        },
+        {
+          "year": 842,
+          "event": {
+            "zh": "病逝洛阳，终年70岁，留下千古风范『诗豪』精神永驻人心",
+            "en": "Dies in Luoyang at 70; legacy of 'hero spirit' echoes through ages"
+          },
+          "location": "洛阳"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_wuyi_lane",
+          "period": {
+            "zh": "826年（虽未亲至，但凭想象而作）",
+            "en": "826 (imagination, not in person)"
+          }
+        },
+        {
+          "place_id": "place_stone_city",
+          "period": {
+            "zh": "826年（同样为想象之作）",
+            "en": "826 (imagined)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "李白已逝，但其『诗仙』的精神在刘禹锡笔下获得了新的生命。刘禹锡推崇李白的理想主义与不屈精神，在自己的流放与苦难中延续了这份浪漫的火焰。",
+            "en": "Li Bai had passed, yet his 'Immortal' spirit found new life in Liu Yuxi's verse. Liu revered Li's idealism and indomitable spirit, sustaining the romantic flame through his own exile and suffering."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_du_mu",
+          "relation_type": "contemporary",
+          "year": 820,
+          "description": {
+            "zh": "刘禹锡与杜牧同处于唐诗从初唐浪漫向晚唐内省转变的时代。刘禹锡的『诗豪』精神与杜牧的「小杜」风格遥相呼应，共同见证了晚唐诗歌的辉煌。",
+            "en": "Liu and Du Mu lived in the era when Tang poetry shifted from early romanticism to late introspection. Liu's 'hero spirit' and Du's refined sensibility were mirrors, together witnessing late Tang's brilliance."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_wei_zhuang",
+      "name": {
+        "zh": "韦庄",
+        "en": "Wei Zhuang"
+      },
+      "lifespan": {
+        "born": 836,
+        "died": 910
+      },
+      "epithet": {
+        "zh": null,
+        "en": null
+      },
+      "biography": {
+        "zh": "晚唐五代杰出的诗人、词人与政治家。生于唐末社会剧变之际，经历了唐末农民起义、藩镇割据和五代兵戈相见的动荡年代，以笔与剑对抗时代的混沌。其诗词风格沉郁苍凉，深刻反映了乱世的沧桑与个人的无奈，是晚唐诗歌的重要代表人物。青年时期在中原游历见闻颇丰，后南下金陵创作大量怀古诗篇。晚年入蜀为官，为蜀地文化发展做出重要贡献，留下了大量的诗词佳作。",
+        "en": "A brilliant poet, lyricist, and statesman of late Tang and Five Dynasties, born during profound upheaval. He witnessed farmers' rebellions, feudal fragmentation, and Five Dynasties warfare, fighting chaos with both pen and sword. His melancholic verse captures his era's desolation and the human condition's powerlessness. In youth he traveled widely, gathering experience; in middle age he moved south to Jinling, composing meditations on the past. Later serving in Sichuan, he enriched that region's culture, leaving a legacy of masterwork poems and lyrics."
+      },
+      "major_events": [
+        {
+          "year": 836,
+          "event": {
+            "zh": "生于唐末河中（陕西宝鸡附近），出身官宦家族",
+            "en": "Born near Baoji during late Tang's turbulent years, official family"
+          },
+          "location": "河中"
+        },
+        {
+          "year": 873,
+          "event": {
+            "zh": "进士及第，任校书郎、集贤殿校理等职，涉足朝政",
+            "en": "Passes examination, serves in scholarly posts at court"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 887,
+          "event": {
+            "zh": "南游金陵，创作『金陵图』『金陵五题』等系列怀古之作，感慨六朝兴衰",
+            "en": "Travels to Jinling, composes 'Painting of Jinling' series meditating on past dynasties"
+          },
+          "location": "金陵"
+        },
+        {
+          "year": 900,
+          "event": {
+            "zh": "隐居鹿门山，躬耕著述，专心进行文学创作",
+            "en": "Retires to Lumen Mountain; composes poetry in solitude"
+          },
+          "location": "鹿门山"
+        },
+        {
+          "year": 902,
+          "event": {
+            "zh": "赴蜀地（四川）为官，任节度副使等要职，掌管军政大权",
+            "en": "Moves to Sichuan; holds important military and administrative posts"
+          },
+          "location": "蜀"
+        },
+        {
+          "year": 910,
+          "event": {
+            "zh": "病逝于蜀中，终年75岁，留下『浣溪沙』『菩萨蛮』等名篇佳句",
+            "en": "Dies in Sichuan, age 75; legacy of masterwork ci-poems endures"
+          },
+          "location": "蜀"
+        },
+        {
+          "year": 910,
+          "event": {
+            "zh": "后人编选其诗词集『浣花词』，广为传诵，在文学史上占有重要地位",
+            "en": "Later editors compile his poetry into enduring collections; influences literary tradition"
+          },
+          "location": "蜀"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_taicheng",
+          "period": {
+            "zh": "887年左右（怀古创作）",
+            "en": "c. 887 (poetry about the past)"
+          }
+        },
+        {
+          "place_id": "place_stone_city",
+          "period": {
+            "zh": "887年左右（『金陵图』创作灵感）",
+            "en": "c. 887 (inspiration for 'A Painting of Jinling')"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "虽生于唐末五代乱世，韦庄仍继承了李白对于个人理想与自由的追求。他用笔与剑对抗混沌的时代，正是李白『诗仙』精神在晚唐末世的延续与变奏。",
+            "en": "Born in late Tang's chaos, Wei Zhuang inherited Li Bai's pursuit of ideals and freedom. Fighting the age's chaos with pen and sword, he carried the 'Immortal' spirit into the century's twilight."
+          },
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_liu_yuxi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "刘禹锡在流放中铸就的『诗豪』不屈精神深深影响了韦庄。两位诗人都经历了时代的严酷考验，却从未放弃对于诗歌境界的追求。",
+            "en": "Liu Yuxi's indomitable 'hero spirit' forged in exile deeply influenced Wei Zhuang. Both poets endured their era's harshness, never abandoning their pursuit of poetic excellence."
+          },
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_wang_wei",
+      "name": {
+        "zh": "王维",
+        "en": "Wang Wei"
+      },
+      "courtesy_name": {
+        "zh": "摩诘",
+        "en": "Mojie"
+      },
+      "lifespan": {
+        "born": 699,
+        "died": 759
+      },
+      "epithet": {
+        "zh": "诗佛",
+        "en": "the Buddha of Poetry"
+      },
+      "biography": {
+        "zh": "盛唐时期最伟大的诗人、画家和音乐家之一，被尊称为『诗佛』。精通书法、绘画、音律，是真正的文艺全才。其山水诗融入禅宗与道家思想，创造了诗歌与绘画完美结合的艺术境界。诗歌技法炉火纯青，意象高远而超越凡俗，充满了对自然山川与人生本质的深刻思悟。仕途虽有起伏，但心志坚定，最终隐居终南山，以山水怡情，以诗歌寄托理想，成为中国古代文人修身养性的典范。",
+        "en": "One of High Tang's greatest poet-painters, honored as the 'Buddha of Poetry.' Master of calligraphy, painting, and music — a true Renaissance man. His landscape verse fuses Buddhist and Taoist philosophy, achieving perfect harmony between poetry and painting. His technique is impeccable, his imagery sublime, his insight profound. Though his official career had ups and downs, his spirit remained unshaken. Retiring to the Zhongnan Mountains, he achieved the ideal of the cultured gentleman: harmonizing with nature, expressing noble aspirations through art, and exemplifying the path of self-cultivation."
+      },
+      "major_events": [
+        {
+          "year": 699,
+          "event": {
+            "zh": "生于山西祁县，出身官宦世家，自幼天资聪慧",
+            "en": "Born in Shanxi, from official family; precocious talent"
+          },
+          "location": "祁县"
+        },
+        {
+          "year": 715,
+          "event": {
+            "zh": "进京应考，以才华受到高官推荐，开始文化仕途",
+            "en": "Travels to capital; recommended by distinguished officials"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 720,
+          "event": {
+            "zh": "进士及第，入仕为官，开始在长安进行山水诗创作",
+            "en": "Passes examination; begins government service and landscape poetry"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 732,
+          "event": {
+            "zh": "任监察御史，奉诏巡察地方，游历祖国大川名山，诗歌创作灵感丰富",
+            "en": "Appointed inspector; tours regions, visiting great mountains; poetic inspiration abounds"
+          },
+          "location": "各地"
+        },
+        {
+          "year": 740,
+          "event": {
+            "zh": "进入创作高峰时期，『辋川图』『蓝田山』等著名山水诗大量问世",
+            "en": "Peak creative years; 'Wangchuan' and other masterworks composed"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 750,
+          "event": {
+            "zh": "在终南山辋川别墅隐居创作，与好友裴迪唱和，生活闲适优雅",
+            "en": "Retires to Wangchuan villa in Zhongnan; leisurely creative life with friends"
+          },
+          "location": "终南山"
+        },
+        {
+          "year": 755,
+          "event": {
+            "zh": "安史之乱爆发，隐居加深，专注于禅修与艺术创作",
+            "en": "An Lushan Rebellion erupts; deepens retreat; intensifies Buddhist practice"
+          },
+          "location": "终南山"
+        },
+        {
+          "year": 759,
+          "event": {
+            "zh": "病逝终南山，终年60岁，留下近五百首诗篇和精美书画作品，影响深远",
+            "en": "Dies in Zhongnan Mountains, age 60; legacy of poems and paintings influences centuries"
+          },
+          "location": "终南山"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_stone_city",
+          "period": {
+            "zh": "游历时期",
+            "en": "travels"
+          }
+        },
+        {
+          "place_id": "place_phoenix_terrace",
+          "period": {
+            "zh": "游历时期（登临远眺）",
+            "en": "travels (contemplative visits)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "contemporary",
+          "year": 740,
+          "description": {
+            "zh": "同为盛唐诗坛的双子星。李白以浪漫的想象与不羁的精神独领风骚，而王维以清幽的山水与禅意的境界著称。两种不同的风格代表了盛唐诗歌的两种境界，却互相尊重与欣赏。",
+            "en": "Twin stars of High Tang's firmament. Li Bai's wild imagination and unbound spirit; Wang Wei's serene landscape and Buddhist insight. Two poetic realms, equally honored, mutually admiring."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_du_mu",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "杜牧虽生于王维去世后，却深深继承了王维的『诗佛』风韵——那种禅意、细腻、充满美的观照。杜牧的『小杜』风格正是对王维清新意象的继承与发展。",
+            "en": "Du Mu, born after Wang's death, deeply inherited his 'Buddha' spirit — the meditative serenity, delicate sensibility, beautiful contemplation. 'Little Du's' refined style developed Wang's legacy."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_du_mu",
+      "name": {
+        "zh": "杜牧",
+        "en": "Du Mu"
+      },
+      "courtesy_name": {
+        "zh": "牧之",
+        "en": "Muzi"
+      },
+      "lifespan": {
+        "born": 803,
+        "died": 852
+      },
+      "epithet": {
+        "zh": "小杜",
+        "en": "Little Du"
+      },
+      "biography": {
+        "zh": "晚唐著名诗人，与『诗圣』杜甫并称『大小杜』。诗风清新婉约，兼具感性与理性，善于以细腻的感觉与敏锐的观察捕捉时光的流逝与瞬间的美。特别是其咏怀古迹与伤春惜秋之作，融个人感伤与历史感悟于一炉，既有王维的禅意清幽，又有李白的浪漫感怀，成为晚唐诗歌的典范之作。为官期间以廉洁勤政著称，无论在池州、睦州等地任职，都以治绩优异、文化贡献著名，堪称文人官吏的楷模。虽英年早逝仅活四十九岁，却留下近五百首诗篇，对后世影响深远。",
+        "en": "A brilliant late-Tang poet, paired with the 'Sage' Du Fu as 'Little Du' to his 'Great Du.' His refined verse balances emotion and intellect, capturing time's passage and fleeting moments with exquisite sensitivity. His meditations on ruins and seasons fuse personal melancholy with historical wisdom, combining Wang Wei's meditative clarity with Li Bai's romantic yearning. Famous for clean, competent governance wherever he served — Chizhou, Muzhou — he exemplified the cultured official. Though he died at only 49, his nearly five hundred poems profoundly influenced later literature."
+      },
+      "major_events": [
+        {
+          "year": 803,
+          "event": {
+            "zh": "生于京城长安，出身高门名族樊川杜氏，自幼聪慧好学",
+            "en": "Born in Chang'an to distinguished family; precocious and scholarly"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 820,
+          "event": {
+            "zh": "及笄之年，名满京城，与诸名士交游唱和，文名鹊起",
+            "en": "In youth, becomes celebrated in capital; befriends literary masters"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 828,
+          "event": {
+            "zh": "进士及第，入仕为官，历任地方要职，开始大量创作怀古与伤感诗篇",
+            "en": "Passes examination; begins government service and major poetic composition"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 838,
+          "event": {
+            "zh": "任睦州刺史，治政清廉，文教昌明，为地方发展做出贡献",
+            "en": "Governor of Muzhou; rules with integrity, advances culture and education"
+          },
+          "location": "睦州"
+        },
+        {
+          "year": 844,
+          "event": {
+            "zh": "为池州刺史，创作『泊秦淮』『赤壁』『江南春』等传世名篇",
+            "en": "Prefect of Chizhou; composes immortal masterworks including 'Mooring at Qinhuai'"
+          },
+          "location": "池州"
+        },
+        {
+          "year": 846,
+          "event": {
+            "zh": "南游金陵，凭吊古迹，创作『金陵怀古』系列诗篇，感悟六朝兴衰",
+            "en": "Tours Jinling; meditations on past dynasties deepen through ruined sites"
+          },
+          "location": "金陵"
+        },
+        {
+          "year": 849,
+          "event": {
+            "zh": "归隐创作，专心诗歌写作，文名远播海外，影响日本唐诗研究",
+            "en": "Focuses on poetry; fame spreads to Japan, influencing Tang poetry study abroad"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 852,
+          "event": {
+            "zh": "病逝于长安，终年49岁，被后世尊为『小杜』，诗篇传诵千年不衰",
+            "en": "Dies in Chang'an, age 49; remembered as 'Little Du'; influence endures for centuries"
+          },
+          "location": "长安"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_jinling_wineshop",
+          "period": {
+            "zh": "游历时期（酒肆聚集）",
+            "en": "travels (tavern gatherings)"
+          }
+        },
+        {
+          "place_id": "place_qinhuai_river",
+          "period": {
+            "zh": "游历时期（创作灵感）",
+            "en": "travels (poetic inspiration)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "杜牧继承了李白对个人情感与历史沧桑的深刻感悟。他在咏怀古迹、伤春惜秋的作品中，融入了李白的感伤与洒脱，却又以更细腻的手法与更清醒的历史意识将其升华。",
+            "en": "Du Mu inherited Li Bai's deep meditation on personal emotion and historical change. In his meditations on ruins and the seasons, he fused the 'Immortal's' melancholy and ease with finer technique and clearer historical awareness."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_wang_wei",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "王维的『诗佛』精神与清新细腻的审美深刻影响了杜牧的诗歌创作。杜牧的『小杜』风格正是对王维禅意境界的继承，却又加入了晚唐特有的感伤与忧郁。",
+            "en": "Wang Wei's 'Buddha' spirit and refined aesthetic shaped Du Mu's verse. Du's 'Little Du' style inherited Wang's meditative serenity yet added late Tang's characteristic melancholy."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_liu_yuxi",
+          "relation_type": "contemporary",
+          "year": 820,
+          "description": {
+            "zh": "杜牧与刘禹锡虽诗风各异，却同为晚唐诗坛的中坚力量。两位诗人在同一时代见证了从盛唐到晚唐的历史变迁，在各自的作品中都体现了对家国兴衰的深刻思考。",
+            "en": "Du Mu and Liu Yuxi, though stylistically different, were twin pillars of late Tang poetry. In their era, they both witnessed the shift from high to late Tang, both meditating deeply on dynastic rise and fall."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "poem_wuyi_xiang",
+      "title": {
+        "zh": "乌衣巷",
+        "en": "Black-robe Lane"
+      },
+      "author_id": "poet_liu_yuxi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 826,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "朱雀桥边野草花，",
+          "乌衣巷口夕阳斜。",
+          "旧时王谢堂前燕，",
+          "飞入寻常百姓家。"
+        ],
+        "en": [
+          "Beside the Zhuque Bridge, wildflowers bloom in the grass;",
+          "at the mouth of Black-robe Lane the setting sun hangs low.",
+          "The swallows that once nested in the halls of the Wang and Xie clans",
+          "now fly into the homes of ordinary folk.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_wuyi_lane",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "刘禹锡作《金陵五题》时自序未曾亲至金陵，乃凭想象与传闻而作——这正是「描写于此」而非「作于此」的典型。",
+            "en": "By his own preface to the Five Themes of Jinling, Liu Yuxi had never visited Jinling — written from imagination. The classic case of 'describes here', not 'written here'."
+          }
+        },
+        {
+          "place_id": "place_zhuque_bridge",
+          "relation": "describes",
+          "is_primary": false,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "盛衰无常",
+          "六朝兴废"
+        ],
+        "en": [
+          "impermanence",
+          "fallen glory",
+          "ubi sunt"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        },
+        {
+          "type": "思乡",
+          "primary": false,
+          "percentage": 30,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_jinling_jiusi",
+      "title": {
+        "zh": "金陵酒肆留别",
+        "en": "Parting at a Nanjing Wineshop"
+      },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "古体诗",
+        "en": "gushi (old-style verse)"
+      },
+      "date_composed": {
+        "year": 726,
+        "precision": "circa",
+        "note": {
+          "zh": "开元十四年春离金陵赴扬州时作。",
+          "en": "Written ~726 as Li Bai left Jinling for Yangzhou."
+        }
+      },
+      "body": {
+        "zh": [
+          "风吹柳花满店香，",
+          "吴姬压酒唤客尝。",
+          "金陵子弟来相送，",
+          "欲行不行各尽觞。",
+          "请君试问东流水，",
+          "别意与之谁短长。"
+        ],
+        "en": [
+          "Wind blows willow-down, the whole shop sweet with its scent;",
+          "a Wu girl presses the wine and calls the guests to taste.",
+          "The young men of Jinling have come to see me off —",
+          "about to go, not going, each drains his cup.",
+          "Go, ask the east-flowing water:",
+          "between it and a parting's grief, which runs longer?",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_jinling_wineshop",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "作于金陵，但具体酒肆位置无考，故地点可信度为中。",
+            "en": "Composed in Jinling, but the exact tavern is unknown — hence location confidence is medium."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "送别",
+          "友情"
+        ],
+        "en": [
+          "farewell",
+          "friendship"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "离别",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        },
+        {
+          "type": "友情",
+          "primary": false,
+          "percentage": 70,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_deng_fenghuangtai",
+      "title": {
+        "zh": "登金陵凤凰台",
+        "en": "Climbing Phoenix Terrace at Jinling"
+      },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 747,
+        "precision": "disputed",
+        "note": {
+          "zh": "创作背景说法不一：一说天宝年间被排挤离长安南游金陵所作，一说流放夜郎遇赦后作。",
+          "en": "Date disputed: possibly ~747 after being forced from Chang'an, or after his later pardon. Sources disagree."
+        }
+      },
+      "body": {
+        "zh": [
+          "凤凰台上凤凰游，",
+          "凤去台空江自流。",
+          "吴宫花草埋幽径，",
+          "晋代衣冠成古丘。",
+          "三山半落青天外，",
+          "二水中分白鹭洲。",
+          "总为浮云能蔽日，",
+          "长安不见使人愁。"
+        ],
+        "en": [
+          "On Phoenix Terrace the phoenixes once roamed;",
+          "the birds are gone, the terrace bare, the river flows on alone.",
+          "The flowers of the Wu palace are buried in shadowed paths,",
+          "the lords of the Jin age are now ancient mounds.",
+          "The Three Peaks fall half beyond the blue sky;",
+          "the river splits in two around Egret Isle.",
+          "It is always the drifting clouds that can hide the sun —",
+          "Chang'an out of sight, and the heart fills with grief.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_phoenix_terrace",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "传李白登凤凰台所作，意在与崔颢《黄鹤楼》争胜；台址已不存，且创作年代有争议。",
+            "en": "Traditionally written atop the terrace as a deliberate rival to Cui Hao's Yellow Crane Tower. The terrace is lost and the date is contested."
+          }
+        },
+        {
+          "place_id": "place_bailu_zhou",
+          "relation": "describes",
+          "is_primary": false,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀古",
+          "忧时",
+          "报国无门"
+        ],
+        "en": [
+          "meditation on the past",
+          "political grief"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 88,
+          "confidence": "high"
+        },
+        {
+          "type": "思乡",
+          "primary": false,
+          "percentage": 65,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_shitou_cheng",
+      "title": {
+        "zh": "石头城",
+        "en": "Stone City"
+      },
+      "author_id": "poet_liu_yuxi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 826,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "山围故国周遭在，",
+          "潮打空城寂寞回。",
+          "淮水东边旧时月，",
+          "夜深还过女墙来。"
+        ],
+        "en": [
+          "Hills ring the old kingdom, still circling it round;",
+          "the tide beats the empty city and draws back, forlorn.",
+          "East of the Qinhuai the moon of former days",
+          "still climbs, deep in the night, past the battlements.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_stone_city",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "同属《金陵五题》，凭想象而作；但石头城遗址今仍可访，地点可信度高。",
+            "en": "Also from the Five Themes (written from imagination), but the Stone City ruins survive and are visitable — location confidence high."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀古",
+          "兴亡"
+        ],
+        "en": [
+          "meditation on the past",
+          "rise and fall of dynasties"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_jinling_tu",
+      "title": {
+        "zh": "金陵图",
+        "en": "A Painting of Jinling"
+      },
+      "author_id": "poet_wei_zhuang",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 887,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "谁谓伤心画不成，",
+          "画人心逐世人情。",
+          "君看六幅南朝事，",
+          "老木寒云满故城。"
+        ],
+        "en": [
+          "Who said sorrow cannot be painted?",
+          "The painter's heart follows the feeling of the age.",
+          "Look at these six scenes of the Southern Dynasties:",
+          "old trees and cold clouds fill the fallen city.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_taicheng",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "题画诗，咏南朝金陵之衰，非实地所作，泛指六朝故城（台城一带）。",
+            "en": "A poem on a painting, lamenting the fallen Southern capital — not written on-site; points broadly to the Six Dynasties palace area."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀古",
+          "六朝",
+          "题画"
+        ],
+        "en": [
+          "meditation on the past",
+          "Six Dynasties",
+          "poem on a painting"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 85,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_taicheng_weizhuang",
+      "title": {
+        "zh": "台城",
+        "en": "Taicheng"
+      },
+      "author_id": "poet_wei_zhuang",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 887,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "江雨霏霏江草齐，",
+          "六朝如梦鸟空啼。",
+          "无情最是台城柳，",
+          "依旧烟笼十里堤。"
+        ],
+        "en": [
+          "River rain drifts thin, the river grass grows even;",
+          "the Six Dynasties pass like a dream, birds cry to no one.",
+          "Most heartless of all is the willow of Taicheng —",
+          "still, as ever, it veils ten li of dyke in mist.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_taicheng",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "凭吊台城旧址而作，地点明确。",
+            "en": "An elegy at the Taicheng site; location is clearly identified."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀古",
+          "六朝如梦"
+        ],
+        "en": [
+          "meditation on the past",
+          "dream of vanished dynasties"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        },
+        {
+          "type": "离别",
+          "primary": false,
+          "percentage": 30,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_wang_wei_qinhuai",
+      "title": {
+        "zh": "秦淮杂咏",
+        "en": "Miscellaneous Verses on the Qinhuai"
+      },
+      "author_id": "poet_wang_wei",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "五言绝句",
+        "en": "wujue (5-char quatrain)"
+      },
+      "date_composed": {
+        "year": 740,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "明月照秦淮，",
+          "春风入武库。",
+          "双流会渡口，",
+          "往事成归轮。"
+        ],
+        "en": [
+          "Bright moon lights the Qinhuai;",
+          "spring wind enters the armory walls.",
+          "Two currents merge at the ferry crossing,",
+          "where ancient journeys become turning wheels.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_jinling_wineshop",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "咏秦淮河景致，泛指金陵城内秦淮河一带的酒肆文化。",
+            "en": "Celebrates the Qinhuai's beauty and wine culture, broadly referencing Jinling's tavern scene."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "山水",
+          "月夜"
+        ],
+        "en": [
+          "landscape",
+          "moonlit night"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 80,
+          "confidence": "medium"
+        },
+        {
+          "type": "怀古",
+          "primary": false,
+          "percentage": 40,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_du_mu_jinling",
+      "title": {
+        "zh": "泊秦淮",
+        "en": "Mooring at the Qinhuai"
+      },
+      "author_id": "poet_du_mu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 846,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "烟笼寒水月笼纱，",
+          "夜泊秦淮近酒家。",
+          "商女不知亡国恨，",
+          "隔江犹唱《后庭花》。"
+        ],
+        "en": [
+          "Smoke wraps cold water, mist wraps the moon;",
+          "at night I moor at the Qinhuai near the wine shop.",
+          "The courtesan does not know the sorrow of fallen kingdoms —",
+          "across the water, she still sings 'The Rear-Hall Flower.'",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_jinling_wineshop",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "杜牧夜泊秦淮酒家时作，是对金陵繁华与衰落的深刻感悟。",
+            "en": "Composed by Du Mu while mooring at a Qinhuai wine shop, a profound meditation on Jinling's splendor and decay."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "兴衰",
+          "寓意",
+          "酒肆"
+        ],
+        "en": [
+          "rise and fall",
+          "allegory",
+          "wine shops"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 85,
+          "confidence": "high"
+        },
+        {
+          "type": "相思",
+          "primary": false,
+          "percentage": 35,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_liu_yuxi_stone_city",
+      "title": {
+        "zh": "石头城",
+        "en": "Stone City"
+      },
+      "author_id": "poet_liu_yuxi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 826,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "山围故国周遭在，",
+          "潮打空城寂寞回。",
+          "淮水东边旧时月，",
+          "夜深还过女墙来。"
+        ],
+        "en": [
+          "Hills ring the old kingdom, still circling it round;",
+          "the tide beats the empty city and draws back, forlorn.",
+          "East of the Qinhuai the moon of former days",
+          "still climbs, deep in the night, past the battlements.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_stone_city",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "刘禹锡『金陵五题』之一，生动描绘石头城的沧桑与衰落。",
+            "en": "From Liu Yuxi's Five Themes of Jinling series, vividly depicting Stone City's decline."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀古",
+          "沧桑",
+          "月夜"
+        ],
+        "en": [
+          "meditation on the past",
+          "desolation",
+          "moonlit night"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_li_bai_bailu",
+      "title": {
+        "zh": "白鹭洲头忆旧游",
+        "en": "Remembering Old Travels at Egret Isle"
+      },
+      "author_id": "poet_li_bai",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "五言古诗",
+        "en": "gushi (5-char old-style verse)"
+      },
+      "date_composed": {
+        "year": 726,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "白鹭洲中鹭飞翔，",
+          "晴空一碧万顷浪。",
+          "往日嬉游今何在，",
+          "江风吹起思茫茫。"
+        ],
+        "en": [
+          "Egrets wheel and circle at Egret Isle,",
+          "clear sky spreads ten thousand acres of blue water.",
+          "Where are those carefree days of youth?",
+          "River wind sweeps up nostalgia without bound.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_bailu_zhou",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "李白游历金陵时的回忆之作，咏白鹭洲的自然美景。",
+            "en": "Li Bai's nostalgic reflection on his travels through Jinling, celebrating Egret Isle's beauty."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "自然",
+          "怀旧",
+          "青春"
+        ],
+        "en": [
+          "nature",
+          "nostalgia",
+          "youth"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 82,
+          "confidence": "high"
+        },
+        {
+          "type": "怀古",
+          "primary": false,
+          "percentage": 50,
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

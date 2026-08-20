@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#08080d;font-family:'Noto Serif SC','Songti SC',serif;color:#e8e2d4}
+  a{color:#c9a86a;text-decoration:none}a:hover{color:#e3c98a}
+  @keyframes aeRise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+  @keyframes aeBloom{from{opacity:0;filter:blur(13px);transform:scale(1.016)}to{opacity:1;filter:blur(0);transform:none}}
+  @keyframes aeMist{from{transform:translate3d(-7%,0,0)}to{transform:translate3d(7%,0,0)}}
+  @keyframes aeGlow{0%,100%{opacity:.1}50%{opacity:.95}}
+  @keyframes aeFloat{from{transform:translateY(0)}to{transform:translateY(-16px)}}
+  @keyframes aeMoon{0%,100%{opacity:.8}50%{opacity:1}}
+  @keyframes aeSpin{to{transform:rotate(360deg)}}
+  @keyframes aeRing{0%{transform:scale(.7);opacity:0}30%{opacity:.5}100%{transform:scale(1.25);opacity:0}}
+  @keyframes aeToast{0%{opacity:0;transform:translate(-50%,8px)}12%{opacity:1;transform:translate(-50%,0)}88%{opacity:1}100%{opacity:0}}
+</style>
+</helmet>
+
+<x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ae-l-loader" hint-size="1px,1px" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none"></x-import>
+
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 26%,#141019,#08080d 70%);padding:28px;box-sizing:border-box">
+  <div style="width:340px;height:724px;border-radius:48px;padding:11px;background:linear-gradient(150deg,#17171f,#0a0a10);box-shadow:0 42px 96px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.05),inset 0 0 0 1.5px rgba(255,255,255,.04)">
+    <div style="position:relative;width:100%;height:100%;border-radius:37px;overflow:hidden;background:#09090f">
+
+      <!-- ═══════════ HOME ═══════════ -->
+      <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+        <div style="position:absolute;inset:0;animation:aeBloom .8s ease both;background:radial-gradient(60% 40% at 74% 12%,rgba(224,112,154,.16),transparent 60%),radial-gradient(120% 80% at 50% 126%,#1b1526 0%,transparent 60%),linear-gradient(180deg,#09090f 0%,#120e1c 58%,#171120 100%)">
+          <div style="position:absolute;inset:0"><image-slot id="ae-home2" shape="rect" fit="cover" placeholder="相思·春 — river dusk, red-bean blossom, moon on water"></image-slot></div>
+          {{ starField }}
+          <div style="position:absolute;top:52px;right:40px;width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 38% 36%,#f6ecd0,#e0c184 62%,#c9a86a);box-shadow:0 0 30px 9px rgba(235,205,140,.3);pointer-events:none;animation:aeMoon 7s ease-in-out infinite"></div>
+          <div style="position:absolute;left:-22%;right:-22%;top:58%;height:150px;background:radial-gradient(56% 100% at 50% 50%,rgba(224,112,154,.1),transparent 74%);filter:blur(18px);pointer-events:none;animation:aeMist 30s ease-in-out infinite alternate"></div>
+          <div style="position:absolute;inset:0 0 auto;height:150px;background:linear-gradient(180deg,rgba(9,9,15,.72),transparent);pointer-events:none"></div>
+          <div style="position:absolute;inset:auto 0 0;height:250px;background:linear-gradient(0deg,rgba(9,8,14,.94),transparent);pointer-events:none"></div>
+          <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:15px 24px 0;font:600 13px system-ui;color:rgba(243,238,228,.85);pointer-events:none"><span>9:41</span><span style="font-size:10px;letter-spacing:3px">◐ ▪▪▪ ▮</span></div>
+          <div style="position:absolute;top:48px;left:26px;right:26px;display:flex;justify-content:flex-start;align-items:baseline;gap:11px;pointer-events:none">
+            <span style="font:600 15px 'Noto Serif SC',serif;letter-spacing:.2em;color:#f3eee4">此时此地</span>
+            <span style="font:400 10px 'Noto Serif SC',serif;letter-spacing:.12em;color:rgba(243,238,228,.5);padding:2px 7px;border:1px solid rgba(243,238,228,.2);border-radius:10px">中 · EN</span>
+          </div>
+          <div style="position:absolute;top:86px;left:26px;right:26px;text-align:center;font:400 11px 'Noto Serif SC',serif;letter-spacing:.28em;color:rgba(235,205,140,.7);pointer-events:none;animation:aeRise 1.2s .2s both">夜 · 谷雨</div>
+          <div style="position:absolute;top:110px;left:32px;right:32px;text-align:center;font:400 12px/1.7 'Noto Serif SC',serif;letter-spacing:.08em;color:rgba(243,238,228,.62);pointer-events:none;animation:aeRise 1.2s .5s both">你与王维，隔着一千三百年，<br>同怀一种相思。</div>
+          <div onClick="{{ readDaily }}" style="position:absolute;top:52%;right:34px;transform:translateY(-50%);display:flex;flex-direction:row-reverse;align-items:center;gap:4px;cursor:pointer">
+            <sc-for list="{{ homeCols }}" as="col" hint-placeholder-count="6"><div style="{{ col.style }}">{{ col.text }}</div></sc-for>
+          </div>
+          <div style="position:absolute;bottom:120px;left:26px;right:26px;pointer-events:auto">
+            <div onClick="{{ goFeeling }}" style="text-align:center;padding:13px 0;border-radius:26px;background:rgba(216,176,114,.14);border:1px solid rgba(216,176,114,.55);color:#ebcd8c;font:500 13.5px 'Noto Serif SC',serif;letter-spacing:.22em;cursor:pointer;backdrop-filter:blur(4px)">选择此刻的心情</div>
+          </div>
+          <div style="position:absolute;bottom:78px;left:0;right:0;text-align:center;font:400 11px 'Noto Serif SC',serif;letter-spacing:.14em;color:rgba(243,238,228,.4);pointer-events:none">— 轻触诗句，细读今日之诗 —</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-around;align-items:center;padding:14px 14px 22px;background:linear-gradient(0deg,rgba(9,8,14,.9),transparent)">
+            <sc-for list="{{ nav }}" as="t" hint-placeholder-count="4"><span style="{{ t.style }}" onClick="{{ t.onClick }}">{{ t.label }}</span></sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ═══════════ FEELING ═══════════ -->
+      <sc-if value="{{ isFeeling }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;animation:aeBloom .8s ease both;background:radial-gradient(70% 44% at 50% 40%,rgba(216,176,114,.08),transparent 62%),linear-gradient(180deg,#08080e 0%,#100d1a 58%,#151020 100%)">
+          {{ starField2 }}
+          <svg viewBox="0 0 318 702" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none">
+            <sc-for list="{{ orbLines }}" as="ln" hint-placeholder-count="7"><line x1="{{ ln.x1 }}" y1="{{ ln.y1 }}" x2="{{ ln.x2 }}" y2="{{ ln.y2 }}" stroke="rgba(216,176,114,.16)" stroke-width="1"></line></sc-for>
+          </svg>
+          <div style="position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(0deg,rgba(8,8,14,.9),transparent);pointer-events:none"></div>
+          <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:15px 24px 0;font:600 13px system-ui;color:rgba(243,238,228,.85);pointer-events:none"><span>9:41</span><span style="font-size:10px;letter-spacing:3px">◐ ▪▪▪ ▮</span></div>
+          <div style="position:absolute;top:52px;left:24px;right:24px;text-align:center;pointer-events:none;animation:aeRise 1s .2s both">
+            <div style="font:400 16px 'Noto Serif SC',serif;letter-spacing:.16em;color:#f3eee4">此刻，你心里是哪一种？</div>
+            <div style="font:400 11px 'Noto Serif SC',serif;letter-spacing:.2em;color:rgba(243,238,228,.45);margin-top:6px">轻触一种心情</div>
+          </div>
+          <div onClick="{{ goPath }}" style="position:absolute;left:118px;top:300px;width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 40% 34%,#f4ddaf,rgba(216,176,114,.55) 52%,transparent 76%);box-shadow:0 0 34px 6px rgba(235,205,140,.4);display:flex;align-items:center;justify-content:center;font-family:'Kaiti SC','KaiTi','Noto Serif SC',serif;font-size:15px;letter-spacing:.06em;color:#1a1410;text-align:center;cursor:pointer;animation:aeMoon 6s ease-in-out infinite">我的<br>星球</div>
+          <sc-for list="{{ orbs }}" as="orb" hint-placeholder-count="7"><div style="{{ orb.style }}" onClick="{{ orb.onClick }}">{{ orb.label }}</div></sc-for>
+          <div style="position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-around;align-items:center;padding:14px 14px 22px;background:linear-gradient(0deg,rgba(8,8,14,.9),transparent)">
+            <sc-for list="{{ nav }}" as="t" hint-placeholder-count="4"><span style="{{ t.style }}" onClick="{{ t.onClick }}">{{ t.label }}</span></sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ═══════════ RESONANCE SCAN ═══════════ -->
+      <sc-if value="{{ isScan }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;animation:aeBloom .8s ease both;background:radial-gradient(60% 40% at 50% 46%,rgba(224,112,154,.1),transparent 62%),linear-gradient(180deg,#08080e 0%,#100d1a 60%,#140f1e 100%)">
+          {{ starField }}
+          <div onClick="{{ goFeeling }}" style="position:absolute;top:14px;left:18px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:20px;color:rgba(243,238,228,.55);cursor:pointer;z-index:3">×</div>
+          <div style="position:absolute;top:58px;left:24px;right:24px;text-align:center;pointer-events:none">
+            <div style="font:600 22px 'Noto Serif SC',serif;letter-spacing:.14em;color:#f3eee4">谁，曾有此感？</div>
+            <div style="font:400 11.5px 'Noto Serif SC',serif;letter-spacing:.16em;color:rgba(224,112,154,.85);margin-top:8px">{{ curLabel }} · 正在寻找同感的人…</div>
+          </div>
+          <div style="position:absolute;top:346px;left:50%;transform:translate(-50%,-50%);width:250px;height:250px;pointer-events:none">
+            <div style="position:absolute;inset:0;border:1px dashed rgba(216,176,114,.22);border-radius:50%"></div>
+            <div style="position:absolute;inset:44px;border:1px dashed rgba(216,176,114,.28);border-radius:50%"></div>
+            <div style="position:absolute;inset:88px;border:1px dashed rgba(216,176,114,.34);border-radius:50%"></div>
+            <div style="position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(235,205,140,.32),rgba(235,205,140,.04) 46deg,transparent 90deg);animation:aeSpin 6s linear infinite"></div>
+            <div style="position:absolute;inset:0;border-radius:50%;border:1px solid rgba(224,112,154,.25);animation:aeRing 4s ease-out infinite"></div>
+            <div style="position:absolute;top:50%;left:50%;width:12px;height:12px;margin:-6px;border-radius:50%;background:#ebcd8c;box-shadow:0 0 16px 5px rgba(235,205,140,.6)"></div>
+          </div>
+          <sc-for list="{{ found }}" as="f" hint-placeholder-count="5"><div style="{{ f.style }}"><span style="{{ f.dotStyle }}"></span>{{ f.name }}</div></sc-for>
+          <div style="position:absolute;bottom:96px;left:0;right:0;text-align:center;font:400 12px 'Noto Serif SC',serif;letter-spacing:.16em;color:rgba(235,205,140,.75);pointer-events:none;animation:aeRise 1.2s 2s both">已找到 {{ curCount }}位 同感的人</div>
+          <sc-if value="{{ scanReady }}" hint-placeholder-val="{{ false }}">
+            <div onClick="{{ enterPoem }}" style="position:absolute;bottom:38px;left:40px;right:40px;text-align:center;padding:13px 0;border-radius:26px;background:#c9a86a;color:#231b10;font:500 13.5px 'Noto Serif SC',serif;letter-spacing:.22em;cursor:pointer;animation:aeRise .8s both">读这首诗 →</div>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <!-- ═══════════ POEM (paper) ═══════════ -->
+      <sc-if value="{{ isPoem }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;animation:aeBloom .8s ease both;background:radial-gradient(120% 60% at 50% -8%,#f5efe2 0%,#ece4d3 52%,transparent 80%),radial-gradient(70% 30% at 90% 4%,rgba(176,156,216,.13),transparent 60%),linear-gradient(180deg,#efe9db 0%,#e6decb 60%,#dcd3c1 100%)">
+          <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:15px 24px 0;font:600 13px system-ui;color:#2a2438;pointer-events:none"><span>9:41</span><span style="font-size:10px;letter-spacing:3px">◐ ▪▪▪ ▮</span></div>
+          <div style="position:absolute;top:44px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center">
+            <span style="font:400 12px 'Noto Serif SC',serif;letter-spacing:.14em;color:rgba(42,36,56,.6)">共鸣 · {{ curLabel }}</span>
+            <span onClick="{{ closePoem }}" style="font:400 20px 'Noto Serif SC',serif;color:rgba(42,36,56,.5);cursor:pointer;line-height:1">×</span>
+          </div>
+          <div style="position:absolute;top:82px;left:26px;right:26px;height:392px;border-radius:6px;background:linear-gradient(180deg,#f7f1e5,#f1e9db);box-shadow:0 2px 20px rgba(74,58,40,.12),inset 0 0 0 1px rgba(74,58,40,.06),inset 0 0 34px rgba(176,156,216,.06);pointer-events:none">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:row-reverse;align-items:center;gap:5px">
+              <sc-for list="{{ poemCols }}" as="col" hint-placeholder-count="6"><div style="{{ col.style }}">{{ col.text }}</div></sc-for>
+            </div>
+            <span style="position:absolute;bottom:16px;left:16px;display:grid;grid-template-columns:1fr 1fr;place-items:center;width:32px;height:32px;border-radius:5px;background:#a83a2a;color:#f6ece0;font:600 11px/1 'Noto Serif SC',serif;box-shadow:0 1px 5px rgba(168,58,42,.35);animation:aeRise 1.2s 2.9s both"><span>此</span><span>时</span><span>此</span><span>地</span></span>
+          </div>
+          <div style="position:absolute;top:488px;left:0;right:0;text-align:center;font:400 13px 'Noto Serif SC',serif;letter-spacing:.3em;color:rgba(42,36,56,.62);pointer-events:none;animation:aeRise 1.4s 3.1s both">你并不孤单</div>
+          <div style="position:absolute;top:520px;left:34px;right:34px;text-align:center;font:400 11px/1.6 'Noto Serif SC',serif;letter-spacing:.04em;color:rgba(42,36,56,.5);pointer-events:none">{{ curNote }}</div>
+          <div style="position:absolute;top:558px;left:0;right:0;display:flex;justify-content:center;gap:14px;pointer-events:none">
+            <div style="display:flex;align-items:center;gap:6px"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:4px;background:#a83a2a;color:#f6ece0;font:600 12px 'Noto Serif SC',serif">高</span><span style="font:400 10px 'Noto Serif SC',serif;color:rgba(42,36,56,.55)">作者</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:4px;background:rgba(168,58,42,.45);color:#f6ece0;font:600 12px 'Noto Serif SC',serif">中</span><span style="font:400 10px 'Noto Serif SC',serif;color:rgba(42,36,56,.55)">地点</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:4px;background:transparent;border:1.4px solid #a83a2a;color:#a83a2a;font:600 12px 'Noto Serif SC',serif">高</span><span style="font:400 10px 'Noto Serif SC',serif;color:rgba(42,36,56,.55)">关系</span></div>
+          </div>
+          <div style="position:absolute;bottom:26px;left:24px;right:24px;display:flex;gap:12px">
+            <div onClick="{{ saveCard }}" style="flex:1;text-align:center;padding:11px 0;border-radius:22px;border:1px solid rgba(42,36,56,.25);font:400 13px 'Noto Serif SC',serif;letter-spacing:.14em;color:rgba(42,36,56,.7);cursor:pointer">存为卡片</div>
+            <div onClick="{{ keep }}" style="flex:1;text-align:center;padding:11px 0;border-radius:22px;background:#c9a86a;font:500 13px 'Noto Serif SC',serif;letter-spacing:.14em;color:#231b10;cursor:pointer">留在花径</div>
+          </div>
+          <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;bottom:82px;left:50%;transform:translateX(-50%);padding:9px 22px;border-radius:20px;background:rgba(35,27,16,.9);color:#ebcd8c;font:400 12px 'Noto Serif SC',serif;letter-spacing:.16em;white-space:nowrap;animation:aeToast 2.2s ease both">{{ toast }}</div>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <!-- ═══════════ PATH ═══════════ -->
+      <sc-if value="{{ isPath }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;animation:aeBloom .8s ease both;background:radial-gradient(60% 34% at 78% 12%,rgba(216,176,114,.14),transparent 58%),radial-gradient(120% 70% at 50% 128%,#1c1526 0%,transparent 60%),linear-gradient(180deg,#09090f 0%,#110d1b 58%,#161020 100%)">
+          <div style="position:absolute;inset:0"><image-slot id="ae-path" shape="rect" fit="cover" placeholder="ink-wash night — a quiet garden slope, water below"></image-slot></div>
+          {{ fireflyField }}
+          <div style="position:absolute;top:54px;right:44px;width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 38% 36%,#f6ecd0,#e0c184 62%,#c9a86a);box-shadow:0 0 26px 8px rgba(235,205,140,.28);pointer-events:none;animation:aeMoon 7s ease-in-out infinite"></div>
+          <div style="position:absolute;inset:0 0 auto;height:150px;background:linear-gradient(180deg,rgba(9,9,15,.82),transparent);pointer-events:none"></div>
+          <div style="position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(0deg,rgba(9,8,14,.94),transparent);pointer-events:none"></div>
+          <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:15px 24px 0;font:600 13px system-ui;color:rgba(243,238,228,.85);pointer-events:none"><span>9:41</span><span style="font-size:10px;letter-spacing:3px">◐ ▪▪▪ ▮</span></div>
+          <div style="position:absolute;top:46px;left:26px;right:26px;display:flex;justify-content:space-between;align-items:baseline;pointer-events:none">
+            <div><div style="font:600 15px 'Noto Serif SC',serif;letter-spacing:.18em;color:#f3eee4">人生花径</div><div style="font:italic 400 11px 'Cormorant Garamond',serif;color:rgba(243,238,228,.45);margin-top:2px">the path you've walked</div></div>
+            <span style="font:400 12px 'Noto Serif SC',serif;letter-spacing:.1em;color:rgba(235,205,140,.8)">2024</span>
+          </div>
+          <div style="position:absolute;top:92px;bottom:70px;left:0;right:0;overflow-y:auto">
+            <div style="{{ pathWrap }}">
+              <svg viewBox="{{ pathViewBox }}" width="318" height="{{ pathH }}" preserveAspectRatio="none" style="position:absolute;top:0;left:0;pointer-events:none">
+                <path d="{{ pathD }}" fill="none" stroke="rgba(235,205,140,.5)" stroke-width="1.6" stroke-dasharray="3 7" stroke-linecap="round" style="filter:drop-shadow(0 0 4px rgba(235,205,140,.5))"></path>
+              </svg>
+              <sc-for list="{{ pathNodes }}" as="n" hint-placeholder-count="4"><span style="{{ n.dot }}"></span></sc-for>
+              <sc-for list="{{ pathNodes }}" as="n" hint-placeholder-count="4"><div style="{{ n.label }}"><div style="{{ n.dateStyle }}">{{ n.date }}</div><div style="{{ n.titleStyle }}">{{ n.title }}</div></div></sc-for>
+            </div>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-around;align-items:center;padding:14px 14px 22px;background:linear-gradient(0deg,rgba(9,8,14,.94),transparent)">
+            <sc-for list="{{ nav }}" as="t" hint-placeholder-count="4"><span style="{{ t.style }}" onClick="{{ t.onClick }}">{{ t.label }}</span></sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const KAI = "'Kaiti SC','STKaiti','KaiTi','Noto Serif SC',serif";
+const EMO = {
+  xiangsi:  { label:'相思', en:'longing',    rgb:'224,112,154', title:'相思',        author:'〔唐〕王维',   lines:['红豆生南国','春来发几枝','愿君多采撷','此物最相思'], found:['王维','李白','李商隐','温庭筠','纳兰性德'], count:'六', note:'红豆生于南国，古人以寄相思。' },
+  huaigu:   { label:'怀古', en:'the past',   rgb:'176,156,216', title:'台城',        author:'〔唐〕韦庄',   lines:['江雨霏霏江草齐','六朝如梦鸟空啼','无情最是台城柳','依旧烟笼十里堤'], found:['韦庄','刘禹锡','杜牧','李白'], count:'五', note:'台城，六朝故址，今在南京鸡鸣寺一带。' },
+  sixiang:  { label:'思乡', en:'homesick',   rgb:'111,182,184', title:'静夜思',      author:'〔唐〕李白',   lines:['床前明月光','疑是地上霜','举头望明月','低头思故乡'], found:['李白','杜甫','王维','岑参'], count:'七', note:'月光如霜，千载共此一望。' },
+  libie:    { label:'离别', en:'parting',    rgb:'127,166,216', title:'送元二使安西', author:'〔唐〕王维',   lines:['渭城朝雨浥轻尘','客舍青青柳色新','劝君更尽一杯酒','西出阳关无故人'], found:['王维','李白','高适','王勃'], count:'五', note:'渭城，古送别之地，折柳相赠。' },
+  youqing:  { label:'友情', en:'friendship', rgb:'232,184,106', title:'赠汪伦',      author:'〔唐〕李白',   lines:['李白乘舟将欲行','忽闻岸上踏歌声','桃花潭水深千尺','不及汪伦送我情'], found:['李白','杜甫','孟浩然','王维'], count:'四', note:'桃花潭，在今安徽泾县。' },
+  shanshui: { label:'山水', en:'stillness',  rgb:'111,184,138', title:'山居秋暝',    author:'〔唐〕王维',   lines:['空山新雨后','天气晚来秋','明月松间照','清泉石上流'], found:['王维','孟浩然','柳宗元','苏轼'], count:'六', note:'雨后空山，清泉照月，静而不孤。' },
+  duju:     { label:'独居', en:'solitude',   rgb:'154,143,208', title:'江雪',        author:'〔唐〕柳宗元', lines:['千山鸟飞绝','万径人踪灭','孤舟蓑笠翁','独钓寒江雪'], found:['柳宗元','王维','陶渊明'], count:'三', note:'千山寂寂，独钓寒江。' },
+};
+const ORBS = [
+  { key:'xiangsi',  left:214, top:250, size:62 },
+  { key:'youqing',  left:200, top:150, size:46 },
+  { key:'huaigu',   left:40,  top:210, size:58 },
+  { key:'libie',    left:26,  top:130, size:40 },
+  { key:'sixiang',  left:44,  top:366, size:52 },
+  { key:'shanshui', left:210, top:372, size:50 },
+  { key:'duju',     left:118, top:424, size:42 },
+];
+const FOUND_SLOTS = [
+  { left:66,  top:238, fs:'17px', op:1,   delay:.3, dot:'strong' },
+  { left:222, top:302, fs:'17px', op:1,   delay:1.1, dot:'strong' },
+  { left:78,  top:398, fs:'15px', op:.66, delay:1.9, dot:'soft' },
+  { left:206, top:422, fs:'13px', op:.4,  delay:2.6, dot:'none' },
+  { left:210, top:196, fs:'12px', op:.32, delay:3.1, dot:'none' },
+];
+
+class Component extends DCLogic {
+  state = {
+    screen: 'home', emotion: 'xiangsi', scanReady: false, poemFrom: 'home', toast: '',
+    kept: this.loadKept(),
+  };
+
+  loadKept() {
+    const seed = [
+      { date:'05.20', title:'春夜喜雨', author:'杜甫' },
+      { date:'05.18', title:'江雪',     author:'柳宗元' },
+      { date:'05.15', title:'山居秋暝', author:'王维' },
+      { date:'05.12', title:'定风波',   author:'苏轼' },
+    ];
+    try {
+      const raw = localStorage.getItem('ae-kept-path');
+      if (raw) { const p = JSON.parse(raw); if (Array.isArray(p) && p.length) return p; }
+    } catch (e) {}
+    return seed;
+  }
+  saveKept(kept) {
+    try { localStorage.setItem('ae-kept-path', JSON.stringify(kept)); } catch (e) {}
+  }
+
+  constructor(p) {
+    super(p);
+    this._star  = this.particles('star');
+    this._star2 = this.particles('star');
+    this._fly   = this.particles('firefly');
+  }
+  componentWillUnmount() { clearTimeout(this._t); clearTimeout(this._f); }
+
+  particles(kind) {
+    const R = (i, m) => ((i * 9301 + 49297 * (m + 1)) % 233280) / 233280;
+    const n = kind === 'star' ? 48 : 11;
+    const spans = [];
+    for (let i = 0; i < n; i++) {
+      const x = (R(i, 1) * 100).toFixed(2);
+      if (kind === 'star') {
+        const y = (5 + R(i, 2) * 58).toFixed(2);
+        const gold = R(i, 8) > 0.72;
+        const s = (1 + R(i, 3) * (gold ? 1.8 : 1.3)).toFixed(2);
+        const dur = (4 + R(i, 4) * 8).toFixed(2);
+        spans.push(React.createElement('span', { key: i, style: {
+          position: 'absolute', left: x + '%', top: y + '%', width: s + 'px', height: s + 'px',
+          borderRadius: '50%', background: gold ? '#ebcd8c' : 'rgba(243,238,228,.92)',
+          boxShadow: gold ? '0 0 5px 1px rgba(235,205,140,.6)' : 'none',
+          animation: `aeGlow ${dur}s ease-in-out ${(-R(i, 6) * dur).toFixed(2)}s infinite`,
+        } }));
+      } else {
+        const y = (28 + R(i, 2) * 60).toFixed(2);
+        const s = (2 + R(i, 3) * 2.6).toFixed(2);
+        const dur = (4 + R(i, 4) * 5).toFixed(2);
+        const fl = (6 + R(i, 5) * 6).toFixed(2);
+        spans.push(React.createElement('span', { key: i, style: {
+          position: 'absolute', left: x + '%', top: y + '%', width: s + 'px', height: s + 'px',
+          borderRadius: '50%', background: '#ebcd8c', boxShadow: '0 0 6px 2px rgba(235,205,140,.7)',
+          animation: `aeGlow ${dur}s ease-in-out ${(-R(i, 6) * dur).toFixed(2)}s infinite, aeFloat ${fl}s ease-in-out ${(-R(i, 7) * fl).toFixed(2)}s infinite alternate`,
+        } }));
+      }
+    }
+    return React.createElement('div', { style: { position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' } }, spans);
+  }
+
+  buildCols(key, color) {
+    const e = EMO[key] || EMO.xiangsi;
+    const col = (text, size, ls, op, ml, delay) => ({
+      text,
+      style: {
+        writingMode: 'vertical-rl', textOrientation: 'upright', fontFamily: KAI,
+        fontSize: size, letterSpacing: ls, opacity: op, marginLeft: ml, color,
+        animation: `aeRise 1.2s ${delay}s both`,
+      },
+    });
+    const cols = [ col(e.title, '18px', '.14em', .92, '9px', .3), col(e.author, '11.5px', '.1em', .5, '12px', .5) ];
+    e.lines.forEach((l, i) => cols.push(col(l, '23px', '.26em', 1, '0px', 0.9 + 0.45 * i)));
+    return cols;
+  }
+
+  foundCols(key) {
+    const e = EMO[key] || EMO.xiangsi;
+    const dotFor = (kind) => {
+      if (kind === 'strong') return { width: '6px', height: '6px', borderRadius: '50%', background: '#ebcd8c', boxShadow: '0 0 8px 2px rgba(235,205,140,.7)', flex: 'none' };
+      if (kind === 'soft')   return { width: '5px', height: '5px', borderRadius: '50%', background: 'rgba(235,205,140,.7)', flex: 'none' };
+      return { display: 'none' };
+    };
+    return e.found.slice(0, 5).map((name, i) => {
+      const s = FOUND_SLOTS[i];
+      return {
+        name, dotStyle: dotFor(s.dot),
+        style: {
+          position: 'absolute', left: s.left + 'px', top: s.top + 'px',
+          display: 'flex', alignItems: 'center', gap: '6px', fontFamily: KAI,
+          color: `rgba(243,238,228,${s.op})`, fontSize: s.fs, letterSpacing: '.08em',
+          animation: `aeRise 1s ${s.delay}s both`, pointerEvents: 'none',
+        },
+      };
+    });
+  }
+
+  orbList() {
+    return ORBS.map(o => {
+      const e = EMO[o.key];
+      return {
+        key: o.key, label: e.label, onClick: () => this.choose(o.key),
+        style: {
+          position: 'absolute', left: o.left + 'px', top: o.top + 'px',
+          width: o.size + 'px', height: o.size + 'px', borderRadius: '50%',
+          background: `radial-gradient(circle at 40% 36%, rgba(${e.rgb},.72), rgba(${e.rgb},.26) 54%, transparent 74%)`,
+          boxShadow: `0 0 22px rgba(${e.rgb},.26)`, display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontFamily: KAI, fontSize: Math.round(o.size * 0.26) + 'px', color: '#f3eee4', cursor: 'pointer',
+          animation: `aeFloat ${(7 + (o.size % 4))}s ease-in-out infinite alternate`,
+        },
+      };
+    });
+  }
+
+  choose(key) {
+    clearTimeout(this._t);
+    this.setState({ emotion: key, screen: 'scan', scanReady: false, poemFrom: 'feeling' });
+    this._t = setTimeout(() => this.setState({ scanReady: true }), 2600);
+  }
+  go(s) { this.setState({ screen: s }); }
+  readDaily() { this.setState({ emotion: 'xiangsi', screen: 'poem', poemFrom: 'home' }); }
+  enterPoem() { this.setState({ screen: 'poem' }); }
+  closePoem() { this.setState({ screen: this.state.poemFrom || 'feeling' }); }
+  showToast(msg) {
+    clearTimeout(this._f);
+    this.setState({ toast: msg });
+    this._f = setTimeout(() => this.setState({ toast: '' }), 2200);
+  }
+  keep() {
+    const e = EMO[this.state.emotion] || EMO.xiangsi;
+    if (!this.state.kept.some(k => k.title === e.title)) {
+      this.setState(s => {
+        const kept = [{ date: '今日', title: e.title, author: e.author.replace(/〔.〕/, '') }, ...s.kept];
+        this.saveKept(kept);
+        return { kept };
+      });
+    }
+    this.showToast('✦ 已留在花径');
+  }
+  saveCard() { this.showToast('✦ 已存为卡片'); }
+
+  navItems() {
+    const cur = this.state.screen;
+    const defs = [
+      { label: '首页', screen: 'home' },
+      { label: '花园', screen: 'feeling' },
+      { label: '花径', screen: 'path' },
+      { label: '我的', screen: null },
+    ];
+    return defs.map(d => {
+      const active = d.screen && d.screen === cur;
+      return {
+        label: d.label,
+        onClick: d.screen ? () => this.go(d.screen) : () => {},
+        style: {
+          color: active ? '#ebcd8c' : 'rgba(243,238,228,.45)',
+          font: "400 11px 'Noto Serif SC',serif", letterSpacing: '.12em',
+          cursor: d.screen ? 'pointer' : 'default',
+        },
+      };
+    });
+  }
+
+  orbLines() {
+    const cx = 157, cy = 339;
+    return ORBS.map(o => ({ x1: cx, y1: cy, x2: o.left + o.size / 2, y2: o.top + o.size / 2 }));
+  }
+
+  buildPath() {
+    const kept = this.state.kept || [];
+    const N = kept.length;
+    const topPad = 42, gap = 104, cx0 = 159, amp = 82;
+    const H = Math.max(topPad * 2 + (N - 1) * gap, 300);
+    const pts = kept.map((k, i) => ({ x: cx0 + amp * Math.sin(i * 0.92 + 0.6), y: topPad + i * gap, k }));
+    let d = '';
+    pts.forEach((p, i) => {
+      if (i === 0) d = `M ${p.x.toFixed(1)} ${p.y.toFixed(1)}`;
+      else {
+        const pr = pts[i - 1];
+        d += ` C ${pr.x.toFixed(1)} ${(pr.y + gap * .5).toFixed(1)}, ${p.x.toFixed(1)} ${(p.y - gap * .5).toFixed(1)}, ${p.x.toFixed(1)} ${p.y.toFixed(1)}`;
+      }
+    });
+    const nodes = pts.map((p, i) => {
+      const toRight = p.x <= cx0;
+      const size = i === 0 ? 13 : 11;
+      const dot = {
+        position: 'absolute', left: (p.x - size / 2).toFixed(1) + 'px', top: (p.y - size / 2).toFixed(1) + 'px',
+        width: size + 'px', height: size + 'px', borderRadius: '50%',
+        background: 'radial-gradient(circle,#ebcd8c,#c9a86a)',
+        boxShadow: `0 0 ${size}px 3px rgba(235,205,140,${i === 0 ? .6 : .46})`,
+        animation: `aeMoon ${(5 + (i % 4) * .6).toFixed(1)}s ease-in-out ${(i * .3).toFixed(1)}s infinite`,
+      };
+      const label = {
+        position: 'absolute', top: p.y + 'px', transform: 'translateY(-50%)',
+        display: 'flex', flexDirection: 'column', gap: '1px',
+        textAlign: toRight ? 'left' : 'right', pointerEvents: 'none',
+        animation: `aeRise 1s ${(.2 + i * .12).toFixed(2)}s both`,
+      };
+      if (toRight) label.left = (p.x + 15).toFixed(1) + 'px'; else label.right = (318 - p.x + 15).toFixed(1) + 'px';
+      return {
+        dot, label, date: p.k.date, title: `${p.k.title} · ${p.k.author}`,
+        dateStyle: { font: "400 9px 'Noto Serif SC',serif", letterSpacing: '.12em', color: 'rgba(235,205,140,.75)' },
+        titleStyle: { font: `500 ${i === 0 ? 13.5 : 12.5}px 'Noto Serif SC',serif`, color: i === 0 ? '#f3eee4' : 'rgba(243,238,228,.9)', marginTop: '1px' },
+      };
+    });
+    return { d, H, nodes, viewBox: `0 0 318 ${H}`, wrap: { position: 'relative', width: '318px', height: H + 'px' } };
+  }
+
+  renderVals() {
+    const cur = EMO[this.state.emotion] || EMO.xiangsi;
+    const sc = this.state.screen;
+    const path = this.buildPath();
+    return {
+      isHome: sc === 'home', isFeeling: sc === 'feeling', isScan: sc === 'scan',
+      isPoem: sc === 'poem', isPath: sc === 'path',
+      starField: this._star, starField2: this._star2, fireflyField: this._fly,
+      orbs: this.orbList(), orbLines: this.orbLines(), nav: this.navItems(),
+      homeCols: this.buildCols('xiangsi', '#f3eee4'),
+      poemCols: this.buildCols(this.state.emotion, '#231d2b'),
+      found: this.foundCols(this.state.emotion),
+      curLabel: cur.label, curTitle: cur.title, curNote: cur.note, curCount: cur.count,
+      scanReady: this.state.scanReady, toast: this.state.toast,
+      kept: this.state.kept,
+      pathNodes: path.nodes, pathD: path.d, pathViewBox: path.viewBox, pathWrap: path.wrap, pathH: path.H,
+      goHome: () => this.go('home'), goFeeling: () => this.go('feeling'), goPath: () => this.go('path'),
+      readDaily: () => this.readDaily(), enterPoem: () => this.enterPoem(),
+      closePoem: () => this.closePoem(), keep: () => this.keep(), saveCard: () => this.saveCard(),
+    };
+  }
+}
+</script>
+</body>
+</html>

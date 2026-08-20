@@ -1,0 +1,125 @@
+/* =====================================================================
+   Poem Page — ink redesign (ui_principles.md §4 §6 §7 §10)
+   Append to src/index.css (or @import). Pairs with handoff/PoemSheet.tsx.
+   Uses the existing token vars: --paper, --paper-dim, --gold, --gold-glow,
+   --seal, --emo-huaigu, --font-kai, --font-song, --ease.
+   ===================================================================== */
+
+/* line / element breath — settles in, never snaps (§6) */
+@keyframes aeRise {
+  from { opacity: 0; transform: translateY(11px); }
+  to   { opacity: 1; transform: none; }
+}
+.ae-rise { animation: aeRise 1.1s var(--ease, cubic-bezier(.4,0,.2,1)) both; }
+
+/* topbar without the loud relation pill */
+.ps2-topbar { justify-content: flex-end; }
+
+/* ── the poem itself ── */
+.ps2-poem-wrap {
+  padding: 30px 6px 4px;
+  /* the whole poem arrives as an ink-bloom (§6) */
+  animation: inkBloom var(--t-bloom, 700ms) var(--ease) both;
+}
+
+/* vertical 楷体, columns reading right → left (§4) */
+.ps2-poem {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+  min-height: 300px;
+}
+.ps2-col {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--font-kai);
+  line-height: 1;
+}
+.ps2-title { color: var(--paper); font-size: 33px; letter-spacing: .14em; }
+.ps2-author {
+  color: var(--paper-dim);
+  font-size: 16px; letter-spacing: .2em; margin-top: 6px;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font-family: var(--font-kai);
+}
+.ps2-author:active { opacity: .6; }
+.ps2-line { color: var(--paper); font-size: 29px; letter-spacing: .26em; }
+
+.ps2-seal-slot { align-self: flex-end; margin: 0 2px 6px 4px; }
+
+/* English fallback — horizontal Cormorant italic, same restraint */
+.ps2-poem-en { padding: 4px 22px; text-align: center; }
+.ps2-title-en { font-family: var(--font-en); font-style: italic; font-size: 30px; color: var(--paper); }
+.ps2-author-en {
+  font-family: var(--font-en); font-size: 15px; color: var(--gold);
+  background: none; border: 0; cursor: pointer; margin: 8px 0 22px; letter-spacing: .04em;
+}
+.ps2-body-en { display: flex; flex-direction: column; gap: 10px; }
+.ps2-line-en { font-family: var(--font-en); font-style: italic; font-size: 19px; line-height: 1.5; color: var(--paper); }
+.ps2-poem-en .ps2-seal-slot { display: inline-block; margin-top: 22px; }
+
+/* closing line 「你并不孤单」 (§10) */
+.ps2-closing {
+  text-align: center;
+  font-family: var(--font-kai);
+  color: var(--gold-glow);
+  font-size: 20px; letter-spacing: .5em; text-indent: .5em;
+  margin: 26px 0 14px;
+}
+body.en .ps2-closing { font-family: var(--font-en); font-style: italic; letter-spacing: .12em; text-indent: 0; }
+
+/* prose paraphrase / honest translation note */
+.ps2-para {
+  font-family: var(--font-song);
+  font-size: 12.5px; line-height: 1.8; color: var(--paper-dim);
+  text-align: center; opacity: .7; margin: 0 24px 14px;
+}
+
+/* ── 印章 seals (§7) — the ONLY red in the app ── */
+.ps2-seal {
+  display: inline-grid; place-items: center; gap: 0;
+  font-family: var(--font-kai); color: var(--paper);
+  border: 1.5px solid var(--seal); border-radius: 5px;
+  overflow: hidden; line-height: 1; flex: none;
+}
+.ps2-seal--stack { grid-template-rows: 1fr 1fr; }     /* 1–2 chars stacked */
+.ps2-seal--grid  { grid-template: 1fr 1fr / 1fr 1fr; } /* 4 chars 2×2 */
+.ps2-seal > span { display: flex; align-items: center; justify-content: center; }
+
+.ps2-seal--lg { width: 54px; height: 54px; }
+.ps2-seal--lg > span { font-size: 20px; }
+.ps2-seal--sm { width: 34px; height: 34px; }
+.ps2-seal--sm > span { font-size: 16px; }
+
+/* weight encodes confidence (§7) */
+.ps2-seal--high     { background: var(--seal); color: var(--paper); }
+.ps2-seal--medium   { background: rgba(168,58,42,.45); color: var(--paper); }
+.ps2-seal--low      { background: transparent; color: var(--seal); }
+.ps2-seal--disputed { background: transparent; color: var(--seal); opacity: .85; }
+.ps2-seal--disputed::after { content: '疑'; position: absolute; }
+
+/* ── reliability block ── */
+.ps2-note {
+  font-family: var(--font-song);
+  font-size: 14px; line-height: 1.85; color: var(--paper-dim);
+  border-left: 1px solid var(--seal); padding: 2px 0 2px 13px;
+  margin: 22px 24px 0;
+}
+body.en .ps2-note { font-style: italic; }
+
+.ps2-rel { margin: 24px 24px 0; }
+.ps2-rel-label {
+  font-family: var(--font-song); font-size: 10px;
+  letter-spacing: .26em; color: var(--paper-dim); margin-bottom: 13px;
+}
+.ps2-rel-seals { display: flex; gap: 22px; }
+.ps2-rel-item { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.ps2-rel-field {
+  font-family: var(--font-song); font-size: 11px;
+  letter-spacing: .12em; color: var(--paper-dim);
+}
+
+/* reuse the seal inside the existing .place-row / .list-item rows */
+.place-row .ps2-seal, .list-item .ps2-seal { margin-right: 2px; }

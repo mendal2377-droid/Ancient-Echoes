@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>彼时此地 · Ancient Echoes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#e8e2d4; --ink-dim:#9a9482; --gold:#d8b072; --jade:#6fb6a6;
+    --rust:#c97a5a; --night:#0a0e0d; --night2:#11201c; --line:rgba(216,176,114,.22);
+    --written:#d8b072;  /* gold = written here */
+    --describes:#6fb6a6;/* jade = describes */
+    --present:#c97a5a;  /* rust = poet present */
+    --event:#9a8fd0;    /* violet = event */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:var(--night);color:var(--ink);
+    font-family:'Noto Serif SC',serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
+  body.en{font-family:'Cormorant Garamond','Noto Serif SC',serif}
+  #app{height:100%;display:flex;flex-direction:column;max-width:520px;margin:0 auto;position:relative}
+
+  /* atmosphere */
+  body::before{content:"";position:fixed;inset:0;background:
+    radial-gradient(circle at 50% 38%, rgba(111,182,166,.10), transparent 55%),
+    radial-gradient(circle at 80% 90%, rgba(216,176,114,.06), transparent 50%);
+    pointer-events:none;z-index:0}
+
+  header{padding:22px 24px 10px;position:relative;z-index:2}
+  .brand{display:flex;align-items:baseline;justify-content:space-between}
+  .title-zh{font-size:26px;font-weight:600;letter-spacing:.18em}
+  .title-en{font-size:20px;font-style:italic;letter-spacing:.04em;display:none}
+  body.en .title-zh{display:none}
+  body.en .title-en{display:block}
+  .sub{font-size:12px;color:var(--ink-dim);letter-spacing:.3em;margin-top:4px;text-transform:uppercase}
+  .lang{border:1px solid var(--line);background:transparent;color:var(--gold);
+    font:inherit;font-size:13px;padding:6px 14px;border-radius:30px;cursor:pointer;letter-spacing:.1em;
+    transition:.3s}
+  .lang:active{transform:scale(.94)}
+
+  /* controls */
+  .controls{padding:6px 24px 14px;display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:2}
+  .seg{display:flex;border:1px solid var(--line);border-radius:30px;overflow:hidden}
+  .seg button{background:transparent;border:0;color:var(--ink-dim);font:inherit;font-size:13px;
+    padding:7px 15px;cursor:pointer;transition:.25s;letter-spacing:.05em}
+  .seg button.on{background:var(--gold);color:var(--night);font-weight:600}
+
+  /* radar */
+  .stage{flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+  .radar{position:relative;width:330px;height:330px;border-radius:50%;
+    background:radial-gradient(circle, rgba(111,182,166,.07), transparent 70%);}
+  .ring{position:absolute;inset:0;border:1px solid var(--line);border-radius:50%}
+  .ring.r2{inset:55px}.ring.r3{inset:110px}.ring.r4{inset:148px}
+  .cross{position:absolute;background:var(--line)}
+  .cross.h{left:0;right:0;top:50%;height:1px}.cross.v{top:0;bottom:0;left:50%;width:1px}
+  .center{position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;
+    background:var(--gold);transform:translate(-50%,-50%);box-shadow:0 0 14px var(--gold);z-index:5}
+  .center::after{content:"";position:absolute;inset:-7px;border:1px solid var(--gold);border-radius:50%;
+    animation:pulse 2.6s infinite ease-out}
+  @keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+
+  .sweep{position:absolute;inset:0;border-radius:50%;overflow:hidden;pointer-events:none}
+  .sweep::before{content:"";position:absolute;left:50%;top:50%;width:50%;height:50%;
+    transform-origin:top left;
+    background:conic-gradient(from 0deg, rgba(216,176,114,.32), transparent 38%);
+    animation:none}
+  .scanning .sweep::before{animation:spin 2.4s linear}
+  @keyframes spin{from{transform:rotate(0)}to{transform:rotate(720deg)}}
+
+  .pin{position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%) scale(0);
+    cursor:pointer;z-index:4;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+  .pin.show{transform:translate(-50%,-50%) scale(1)}
+  .pin::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid currentColor;opacity:.5;
+    animation:ping 2s infinite}
+  @keyframes ping{0%{transform:scale(.7);opacity:.6}100%{transform:scale(2);opacity:0}}
+  .pin.w{background:var(--written);color:var(--written)}
+  .pin.d{background:var(--describes);color:var(--describes)}
+  .pin.p{background:var(--present);color:var(--present)}
+  .pin.e{background:var(--event);color:var(--event)}
+
+  .scan-btn{position:relative;z-index:2;margin:0 auto 14px;display:block;
+    background:linear-gradient(135deg,var(--gold),#b8904f);color:var(--night);
+    border:0;font:inherit;font-weight:600;font-size:16px;letter-spacing:.18em;
+    padding:13px 40px;border-radius:34px;cursor:pointer;box-shadow:0 6px 24px rgba(216,176,114,.3);
+    transition:.25s}
+  .scan-btn:active{transform:scale(.96)}
+  .scan-btn:disabled{opacity:.5}
+
+  .legend{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 24px 18px;
+    font-size:11.5px;color:var(--ink-dim);position:relative;z-index:2;letter-spacing:.03em}
+  .legend span{display:flex;align-items:center;gap:5px}
+  .legend i{width:9px;height:9px;border-radius:50%;display:inline-block}
+
+  /* detail sheet */
+  .sheet{position:absolute;inset:0;background:linear-gradient(180deg,#0c1513,#0a0e0d);
+    z-index:20;transform:translateY(100%);transition:transform .42s cubic-bezier(.4,0,.2,1);
+    overflow-y:auto;padding:26px 26px 60px}
+  .sheet.open{transform:translateY(0)}
+  .close{position:sticky;top:0;float:right;background:transparent;border:1px solid var(--line);
+    color:var(--ink-dim);width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer}
+  .relation-tag{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    padding:4px 12px;border-radius:20px;margin-bottom:14px}
+  .p-title{font-size:30px;font-weight:600;line-height:1.2;margin-bottom:4px}
+  body.en .p-title{font-style:italic}
+  .p-author{color:var(--gold);font-size:15px;letter-spacing:.08em;margin-bottom:22px}
+  .p-body{font-size:19px;line-height:2.1;margin-bottom:24px;letter-spacing:.04em}
+  body.en .p-body{font-size:17px;line-height:1.9;font-style:italic;color:var(--ink)}
+  .p-body .para{font-size:13px;color:var(--ink-dim);font-style:normal;letter-spacing:0;display:block;margin-top:10px}
+  .place-row{display:flex;align-items:center;gap:8px;padding:12px 0;border-top:1px solid var(--line)}
+  .rel-dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .place-name{font-size:15px}
+  .relbl{font-size:12px;color:var(--ink-dim);margin-left:auto;letter-spacing:.05em}
+  .note{font-size:13.5px;line-height:1.7;color:var(--ink-dim);background:rgba(255,255,255,.03);
+    border-left:2px solid var(--jade);padding:12px 14px;margin-top:8px;border-radius:0 8px 8px 0}
+  .rel-bars{margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
+  .rel-bars h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:12px}
+  .bar{display:flex;align-items:center;gap:10px;margin-bottom:9px;font-size:13px}
+  .bar .lbl{width:90px;color:var(--ink-dim)}
+  .bar .track{flex:1;height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
+  .bar .fill{height:100%;border-radius:3px}
+  .conf-high{width:100%;background:var(--jade)}
+  .conf-medium{width:60%;background:var(--gold)}
+  .conf-low{width:30%;background:var(--rust)}
+  .conf-disputed{width:45%;background:var(--present);opacity:.7}
+  .bar .v{width:74px;text-align:right;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .empty{text-align:center;color:var(--ink-dim);font-size:14px;padding:20px;position:relative;z-index:2}
+</style>
+</head>
+<body class="zh">
+<div id="app">
+  <header>
+    <div class="brand">
+      <div>
+        <div class="title-zh">彼 时 此 地</div>
+        <div class="title-en">Ancient Echoes</div>
+        <div class="sub" data-zh="金陵 · 唐" data-en="Jinling · Tang"></div>
+      </div>
+      <button class="lang" id="langBtn">EN</button>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" id="typeSeg">
+      <button data-v="poems" class="on" data-zh="诗作" data-en="Poems"></button>
+      <button data-v="poets" data-zh="诗人" data-en="Poets"></button>
+    </div>
+    <div class="seg" id="distSeg">
+      <button data-v="3" class="on" data-zh="3 公里" data-en="3 km"></button>
+      <button data-v="10" data-zh="10 公里" data-en="10 km"></button>
+      <button data-v="50" data-zh="50 公里" data-en="50 km"></button>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="radar" id="radar">
+      <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
+      <div class="cross h"></div><div class="cross v"></div>
+      <div class="sweep"></div>
+      <div class="center"></div>
+    </div>
+  </div>
+
+  <button class="scan-btn" id="scanBtn" data-zh="扫 描" data-en="SCAN"></button>
+
+  <div class="legend">
+    <span><i style="background:var(--written)"></i><b data-zh="作于此地" data-en="Written here"></b></span>
+    <span><i style="background:var(--describes)"></i><b data-zh="描写此地" data-en="Describes"></b></span>
+    <span><i style="background:var(--present)"></i><b data-zh="曾驻此地" data-en="Poet present"></b></span>
+  </div>
+
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<script>
+/* ---- data loads from the seed file; inlined here so the prototype runs standalone ---- */
+const DATA = {"schema_version": "0.1", "default_lang": "zh", "supported_langs": ["zh", "en"], "city": {"id": "city_nanjing", "name": {"zh": "南京", "en": "Nanjing"}, "historical_names": {"zh": ["金陵", "建康", "白下", "江宁"], "en": ["Jinling", "Jiankang", "Baixia", "Jiangning"]}}, "places": [{"id": "place_wuyi_lane", "name": {"zh": "乌衣巷", "en": "Black-robe Lane"}, "coordinates": {"lat": 32.0186, "lng": 118.7889}, "coord_precision": "exact", "still_exists": true, "modern_status": {"zh": "今秦淮区夫子庙景区内的步行街，仍名乌衣巷。", "en": "A pedestrian street still named Wuyi Lane, inside the Confucius Temple (Qinhuai) scenic area."}}, {"id": "place_zhuque_bridge", "name": {"zh": "朱雀桥", "en": "Zhuque (Vermilion Bird) Bridge"}, "coordinates": {"lat": 32.0179, "lng": 118.7875}, "coord_precision": "approximate", "still_exists": false, "modern_status": {"zh": "原桥已不存，旧址在今镇淮桥一带。", "en": "Original bridge lost; site lay near today's Zhenhuai Bridge over the Qinhuai."}}, {"id": "place_phoenix_terrace", "name": {"zh": "凤凰台", "en": "Phoenix Terrace"}, "coordinates": {"lat": 32.0289, "lng": 118.7717}, "coord_precision": "approximate", "still_exists": false, "modern_status": {"zh": "故址在今南京城西南隅凤凰山，台已不存。", "en": "Former site on Phoenix Hill in the city's southwest; the terrace no longer survives."}}, {"id": "place_stone_city", "name": {"zh": "石头城", "en": "Stone City"}, "coordinates": {"lat": 32.0556, "lng": 118.74}, "coord_precision": "exact", "still_exists": true, "modern_status": {"zh": "石头城遗址公园，仍存部分城垣（“鬼脸城”）。", "en": "Stone City Ruins Park; a stretch of the old rampart (the 'Ghost Face Wall') still stands."}}, {"id": "place_jinling_wineshop", "name": {"zh": "金陵酒肆（旧址区）", "en": "Jinling Wineshop (district)"}, "coordinates": {"lat": 32.02, "lng": 118.79}, "coord_precision": "district", "still_exists": false, "modern_status": {"zh": "具体酒肆无考，泛指金陵城内秦淮一带。", "en": "No specific tavern identified; broadly the Qinhuai district of old Jinling."}}, {"id": "place_bailu_zhou", "name": {"zh": "白鹭洲", "en": "Egret Isle (Bailuzhou)"}, "coordinates": {"lat": 32.0244, "lng": 118.7942}, "coord_precision": "approximate", "still_exists": false, "modern_status": {"zh": "古为长江沙洲，今已与陆地相连，江东门外一带。", "en": "Once a sandbar in the Yangtze, now joined to land near Jiangdongmen."}}, {"id": "place_taicheng", "name": {"zh": "台城", "en": "Taicheng (Palace City)"}, "coordinates": {"lat": 32.0717, "lng": 118.7906}, "coord_precision": "approximate", "still_exists": false, "modern_status": {"zh": "六朝宫城遗迹，今玄武湖南侧、鸡鸣寺一带。", "en": "Six Dynasties palace-city ruins, near Jiming Temple south of Xuanwu Lake."}}], "poets": [{"id": "poet_li_bai", "name": {"zh": "李白", "en": "Li Bai"}, "courtesy_name": {"zh": "太白", "en": "Taibai"}, "lifespan": {"born": 701, "died": 762}, "epithet": {"zh": "诗仙", "en": "the Immortal of Poetry"}}, {"id": "poet_liu_yuxi", "name": {"zh": "刘禹锡", "en": "Liu Yuxi"}, "lifespan": {"born": 772, "died": 842}, "epithet": {"zh": "诗豪", "en": "the Hero of Poetry"}}, {"id": "poet_wei_zhuang", "name": {"zh": "韦庄", "en": "Wei Zhuang"}, "lifespan": {"born": 836, "died": 910}, "epithet": {"zh": null, "en": null}}], "poems": [{"id": "poem_wuyi_xiang", "title": {"zh": "乌衣巷", "en": "Black-robe Lane"}, "author_id": "poet_liu_yuxi", "dynasty": "Tang", "form": {"zh": "七言绝句", "en": "qijue (7-char quatrain)"}, "date_composed": {"year": 826, "precision": "circa"}, "body": {"zh": ["朱雀桥边野草花，", "乌衣巷口夕阳斜。", "旧时王谢堂前燕，", "飞入寻常百姓家。"], "en": ["Beside the Zhuque Bridge, wildflowers bloom in the grass;", "at the mouth of Black-robe Lane the setting sun hangs low.", "The swallows that once nested in the halls of the Wang and Xie clans", "now fly into the homes of ordinary folk.", "(prose paraphrase, original translation, license: CC0)"]}, "place_links": [{"place_id": "place_wuyi_lane", "relation": "describes", "is_primary": true, "reliability": {"attribution": "high", "location": "high", "relation": "high"}, "note": {"zh": "刘禹锡作《金陵五题》时自序未曾亲至金陵，乃凭想象与传闻而作——这正是“描写于此”而非“作于此”的典型。", "en": "By his own preface to the Five Themes of Jinling, Liu Yuxi had never visited Jinling — written from imagination. The classic case of 'describes here', not 'written here'."}}, {"place_id": "place_zhuque_bridge", "relation": "describes", "is_primary": false, "reliability": {"attribution": "high", "location": "medium", "relation": "high"}}], "themes": {"zh": ["盛衰无常", "六朝兴废"], "en": ["impermanence", "fallen glory", "ubi sunt"]}}, {"id": "poem_jinling_jiusi", "title": {"zh": "金陵酒肆留别", "en": "Parting at a Nanjing Wineshop"}, "author_id": "poet_li_bai", "dynasty": "Tang", "form": {"zh": "古体诗", "en": "gushi (old-style verse)"}, "date_composed": {"year": 726, "precision": "circa", "note": {"zh": "开元十四年春离金陵赴扬州时作。", "en": "Written ~726 as Li Bai left Jinling for Yangzhou."}}, "body": {"zh": ["风吹柳花满店香，", "吴姬压酒唤客尝。", "金陵子弟来相送，", "欲行不行各尽觞。", "请君试问东流水，", "别意与之谁短长。"], "en": ["Wind blows willow-down, the whole shop sweet with its scent;", "a Wu girl presses the wine and calls the guests to taste.", "The young men of Jinling have come to see me off —", "about to go, not going, each drains his cup.", "Go, ask the east-flowing water:", "between it and a parting's grief, which runs longer?", "(prose paraphrase, original translation, license: CC0)"]}, "place_links": [{"place_id": "place_jinling_wineshop", "relation": "written_here", "is_primary": true, "reliability": {"attribution": "high", "location": "medium", "relation": "high"}, "note": {"zh": "作于金陵，但具体酒肆位置无考，故地点可信度为中。", "en": "Composed in Jinling, but the exact tavern is unknown — hence location confidence is medium."}}], "themes": {"zh": ["送别", "友情"], "en": ["farewell", "friendship"]}}, {"id": "poem_deng_fenghuangtai", "title": {"zh": "登金陵凤凰台", "en": "Climbing Phoenix Terrace at Jinling"}, "author_id": "poet_li_bai", "dynasty": "Tang", "form": {"zh": "七言律诗", "en": "qilü (7-char regulated verse)"}, "date_composed": {"year": 747, "precision": "disputed", "note": {"zh": "创作背景说法不一：一说天宝年间被排挤离长安南游金陵所作，一说流放夜郎遇赦后作。", "en": "Date disputed: possibly ~747 after being forced from Chang'an, or after his later pardon. Sources disagree."}}, "body": {"zh": ["凤凰台上凤凰游，", "凤去台空江自流。", "吴宫花草埋幽径，", "晋代衣冠成古丘。", "三山半落青天外，", "二水中分白鹭洲。", "总为浮云能蔽日，", "长安不见使人愁。"], "en": ["On Phoenix Terrace the phoenixes once roamed;", "the birds are gone, the terrace bare, the river flows on alone.", "The flowers of the Wu palace are buried in shadowed paths,", "the lords of the Jin age are now ancient mounds.", "The Three Peaks fall half beyond the blue sky;", "the river splits in two around Egret Isle.", "It is always the drifting clouds that can hide the sun —", "Chang'an out of sight, and the heart fills with grief.", "(prose paraphrase, original translation, license: CC0)"]}, "place_links": [{"place_id": "place_phoenix_terrace", "relation": "written_here", "is_primary": true, "reliability": {"attribution": "high", "location": "medium", "relation": "medium"}, "note": {"zh": "传李白登凤凰台所作，意在与崔颢《黄鹤楼》争胜；台址已不存，且创作年代有争议。", "en": "Traditionally written atop the terrace as a deliberate rival to Cui Hao's Yellow Crane Tower. The terrace is lost and the date is contested."}}, {"place_id": "place_bailu_zhou", "relation": "describes", "is_primary": false, "reliability": {"attribution": "high", "location": "medium", "relation": "high"}}], "themes": {"zh": ["怀古", "忧时", "报国无门"], "en": ["meditation on the past", "political grief"]}}, {"id": "poem_shitou_cheng", "title": {"zh": "石头城", "en": "Stone City"}, "author_id": "poet_liu_yuxi", "dynasty": "Tang", "form": {"zh": "七言绝句", "en": "qijue (7-char quatrain)"}, "date_composed": {"year": 826, "precision": "circa"}, "body": {"zh": ["山围故国周遭在，", "潮打空城寂寞回。", "淮水东边旧时月，", "夜深还过女墙来。"], "en": ["Hills ring the old kingdom, still circling it round;", "the tide beats the empty city and draws back, forlorn.", "East of the Qinhuai the moon of former days", "still climbs, deep in the night, past the battlements.", "(prose paraphrase, original translation, license: CC0)"]}, "place_links": [{"place_id": "place_stone_city", "relation": "describes", "is_primary": true, "reliability": {"attribution": "high", "location": "high", "relation": "high"}, "note": {"zh": "同属《金陵五题》，凭想象而作；但石头城遗址今仍可访，地点可信度高。", "en": "Also from the Five Themes (written from imagination), but the Stone City ruins survive and are visitable — location confidence high."}}], "themes": {"zh": ["怀古", "兴亡"], "en": ["meditation on the past", "rise and fall of dynasties"]}}, {"id": "poem_jinling_tu", "title": {"zh": "金陵图", "en": "A Painting of Jinling"}, "author_id": "poet_wei_zhuang", "dynasty": "Tang", "form": {"zh": "七言绝句", "en": "qijue (7-char quatrain)"}, "date_composed": {"year": 887, "precision": "circa"}, "body": {"zh": ["谁谓伤心画不成，", "画人心逐世人情。", "君看六幅南朝事，", "老木寒云满故城。"], "en": ["Who said sorrow cannot be painted?", "The painter's heart follows the feeling of the age.", "Look at these six scenes of the Southern Dynasties:", "old trees and cold clouds fill the fallen city.", "(prose paraphrase, original translation, license: CC0)"]}, "place_links": [{"place_id": "place_taicheng", "relation": "describes", "is_primary": true, "reliability": {"attribution": "high", "location": "medium", "relation": "medium"}, "note": {"zh": "题画诗，咏南朝金陵之衰，非实地所作，泛指六朝故城（台城一带）。", "en": "A poem on a painting, lamenting the fallen Southern capital — not written on-site; points broadly to the Six Dynasties palace area."}}], "themes": {"zh": ["怀古", "六朝", "题画"], "en": ["meditation on the past", "Six Dynasties", "poem on a painting"]}}, {"id": "poem_taicheng_weizhuang", "title": {"zh": "台城", "en": "Taicheng"}, "author_id": "poet_wei_zhuang", "dynasty": "Tang", "form": {"zh": "七言绝句", "en": "qijue (7-char quatrain)"}, "date_composed": {"year": 887, "precision": "circa"}, "body": {"zh": ["江雨霏霏江草齐，", "六朝如梦鸟空啼。", "无情最是台城柳，", "依旧烟笼十里堤。"], "en": ["River rain drifts thin, the river grass grows even;", "the Six Dynasties pass like a dream, birds cry to no one.", "Most heartless of all is the willow of Taicheng —", "still, as ever, it veils ten li of dyke in mist.", "(prose paraphrase, original translation, license: CC0)"]}, "place_links": [{"place_id": "place_taicheng", "relation": "describes", "is_primary": true, "reliability": {"attribution": "high", "location": "high", "relation": "high"}, "note": {"zh": "凭吊台城旧址而作，地点明确。", "en": "An elegy at the Taicheng site; location is clearly identified."}}], "themes": {"zh": ["怀古", "六朝如梦"], "en": ["meditation on the past", "dream of vanished dynasties"]}}]};
+
+const L = { lang:'zh' };
+const RELMAP = { written_here:'w', describes:'d', poet_present:'p', event_here:'e' };
+const RELTXT = {
+  written_here:{zh:'作于此地',en:'Written here'},
+  describes:{zh:'描写此地',en:'Describes this place'},
+  poet_present:{zh:'诗人曾驻',en:'Poet was present'},
+  event_here:{zh:'史事发生',en:'Event here'}
+};
+const CONFTXT = {high:{zh:'高',en:'High'},medium:{zh:'中',en:'Medium'},low:{zh:'低',en:'Low'},disputed:{zh:'存疑',en:'Disputed'}};
+const FLDTXT = {attribution:{zh:'作者归属',en:'Attribution'},location:{zh:'地点',en:'Location'},relation:{zh:'关系',en:'Relation'}};
+
+const poetById = id => DATA.poets.find(p=>p.id===id);
+const placeById = id => DATA.places.find(p=>p.id===id);
+const t = o => o ? (o[L.lang] ?? o.zh) : '';
+
+/* center = Wuyi Lane (stand-in for GPS). project lat/lng to radar x/y by offset. */
+const CENTER = { lat:32.0186, lng:118.7889 };
+const RADIUS_PX = 150; // radar inner radius
+function project(lat,lng,maxKm){
+  const dLat=(lat-CENTER.lat)*111, dLng=(lng-CENTER.lng)*111*Math.cos(CENTER.lat*Math.PI/180);
+  const km=Math.hypot(dLat,dLng);
+  const ang=Math.atan2(dLng,dLat); // dLng=east=x, dLat=north=y
+  const rNorm=Math.min(km/maxKm,1)*RADIUS_PX;
+  return { x:165+Math.sin(ang)*rNorm, y:165-Math.cos(ang)*rNorm, km };
+}
+
+function applyLang(){
+  document.body.className = L.lang;
+  document.documentElement.lang = L.lang;
+  document.getElementById('langBtn').textContent = L.lang==='zh'?'EN':'中';
+  document.querySelectorAll('[data-zh]').forEach(el=>{
+    el.textContent = el.dataset[L.lang];
+  });
+}
+
+function currentDist(){ return +document.querySelector('#distSeg .on').dataset.v; }
+
+function clearPins(){ document.querySelectorAll('.pin').forEach(p=>p.remove()); }
+
+function scan(){
+  const radar=document.getElementById('radar');
+  const btn=document.getElementById('scanBtn');
+  clearPins();
+  radar.classList.add('scanning'); btn.disabled=true;
+  const maxKm=currentDist();
+
+  // gather primary place link per poem within range
+  const hits=[];
+  DATA.poems.forEach(poem=>{
+    const link=poem.place_links.find(l=>l.is_primary)||poem.place_links[0];
+    const pl=placeById(link.place_id); if(!pl)return;
+    const pos=project(pl.coordinates.lat,pl.coordinates.lng,maxKm);
+    if(pos.km<=maxKm) hits.push({poem,link,pl,pos});
+  });
+
+  setTimeout(()=>{
+    radar.classList.remove('scanning'); btn.disabled=false;
+    if(!hits.length){
+      const e=document.createElement('div');e.className='pin';return;
+    }
+    hits.forEach((h,i)=>{
+      const pin=document.createElement('div');
+      pin.className='pin '+RELMAP[h.link.relation];
+      pin.style.left=h.pos.x+'px'; pin.style.top=h.pos.y+'px';
+      pin.onclick=()=>openSheet(h);
+      radar.appendChild(pin);
+      // staggered reveal in scan order
+      setTimeout(()=>pin.classList.add('show'), 120*i);
+    });
+  },2400);
+}
+
+function bar(field,conf){
+  return `<div class="bar"><span class="lbl">${t(FLDTXT[field])}</span>
+    <span class="track"><span class="fill conf-${conf}"></span></span>
+    <span class="v">${t(CONFTXT[conf])}</span></div>`;
+}
+
+function openSheet(h){
+  const {poem,link,pl}=h;
+  const poet=poetById(poem.author_id);
+  const relColor={written_here:'var(--written)',describes:'var(--describes)',poet_present:'var(--present)',event_here:'var(--event)'}[link.relation];
+  const bodyLines=t(poem.body).map(line=>{
+    return line.startsWith('(')||/paraphrase|译/.test(line)
+      ? `<span class="para">${line}</span>` : line;
+  }).join('<br>');
+
+  const sheet=document.getElementById('sheet');
+  sheet.innerHTML=`
+    <button class="close" id="closeBtn">×</button>
+    <div class="relation-tag" style="background:${relColor};color:#0a0e0d">${t(RELTXT[link.relation])}</div>
+    <div class="p-title">${t(poem.title)}</div>
+    <div class="p-author">${t(poet.name)} · ${poet.lifespan.born}–${poet.lifespan.died}</div>
+    <div class="p-body">${bodyLines}</div>
+    ${poem.place_links.map(l=>{
+      const p=placeById(l.place_id);
+      const c={written_here:'var(--written)',describes:'var(--describes)',poet_present:'var(--present)',event_here:'var(--event)'}[l.relation];
+      return `<div class="place-row">
+        <span class="rel-dot" style="background:${c}"></span>
+        <span class="place-name">${t(p.name)}</span>
+        <span class="relbl">${t(RELTXT[l.relation])}${p.still_exists?'':' · '+(L.lang==='zh'?'遗址不存':'site lost')}</span>
+      </div>${l.note?`<div class="note">${t(l.note)}</div>`:''}`;
+    }).join('')}
+    <div class="rel-bars">
+      <h4 data-zh="可信度" data-en="Reliability">${L.lang==='zh'?'可信度':'Reliability'}</h4>
+      ${bar('attribution',link.reliability.attribution)}
+      ${bar('location',link.reliability.location)}
+      ${bar('relation',link.reliability.relation)}
+    </div>`;
+  sheet.classList.add('open');
+  document.getElementById('closeBtn').onclick=()=>sheet.classList.remove('open');
+}
+
+/* wiring */
+document.getElementById('langBtn').onclick=()=>{ L.lang=L.lang==='zh'?'en':'zh'; applyLang(); };
+document.getElementById('scanBtn').onclick=scan;
+document.querySelectorAll('.seg').forEach(seg=>{
+  seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    if(seg.id==='distSeg') clearPins();
+  });
+});
+
+applyLang();
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* =====================================================================
+   此情 Emotion Universe — ink-mist atmosphere (ui_principles.md §3 §9 §10-此情)
+   Replaces the blue cosmic background + three blur(60px) nebulas.
+   Append to src/index.css AFTER the existing .eu-space-bg / .eu-nebula rules
+   (these overrides win by source order), or replace those blocks in place.
+
+   Wiring (EmotionUniverse.tsx):
+   - Put the dominant emotion's RGB on the root as --emo. Before results, keep
+     the neutral 怀古 default already set below. After a match, set it inline:
+
+       const EMO_RGB = {
+         '怀古':'176,156,216', '思乡':'111,182,184', '离别':'127,166,216',
+         '相思':'224,112,154', '友情':'232,184,106', '山水':'111,184,138',
+         '独居':'154,143,208',
+       }
+       // pick the most-matched emotion from results, fall back to 怀古
+       <div className="emotion-universe" style={{ ['--emo' as any]: EMO_RGB[topEmotion] ?? '176,156,216' }}>
+
+   The whole atmosphere then re-tints to the feeling — the screen's mood IS the
+   user's mood. No runtime blur anywhere (mist is soft-edged gradients).
+   ===================================================================== */
+
+.emotion-universe { --emo: 176, 156, 216; }   /* default 怀古 purple */
+
+/* night-paper ground, not blue space */
+.eu-space-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(120% 55% at 30% 14%, rgba(var(--emo), 0.13), transparent 60%),
+    radial-gradient(80% 40% at 78% 8%, rgba(216, 176, 114, 0.05), transparent 55%),
+    linear-gradient(176deg, #0a0a12 0%, #120e1c 60%, #15111f 100%);
+  transition: background 1.2s var(--ease, cubic-bezier(.4,0,.2,1));
+}
+
+/* 雾 mist — baked soft gradients, NO filter:blur (§9). Re-uses the 3 nodes. */
+.eu-nebula { position: absolute; border-radius: 0; filter: none; pointer-events: none; }
+.eu-nebula-1 {
+  left: -60px; right: -60px; top: 32%; width: auto; height: 240px;
+  background: radial-gradient(60% 60% at 40% 50%, rgba(var(--emo), 0.10), transparent 72%);
+  animation: eu-mist-a 19s ease-in-out infinite;
+}
+.eu-nebula-2 {
+  left: -50px; right: -40px; top: auto; bottom: 6%; width: auto; height: 210px;
+  background: radial-gradient(70% 60% at 60% 60%, rgba(var(--emo), 0.07), transparent 72%);
+  animation: eu-mist-b 26s ease-in-out infinite;
+}
+.eu-nebula-3 {
+  left: -40px; right: -50px; top: 60%; bottom: auto; width: auto; height: 180px;
+  background: radial-gradient(60% 55% at 50% 50%, rgba(var(--emo), 0.05), transparent 75%);
+  animation: eu-mist-a 31s ease-in-out infinite reverse;
+}
+@keyframes eu-mist-a { 0%,100% { transform: translate(0,0); } 50% { transform: translate(20px,-10px); } }
+@keyframes eu-mist-b { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-18px,8px); } }
+
+/* poem cards + textarea pick up the emotion tint instead of neutral gray */
+.eu-feel-textarea,
+.eu-feel-poem-card {
+  border-color: rgba(var(--emo), 0.20) !important;
+  background: rgba(var(--emo), 0.045) !important;
+}
+.eu-feel-find-btn {
+  border-color: rgba(var(--emo), 0.34) !important;
+  background: rgba(var(--emo), 0.09) !important;
+  color: var(--paper) !important;
+}
+
+/* optional: the mode tag + prompt accent follow the feeling */
+.eu-feel-mode-tag { color: rgb(var(--emo)); opacity: .85; }

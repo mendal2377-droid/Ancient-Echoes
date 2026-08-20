@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "default_lang": "zh",
+  "supported_langs": ["zh", "en"],
+  "city": {
+    "id": "city_anthology",
+    "name": { "zh": "", "en": "" },
+    "historical_names": { "zh": [], "en": [] }
+  },
+  "places": [],
+  "poets": [
+    { "id": "poet_anth_libai", "name": { "zh": "李白", "en": "Li Bai" }, "lifespan": { "born": 701, "died": 762 }, "epithet": { "zh": "诗仙", "en": "the Immortal of Poetry" } },
+    { "id": "poet_anth_menghaoran", "name": { "zh": "孟浩然", "en": "Meng Haoran" }, "lifespan": { "born": 689, "died": 740 }, "epithet": { "zh": null, "en": null } },
+    { "id": "poet_anth_wangzhihuan", "name": { "zh": "王之涣", "en": "Wang Zhihuan" }, "lifespan": { "born": 688, "died": 742 }, "epithet": { "zh": null, "en": null } },
+    { "id": "poet_anth_wangwei", "name": { "zh": "王维", "en": "Wang Wei" }, "lifespan": { "born": 701, "died": 761 }, "epithet": { "zh": "诗佛", "en": "the Buddha of Poetry" } },
+    { "id": "poet_anth_liuzongyuan", "name": { "zh": "柳宗元", "en": "Liu Zongyuan" }, "lifespan": { "born": 773, "died": 819 }, "epithet": { "zh": null, "en": null } },
+    { "id": "poet_anth_dumu", "name": { "zh": "杜牧", "en": "Du Mu" }, "lifespan": { "born": 803, "died": 852 }, "epithet": { "zh": null, "en": null } },
+    { "id": "poet_anth_zhangji", "name": { "zh": "张继", "en": "Zhang Ji" }, "lifespan": { "born": 715, "died": 779 }, "epithet": { "zh": null, "en": null } }
+  ],
+  "poems": [
+    {
+      "id": "poem_anth_jingyesi",
+      "title": { "zh": "静夜思", "en": "Quiet Night Thoughts" },
+      "author_id": "poet_anth_libai",
+      "dynasty": "Tang",
+      "form": { "zh": "五言绝句", "en": "wujue (5-char quatrain)" },
+      "date_composed": { "year": 730, "precision": "unknown" },
+      "body": {
+        "zh": ["床前明月光，", "疑是地上霜。", "举头望明月，", "低头思故乡。"],
+        "en": ["Before my bed, the bright moonlight—", "I wonder if it is frost on the ground.", "I lift my head and gaze at the moon,", "then lower it, longing for home."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["月", "思乡", "夜"], "en": ["moon", "homesickness", "night"] },
+      "emotions": [
+        { "type": "思乡", "primary": true, "percentage": 95, "confidence": "high" },
+        { "type": "独居", "primary": false, "percentage": 40, "confidence": "medium" }
+      ]
+    },
+    {
+      "id": "poem_anth_chunxiao",
+      "title": { "zh": "春晓", "en": "Spring Dawn" },
+      "author_id": "poet_anth_menghaoran",
+      "dynasty": "Tang",
+      "form": { "zh": "五言绝句", "en": "wujue (5-char quatrain)" },
+      "date_composed": { "year": 720, "precision": "unknown" },
+      "body": {
+        "zh": ["春眠不觉晓，", "处处闻啼鸟。", "夜来风雨声，", "花落知多少。"],
+        "en": ["Asleep in spring, I missed the dawn;", "now everywhere I hear the birds.", "In the night came the sound of wind and rain—", "how many blossoms must have fallen?"]
+      },
+      "place_links": [],
+      "themes": { "zh": ["春", "花", "山水"], "en": ["spring", "blossoms", "landscape"] },
+      "emotions": [
+        { "type": "山水", "primary": true, "percentage": 85, "confidence": "high" },
+        { "type": "独居", "primary": false, "percentage": 30, "confidence": "medium" }
+      ]
+    },
+    {
+      "id": "poem_anth_dengguanquelou",
+      "title": { "zh": "登鹳雀楼", "en": "Climbing Stork Tower" },
+      "author_id": "poet_anth_wangzhihuan",
+      "dynasty": "Tang",
+      "form": { "zh": "五言绝句", "en": "wujue (5-char quatrain)" },
+      "date_composed": { "year": 710, "precision": "unknown" },
+      "body": {
+        "zh": ["白日依山尽，", "黄河入海流。", "欲穷千里目，", "更上一层楼。"],
+        "en": ["The white sun sets behind the mountains,", "the Yellow River flows into the sea.", "To see a thousand miles farther,", "climb one more storey of the tower."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["山水", "江河", "志"], "en": ["landscape", "river", "aspiration"] },
+      "emotions": [
+        { "type": "山水", "primary": true, "percentage": 85, "confidence": "high" },
+        { "type": "怀古", "primary": false, "percentage": 25, "confidence": "low" }
+      ]
+    },
+    {
+      "id": "poem_anth_xiangsi",
+      "title": { "zh": "相思", "en": "Longing" },
+      "author_id": "poet_anth_wangwei",
+      "dynasty": "Tang",
+      "form": { "zh": "五言绝句", "en": "wujue (5-char quatrain)" },
+      "date_composed": { "year": 740, "precision": "unknown" },
+      "body": {
+        "zh": ["红豆生南国，", "春来发几枝。", "愿君多采撷，", "此物最相思。"],
+        "en": ["Red beans grow in the southern land;", "in spring they put forth a few new sprigs.", "Gather many of them, I pray you—", "nothing speaks of longing like these."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["相思", "红豆", "春"], "en": ["longing", "red beans", "spring"] },
+      "emotions": [
+        { "type": "相思", "primary": true, "percentage": 95, "confidence": "high" },
+        { "type": "友情", "primary": false, "percentage": 40, "confidence": "medium" }
+      ]
+    },
+    {
+      "id": "poem_anth_jiangxue",
+      "title": { "zh": "江雪", "en": "River Snow" },
+      "author_id": "poet_anth_liuzongyuan",
+      "dynasty": "Tang",
+      "form": { "zh": "五言绝句", "en": "wujue (5-char quatrain)" },
+      "date_composed": { "year": 805, "precision": "unknown" },
+      "body": {
+        "zh": ["千山鸟飞绝，", "万径人踪灭。", "孤舟蓑笠翁，", "独钓寒江雪。"],
+        "en": ["A thousand hills, and no bird flies;", "ten thousand paths, no human trace.", "A lone boat, an old man in straw cape,", "fishing alone the cold river snow."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["雪", "孤独", "山水"], "en": ["snow", "solitude", "landscape"] },
+      "emotions": [
+        { "type": "独居", "primary": true, "percentage": 90, "confidence": "high" },
+        { "type": "山水", "primary": false, "percentage": 60, "confidence": "medium" }
+      ]
+    },
+    {
+      "id": "poem_anth_shanxing",
+      "title": { "zh": "山行", "en": "Travelling in the Mountains" },
+      "author_id": "poet_anth_dumu",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 835, "precision": "unknown" },
+      "body": {
+        "zh": ["远上寒山石径斜，", "白云生处有人家。", "停车坐爱枫林晚，", "霜叶红于二月花。"],
+        "en": ["Far up the cold mountain, a stone path slants;", "where white clouds are born, a house or two.", "I stop the cart, in love with the maple woods at dusk—", "frost-touched leaves are redder than spring flowers."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["山", "秋", "枫"], "en": ["mountain", "autumn", "maple"] },
+      "emotions": [
+        { "type": "山水", "primary": true, "percentage": 90, "confidence": "high" },
+        { "type": "怀古", "primary": false, "percentage": 25, "confidence": "low" }
+      ]
+    },
+    {
+      "id": "poem_anth_jiuyue",
+      "title": { "zh": "九月九日忆山东兄弟", "en": "Thinking of My Brothers on the Double Ninth" },
+      "author_id": "poet_anth_wangwei",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 718, "precision": "unknown" },
+      "body": {
+        "zh": ["独在异乡为异客，", "每逢佳节倍思亲。", "遥知兄弟登高处，", "遍插茱萸少一人。"],
+        "en": ["Alone, a stranger in a strange land,", "at every festival I miss my kin the more.", "From afar I know my brothers climb the heights,", "each wearing dogwood—one man short."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["思乡", "佳节", "登高"], "en": ["homesickness", "festival", "ascending"] },
+      "emotions": [
+        { "type": "思乡", "primary": true, "percentage": 95, "confidence": "high" },
+        { "type": "离别", "primary": false, "percentage": 45, "confidence": "medium" }
+      ]
+    },
+    {
+      "id": "poem_anth_songyuaner",
+      "title": { "zh": "送元二使安西", "en": "Farewell to Yuan the Second, Bound for Anxi" },
+      "author_id": "poet_anth_wangwei",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 738, "precision": "unknown" },
+      "body": {
+        "zh": ["渭城朝雨浥轻尘，", "客舍青青柳色新。", "劝君更尽一杯酒，", "西出阳关无故人。"],
+        "en": ["Morning rain in Weicheng dampens the light dust;", "by the inn the willows are fresh and green.", "Let me urge on you one more cup of wine—", "west of Yang Pass there will be no old friends."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["离别", "雨", "酒"], "en": ["parting", "rain", "wine"] },
+      "emotions": [
+        { "type": "离别", "primary": true, "percentage": 90, "confidence": "high" },
+        { "type": "友情", "primary": false, "percentage": 70, "confidence": "high" }
+      ]
+    },
+    {
+      "id": "poem_anth_fengqiao",
+      "title": { "zh": "枫桥夜泊", "en": "Night Mooring at Maple Bridge" },
+      "author_id": "poet_anth_zhangji",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 756, "precision": "unknown" },
+      "body": {
+        "zh": ["月落乌啼霜满天，", "江枫渔火对愁眠。", "姑苏城外寒山寺，", "夜半钟声到客船。"],
+        "en": ["The moon sets, a crow cries, frost fills the sky;", "river maples, fishing fires, and sorrow-laden sleep.", "Beyond Gusu's walls, at Cold Mountain Temple,", "the midnight bell reaches the traveller's boat."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["夜", "月", "羁旅"], "en": ["night", "moon", "travel"] },
+      "emotions": [
+        { "type": "思乡", "primary": true, "percentage": 80, "confidence": "high" },
+        { "type": "独居", "primary": false, "percentage": 55, "confidence": "medium" }
+      ]
+    },
+    {
+      "id": "poem_anth_luzhai",
+      "title": { "zh": "鹿柴", "en": "Deer Enclosure" },
+      "author_id": "poet_anth_wangwei",
+      "dynasty": "Tang",
+      "form": { "zh": "五言绝句", "en": "wujue (5-char quatrain)" },
+      "date_composed": { "year": 745, "precision": "unknown" },
+      "body": {
+        "zh": ["空山不见人，", "但闻人语响。", "返景入深林，", "复照青苔上。"],
+        "en": ["Empty mountain—no one to be seen,", "yet the sound of voices is heard.", "Returning light enters the deep woods,", "shining again upon the green moss."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["山水", "空", "静"], "en": ["landscape", "emptiness", "stillness"] },
+      "emotions": [
+        { "type": "山水", "primary": true, "percentage": 90, "confidence": "high" },
+        { "type": "独居", "primary": false, "percentage": 50, "confidence": "medium" }
+      ]
+    },
+    {
+      "id": "poem_anth_huanghelou",
+      "title": { "zh": "黄鹤楼送孟浩然之广陵", "en": "Seeing Off Meng Haoran at Yellow Crane Tower" },
+      "author_id": "poet_anth_libai",
+      "dynasty": "Tang",
+      "form": { "zh": "七言绝句", "en": "qijue (7-char quatrain)" },
+      "date_composed": { "year": 730, "precision": "unknown" },
+      "body": {
+        "zh": ["故人西辞黄鹤楼，", "烟花三月下扬州。", "孤帆远影碧空尽，", "唯见长江天际流。"],
+        "en": ["My old friend takes leave of the Yellow Crane Tower in the west,", "in the mist and blossoms of the third month, going down to Yangzhou.", "His lone sail's far shadow fades into the blue,", "and I see only the Yangtze flowing to the edge of the sky."]
+      },
+      "place_links": [],
+      "themes": { "zh": ["离别", "友情", "江"], "en": ["parting", "friendship", "river"] },
+      "emotions": [
+        { "type": "离别", "primary": true, "percentage": 85, "confidence": "high" },
+        { "type": "友情", "primary": false, "percentage": 75, "confidence": "high" }
+      ]
+    }
+  ]
+}

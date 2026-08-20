@@ -1,0 +1,44 @@
+/* =====================================================================
+   handoff/seals/seal.css  →  append to src/index.css
+   The 印章 honesty stamp, app-wide (ui_principles.md §7).
+   Seal red --seal stays the ONLY red in the app.
+   After adopting this you can DELETE:
+     · .relation-tag            (index.css ~936)
+     · .conf-high/medium/low/disputed + .bar/.track/.fill/.rel-bars (~1013–1033)
+   ===================================================================== */
+
+.seal-stamp {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  font-family: var(--font-kai);
+  color: var(--paper);
+  border: 1.5px solid var(--seal);
+  border-radius: 5px;
+  overflow: hidden;
+  line-height: 1;
+  flex: none;
+}
+.seal-stamp--stack { grid-template-rows: 1fr 1fr; }
+.seal-stamp--grid  { grid-template: 1fr 1fr / 1fr 1fr; }
+.seal-stamp > span { display: flex; align-items: center; justify-content: center; }
+
+/* sizes */
+.seal-stamp--lg { width: 54px; height: 54px; }
+.seal-stamp--lg > span { font-size: 20px; }
+.seal-stamp--md { width: 40px; height: 40px; }
+.seal-stamp--md > span { font-size: 18px; }
+.seal-stamp--sm { width: 34px; height: 34px; }
+.seal-stamp--sm > span { font-size: 16px; }
+.seal-stamp--xs { width: 26px; height: 26px; border-width: 1.2px; border-radius: 4px; }
+.seal-stamp--xs > span { font-size: 11px; }
+
+/* weight = confidence */
+.seal-stamp--high     { background: var(--seal); color: var(--paper); }
+.seal-stamp--medium   { background: rgba(168,58,42,.45); color: var(--paper); }
+.seal-stamp--low      { background: transparent; color: var(--seal); }
+.seal-stamp--disputed { background: transparent; color: var(--seal); opacity: .85; }
+
+/* list rows: seal replaces the old colored .list-dot, sits inline */
+.list-item .seal-stamp { margin-right: 12px; align-self: center; }
+.place-row .seal-stamp { margin-right: 8px; }
