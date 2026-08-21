@@ -1729,15 +1729,32 @@ export function resolvePoem(title: string, author: string): string | null {
   return hits.length === 1 ? hits[0] : null
 }
 
-/** Does this prose quote a poem back at the reader? The oracle is told not to
- *  — a 缘由 should be about the person's own words — and the rule matters for
- *  more than style: quoted verse is the one place model-written poetry could
- *  reach the page unverified. Five characters is the shortest classical line. */
-export function quotesVerse(text: string): boolean {
-  const t = strip(text)
-  if (!t) return false
-  return Object.keys(POEMS).some(id =>
-    POEMS[id].lines.some(l => { const s = strip(l); return s.length >= 5 && t.includes(s) }))
+// Every line in the corpus, punctuation removed, long enough to be a quotation
+// rather than a coincidence. Five characters is the shortest classical line.
+let verseCache: string[] | null = null
+const verseLines = () => (verseCache ??= Object.keys(POEMS)
+  .flatMap(id => POEMS[id].lines.map(strip))
+  .filter(l => l.length >= 5))
+
+/** Take the recited verse out of a 缘由 and return what remains.
+ *
+ *  A 缘由 is prose about the person, and quoted verse is the one place
+ *  model-written poetry could reach the page unchecked — so it cannot stay.
+ *  But dropping the whole sentence costs too much: the model typically quotes
+ *  one line and then says something worth keeping, and a poem imported without
+ *  a gloss has nothing to fall back on, leaving the card blank. So this cuts
+ *  the offending clause and keeps the rest, if the rest still says something. */
+export function stripVerse(text: string): string {
+  const lines = verseLines()
+  // clause + its trailing punctuation; no lookbehind, which older Safari
+  // cannot even parse, and this module is bundled for the browser too.
+  const segs = text.match(/[^，。；、！？]+[，。；、！？]?/g) ?? []
+  const kept = segs
+    .filter(seg => { const s = strip(seg); return !lines.some(l => s.includes(l)) })
+    .join('')
+    .replace(/^[，。；、！？\s]+/, '')
+    .trim()
+  return strip(kept).length >= 6 ? kept : ''
 }
 
 export interface Moment {
