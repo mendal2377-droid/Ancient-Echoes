@@ -17,7 +17,7 @@
 // POEMS before it leaves this file, and again on the client. The guarantee is
 // preserved; it just lives in code now rather than in the API contract.
 
-import { POEMS, resolvePoem, quotesVerse } from '../src/ritual/data.js'   // .js is required — see the note in oracle.ts
+import { POEMS, resolvePoem, stripVerse } from '../src/ritual/data.js'   // .js is required — see the note in oracle.ts
 
 export interface OraclePick {
   id: string
@@ -43,10 +43,13 @@ const SYSTEM = `你是「此时此地」的司签人。有人把此刻的一点�
 - 不是关键词匹配。要听的是处境和心境：有人说「加班到深夜一个人走回家」，答他的未必是写「夜」的诗，而是写「独」的诗。
 - 三首要有层次：第一首最贴，后两首给另一种角度，不要三首都是同一种回答。
 - reason 是写给这个人看的一句话，三十字以内：把他说的话，和这首诗接上。
-  绝对不要引用诗句原文——诗就在他眼前，他自己会读。
+  一个字的诗句原文都不能出现在 reason 里——诗就印在他眼前，他自己会读。
+  化用可以，照抄不行：可以用诗里的意象重新造句，不能整句搬过来。
   不要解释诗的意思，不要用「这首诗表达了」这类句式，不要安慰他。
-  ✗ 千山鸟飞绝，万径人踪灭，你走的路也是这般寂寂无人。（复述了诗句）
+  ✗ 千山鸟飞绝，万径人踪灭，你走的路也是这般寂寂无人。（照抄了两句）
+  ✗ 夕阳无限好，只是近黄昏，你此刻大概也这样。（照抄了两句）
   ✓ 千山万径只剩你一人，这趟夜路也像一场独钓。
+  ✓ 好光景就在眼前，偏偏是快要收尾的时候。
 - 用中文。安静、克制，像一个不多话的人递过来一张纸。
 
 只输出 JSON，不要任何其它文字，格式：
@@ -119,10 +122,9 @@ export async function runOracle(text: string, tags: string[]): Promise<OraclePic
     seen.add(id)
 
     // A 缘由 that quotes verse is either restating the poem beside it or, worse,
-    // reciting one from memory that nothing has checked. Drop the line, keep
-    // the poem — the card falls back to our own gloss.
-    let reason = typeof p.reason === 'string' ? p.reason.trim() : ''
-    if (reason && quotesVerse(reason)) reason = ''
+    // reciting one from memory that nothing has checked. Cut the recitation,
+    // keep whatever the model said in its own words.
+    const reason = stripVerse(typeof p.reason === 'string' ? p.reason.trim() : '')
 
     picks.push({ id, reason })
     if (picks.length === 3) break
