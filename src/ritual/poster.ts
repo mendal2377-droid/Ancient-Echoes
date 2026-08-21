@@ -248,13 +248,24 @@ export async function drawPosterTo(canvas: HTMLCanvasElement, input: PosterInput
   // A 7-character line is taller than a 5-character one, and 只留一句 wants a
   // bigger glyph — left unbounded, either pushes the block below into the
   // wordmark. Budget first, size second.
+  //
+  // The horizontal budget matters now too. The corpus was twelve 绝句 — four
+  // columns, which 76px fits with room to spare. It is now mostly 律诗: eight
+  // columns, which at 76px walk straight off the left edge of the canvas into
+  // negative x. Both axes get a budget.
   const POEM_TOP = 230
   const POEM_MAX_H = 640
   const VGAP = 16
   const tallest = Math.max(...lines.map(l => [...l].length))
-  const VERSE = Math.min(76, POEM_MAX_H / tallest - VGAP)
   const poemTop = POEM_TOP
   const colGap = 34
+  // what remains after 题 and 落款 have taken their columns, keeping a left margin
+  const POEM_MAX_W = (W - 200) - (52 + colGap) - (30 + colGap + 6) - 120
+  const VERSE = Math.min(
+    76,
+    POEM_MAX_H / tallest - VGAP,
+    (POEM_MAX_W - colGap * (lines.length - 1)) / lines.length,
+  )
 
   let x = W - 200
   vertical(ctx, input.title, x, poemTop, 52, 14, t.ink)

@@ -847,20 +847,42 @@ function PoemScreen({ poems, kins, reasons, idx, onSelect, onTouched, onSkip }: 
 
 
 interface Col { text: string; style: CSSProperties }
+// The glyph size is DERIVED, not fixed. The corpus used to be twelve 绝句 —
+// four short columns, and 22px fit every one of them. It is now mostly 律诗 and
+// 词: eight lines, sometimes ten characters long. 晏几道《虞美人》 at a fixed
+// 22px asks for 376px inside a 337px card and simply spills out the side.
+//
+// So: budget first, size second — the same discipline the poster uses down its
+// vertical axis, applied here across the horizontal one. A 绝句 still renders at
+// 22px exactly as before; only the poems that would not fit are brought in.
+const CARD_BOX_W = 337   // measured content box of the card front
+const CARD_BOX_H = 264
+const COL_GAP = 5
+const COL_RATIO = 1.5    // a vertical column is ~1.5× the glyph wide
+const CHAR_RATIO = 1.2   // a glyph advances ~1.2× its size at letter-spacing .24em
+
 function buildCols(poem: Poem, color: string): Col[] {
-  const col = (text: string, size: string, ls: string, op: number, ml: string, delay: number): Col => ({
+  const col = (text: string, size: number, ls: string, op: number, ml: string, delay: number): Col => ({
     text,
     style: {
       writingMode: 'vertical-rl', textOrientation: 'upright', fontFamily: KAI,
-      fontSize: size, letterSpacing: ls, opacity: op, marginLeft: ml, color,
+      fontSize: `${size.toFixed(1)}px`, letterSpacing: ls, opacity: op, marginLeft: ml, color,
       animation: `hnRise 1.2s ${delay}s both`,
     },
   })
+
+  const n = poem.lines.length
+  const tallest = Math.max(1, ...poem.lines.map(l => [...l].length))
+  // title and 落款 are 0.82 / 0.52 of the verse size, so they cost that much width
+  const widthFit = (CARD_BOX_W - COL_GAP * (n + 1)) / (COL_RATIO * (n + 0.82 + 0.52))
+  const heightFit = CARD_BOX_H / (tallest * CHAR_RATIO)
+  const verse = Math.min(22, widthFit, heightFit)
+
   const cols = [
-    col(poem.title, '18px', '.14em', .92, '9px', .5),
-    col(`〔${poem.dynasty}〕${poem.author}`, '11.5px', '.1em', .5, '12px', .7),
+    col(poem.title, verse * 0.82, '.14em', .92, '9px', .5),
+    col(`〔${poem.dynasty}〕${poem.author}`, verse * 0.52, '.1em', .5, '12px', .7),
   ]
-  poem.lines.forEach((l, i) => cols.push(col(l, '22px', '.24em', 1, '0px', 1.0 + 0.4 * i)))
+  poem.lines.forEach((l, i) => cols.push(col(l, verse, '.24em', 1, '0px', 1.0 + 0.4 * i)))
   return cols
 }
 
