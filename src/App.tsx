@@ -585,12 +585,21 @@ function HomeScreen(props: {
 
       <div style={{ position: 'absolute', top: 146, left: 28, right: 28, textAlign: 'center', font: `400 21px ${SONG}`, letterSpacing: '.14em', color: '#f3eee4', pointerEvents: 'none', animation: 'hnRise 1.1s .2s both' }}>今天发生了什么？</div>
 
-      <div style={{ position: 'absolute', top: 206, left: 28, right: 28, animation: 'hnRise 1.1s .45s both' }}>
+      {/* ── the composing column ──
+          These used to be five absolutely-positioned blocks at fixed tops, which
+          works only while every one of them is exactly the height it was on the
+          day the numbers were written. The chip row wraps: five chips take two
+          rows, ending at y=391 and colliding with 照片·此地 pinned at 388. The
+          photo's 看起来像 guess did the same thing to 投入水中. So the column
+          flows now — one anchor at the top, and each block simply follows the
+          one above it however tall it turns out to be. */}
+      <div style={{ position: 'absolute', top: 206, left: 0, right: 0, display: 'flex', flexDirection: 'column' }}>
+      <div style={{ padding: '0 28px', animation: 'hnRise 1.1s .45s both' }}>
         <textarea value={props.draftText} onChange={(e) => props.onDraft(e.target.value)} placeholder="写下此刻的一点痕迹……"
           style={{ width: '100%', height: 96, boxSizing: 'border-box', resize: 'none', border: 'none', borderRadius: 16, padding: '16px 17px', background: 'rgba(243,238,228,.05)', boxShadow: 'inset 0 0 0 1px rgba(243,238,228,.1)', color: '#f3eee4', fontSize: 14, lineHeight: 1.8, letterSpacing: '.04em' }} />
       </div>
 
-      <div style={{ position: 'absolute', top: 322, left: 24, right: 24, display: 'flex', flexWrap: 'wrap', gap: 9, justifyContent: 'center', animation: 'hnRise 1.1s .65s both' }}>
+      <div style={{ marginTop: 20, padding: '0 24px', display: 'flex', flexWrap: 'wrap', gap: 9, justifyContent: 'center', animation: 'hnRise 1.1s .65s both' }}>
         {CHIPS.map(label => {
           const on = props.tags.indexOf(label) >= 0
           return (
@@ -605,7 +614,7 @@ function HomeScreen(props: {
       {/* 照片 · 此地 — these were `pointerEvents: none` labels once; they do
           something now. 声音 is not here: recording is a heavy ask for a quiet
           app, and there is nothing honest to do with the audio yet. */}
-      <div style={{ position: 'absolute', top: 388, left: 24, right: 24, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 10, animation: 'hnRise 1.1s .8s both' }}>
+      <div style={{ marginTop: 30, padding: '0 24px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 10, animation: 'hnRise 1.1s .8s both' }}>
         <input
           ref={props.photoInputRef} type="file" accept="image/*" style={{ display: 'none' }}
           onChange={e => { const f = e.target.files?.[0]; if (f) props.onPickPhoto(f); e.target.value = '' }}
@@ -636,7 +645,7 @@ function HomeScreen(props: {
       {/* The colour guess is a suggestion, never applied silently — it sits
           here so it can be corrected or dismissed before it reaches the oracle. */}
       {props.photo && props.sceneGuess && (
-        <div style={{ position: 'absolute', top: 440, left: 24, right: 24, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 8, animation: 'hnRise .9s both' }}>
+        <div style={{ marginTop: 12, padding: '0 24px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 8, animation: 'hnRise .9s both' }}>
           <span style={{ font: `400 10.5px ${SONG}`, letterSpacing: '.08em', color: 'rgba(243,238,228,.34)' }}>看起来像</span>
           <span onClick={() => props.onSceneGuess('')} title="不对就去掉"
             style={{ padding: '5px 11px', borderRadius: 13, cursor: 'pointer', font: `400 11px ${SONG}`, color: '#231b10', background: 'rgba(201,168,106,.85)' }}>
@@ -645,9 +654,10 @@ function HomeScreen(props: {
         </div>
       )}
 
-      <div onClick={props.onOffer} style={{ position: 'absolute', top: 452, left: 60, right: 60, textAlign: 'center', padding: '15px 0', borderRadius: 30, background: 'radial-gradient(120% 140% at 50% 0%,rgba(235,205,140,.22),rgba(216,176,114,.1))', boxShadow: 'inset 0 0 0 1px rgba(216,176,114,.6),0 0 26px rgba(235,205,140,.14)', color: '#ebcd8c', font: `500 15px ${SONG}`, letterSpacing: '.34em', cursor: 'pointer', animation: 'hnRise 1.1s .95s both' }}>投入水中</div>
+      <div onClick={props.onOffer} style={{ marginTop: 30, marginLeft: 60, marginRight: 60, textAlign: 'center', padding: '15px 0', borderRadius: 30, background: 'radial-gradient(120% 140% at 50% 0%,rgba(235,205,140,.22),rgba(216,176,114,.1))', boxShadow: 'inset 0 0 0 1px rgba(216,176,114,.6),0 0 26px rgba(235,205,140,.14)', color: '#ebcd8c', font: `500 15px ${SONG}`, letterSpacing: '.34em', textIndent: '.34em', cursor: 'pointer', animation: 'hnRise 1.1s .95s both' }}>投入水中</div>
 
-      <div style={{ position: 'absolute', top: 520, left: 0, right: 0, textAlign: 'center', font: `italic 400 12px var(--hn-en)`, letterSpacing: '.06em', color: 'rgba(243,238,228,.34)', pointerEvents: 'none' }}>let this moment fall into water</div>
+      <div style={{ marginTop: 20, textAlign: 'center', font: `italic 400 12px var(--hn-en)`, letterSpacing: '.06em', color: 'rgba(243,238,228,.34)', pointerEvents: 'none' }}>let this moment fall into water</div>
+      </div>
 
       <TabBar cur={props.cur} onNav={props.onNav} onReplayIntro={props.onReplayIntro} />
     </div>
