@@ -783,18 +783,33 @@ function PoemScreen({ poems, kins, reasons, idx, onSelect, onTouched, onSkip }: 
                       <div style={{ font: `400 14px ${KAI}`, letterSpacing: '.14em', color: '#231d2b' }}>
                         {poem.title}　〔{poem.dynasty}〕{poem.author}
                       </div>
-                      <div style={{ marginTop: 14, font: `400 12.5px/1.85 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.72)' }}>{poem.person}</div>
-                      <div style={{ marginTop: 8, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.56)' }}>
-                        {poem.scene}
-                        {poem.srcConfidence === 'trad' && (
-                          <span style={{ marginLeft: 5, fontSize: 10, color: 'rgba(42,36,56,.34)' }}>〔相传〕</span>
-                        )}
-                      </div>
-                      <div style={{ width: 24, height: 1, margin: '16px auto 0', background: 'rgba(42,36,56,.18)' }} />
-                      <div style={{ marginTop: 14, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.52)' }}>
-                        <span style={{ marginRight: 6, fontSize: 10, letterSpacing: '.1em', color: 'rgba(168,58,42,.72)' }}>回声</span>
-                        {poem.echo}
-                      </div>
+                      {/* Every field below is optional. A poem whose text we
+                          trust but whose story we have not checked shows less
+                          — never a fuller invented one. An empty half-card is
+                          honest; a confident wrong year is not. */}
+                      {poem.person && (
+                        <div style={{ marginTop: 14, font: `400 12.5px/1.85 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.72)' }}>{poem.person}</div>
+                      )}
+                      {poem.scene && (
+                        <div style={{ marginTop: 8, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.56)' }}>
+                          {poem.scene}
+                          {poem.srcConfidence === 'trad' && (
+                            <span style={{ marginLeft: 5, fontSize: 10, color: 'rgba(42,36,56,.34)' }}>〔相传〕</span>
+                          )}
+                        </div>
+                      )}
+                      {poem.echo && <>
+                        <div style={{ width: 24, height: 1, margin: '16px auto 0', background: 'rgba(42,36,56,.18)' }} />
+                        <div style={{ marginTop: 14, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.52)' }}>
+                          <span style={{ marginRight: 6, fontSize: 10, letterSpacing: '.1em', color: 'rgba(168,58,42,.72)' }}>回声</span>
+                          {poem.echo}
+                        </div>
+                      </>}
+                      {!poem.person && !poem.scene && !poem.echo && (
+                        <div style={{ marginTop: 20, font: `400 11px/1.9 ${SONG}`, letterSpacing: '.06em', color: 'rgba(42,36,56,.36)' }}>
+                          这首诗的来历，我们还没有考订清楚。<br />先把诗给你。
+                        </div>
+                      )}
                       {kin && (
                         <div style={{ marginTop: 16, padding: '12px 14px 13px', borderRadius: 5, background: 'rgba(168,58,42,.035)', boxShadow: 'inset 0 0 0 1px rgba(168,58,42,.16)', textAlign: 'left' }}>
                           <div style={{ font: `400 10px ${SONG}`, letterSpacing: '.3em', textIndent: '.3em', color: 'rgba(168,58,42,.72)' }}>隔 世 应 答</div>
@@ -832,20 +847,42 @@ function PoemScreen({ poems, kins, reasons, idx, onSelect, onTouched, onSkip }: 
 
 
 interface Col { text: string; style: CSSProperties }
+// The glyph size is DERIVED, not fixed. The corpus used to be twelve 绝句 —
+// four short columns, and 22px fit every one of them. It is now mostly 律诗 and
+// 词: eight lines, sometimes ten characters long. 晏几道《虞美人》 at a fixed
+// 22px asks for 376px inside a 337px card and simply spills out the side.
+//
+// So: budget first, size second — the same discipline the poster uses down its
+// vertical axis, applied here across the horizontal one. A 绝句 still renders at
+// 22px exactly as before; only the poems that would not fit are brought in.
+const CARD_BOX_W = 337   // measured content box of the card front
+const CARD_BOX_H = 264
+const COL_GAP = 5
+const COL_RATIO = 1.5    // a vertical column is ~1.5× the glyph wide
+const CHAR_RATIO = 1.2   // a glyph advances ~1.2× its size at letter-spacing .24em
+
 function buildCols(poem: Poem, color: string): Col[] {
-  const col = (text: string, size: string, ls: string, op: number, ml: string, delay: number): Col => ({
+  const col = (text: string, size: number, ls: string, op: number, ml: string, delay: number): Col => ({
     text,
     style: {
       writingMode: 'vertical-rl', textOrientation: 'upright', fontFamily: KAI,
-      fontSize: size, letterSpacing: ls, opacity: op, marginLeft: ml, color,
+      fontSize: `${size.toFixed(1)}px`, letterSpacing: ls, opacity: op, marginLeft: ml, color,
       animation: `hnRise 1.2s ${delay}s both`,
     },
   })
+
+  const n = poem.lines.length
+  const tallest = Math.max(1, ...poem.lines.map(l => [...l].length))
+  // title and 落款 are 0.82 / 0.52 of the verse size, so they cost that much width
+  const widthFit = (CARD_BOX_W - COL_GAP * (n + 1)) / (COL_RATIO * (n + 0.82 + 0.52))
+  const heightFit = CARD_BOX_H / (tallest * CHAR_RATIO)
+  const verse = Math.min(22, widthFit, heightFit)
+
   const cols = [
-    col(poem.title, '18px', '.14em', .92, '9px', .5),
-    col(`〔${poem.dynasty}〕${poem.author}`, '11.5px', '.1em', .5, '12px', .7),
+    col(poem.title, verse * 0.82, '.14em', .92, '9px', .5),
+    col(`〔${poem.dynasty}〕${poem.author}`, verse * 0.52, '.1em', .5, '12px', .7),
   ]
-  poem.lines.forEach((l, i) => cols.push(col(l, '22px', '.24em', 1, '0px', 1.0 + 0.4 * i)))
+  poem.lines.forEach((l, i) => cols.push(col(l, verse, '.24em', 1, '0px', 1.0 + 0.4 * i)))
   return cols
 }
 
