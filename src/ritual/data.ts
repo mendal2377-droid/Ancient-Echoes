@@ -275,7 +275,6 @@ export interface Moment {
   note: string
   m: number
   d: number
-  copied?: boolean   // 抄过一遍 — the poem was hand-traced, not just kept
   place?: string     // 此地 — where you were
   photo?: string     // the small edition (see ritual/photo.ts), for re-sharing
 }

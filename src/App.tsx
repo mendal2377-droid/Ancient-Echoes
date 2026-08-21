@@ -22,7 +22,7 @@ const KAI = "var(--hn-kai)"
 const SONG = "'Noto Serif SC',serif"
 const WATER_SECONDS = 3.5
 
-type Screen = 'splash' | 'intro' | 'reunion' | 'home' | 'water' | 'poem' | 'plant' | 'planted' | 'copy' | 'share' | 'path'
+type Screen = 'splash' | 'intro' | 'reunion' | 'home' | 'water' | 'poem' | 'plant' | 'planted' | 'share' | 'path'
 
 const SPLASH_SECONDS = 4.4
 
@@ -188,14 +188,6 @@ export default function App() {
     setScreen('planted')
   }
 
-  // 抄毕 — the moment is marked as hand-copied; 花径 shows it thereafter.
-  const markCopied = () => {
-    if (!lastMomentId) return
-    const next = moments.map(mo => (mo.id === lastMomentId ? { ...mo, copied: true } : mo))
-    saveMoments(next)
-    setMoments(next)
-  }
-
   const go = (s: Screen) => setScreen(s)
   const poem = POEMS[currentPoemId()] || POEMS[DEFAULTS[0]]
   // plant() clears the draft, so the card reads the words back off the moment.
@@ -264,7 +256,7 @@ export default function App() {
         {screen === 'planted' && (
           <PlantedScreen
             poem={poem} fireflyField={fireflyField}
-            onCopy={() => go('copy')} onShare={() => go('share')}
+            onShare={() => go('share')}
             onToPath={() => { endMomentFlow(); go('path') }}
           />
         )}
@@ -277,14 +269,6 @@ export default function App() {
             place={plantedMoment?.place}
             photo={photo}
             onBack={() => go('planted')}
-          />
-        )}
-
-        {screen === 'copy' && (
-          <CopyScreen
-            poem={poem}
-            onFinish={() => { markCopied(); endMomentFlow(); go('path') }}
-            onExit={() => { endMomentFlow(); go('path') }}
           />
         )}
 
@@ -890,7 +874,7 @@ function PlantScreen({ poem, starField2, noteText, onNote, onPlant }: { poem: Po
 // ─────────────────────────────────────────────────────────────────────────
 // PLANTED · success
 // ─────────────────────────────────────────────────────────────────────────
-function PlantedScreen({ poem, fireflyField, onCopy, onShare, onToPath }: { poem: Poem; fireflyField: JSX.Element; onCopy: () => void; onShare: () => void; onToPath: () => void }) {
+function PlantedScreen({ poem, fireflyField, onShare, onToPath }: { poem: Poem; fireflyField: JSX.Element; onShare: () => void; onToPath: () => void }) {
   const tint = `rgb(${poem.rgb})`, tintSoft = `rgba(${poem.rgb},.4)`
   return (
     <div style={{ position: 'absolute', inset: 0, animation: 'hnBloom 1.1s ease both', background: 'radial-gradient(60% 40% at 50% 42%,rgba(216,176,114,.1),transparent 64%),linear-gradient(180deg,#09090f 0%,#120e1c 58%,#161020 100%)' }}>
@@ -899,14 +883,15 @@ function PlantedScreen({ poem, fireflyField, onCopy, onShare, onToPath }: { poem
       <div style={{ position: 'absolute', top: 338, left: 0, right: 0, textAlign: 'center', font: `400 17px ${SONG}`, letterSpacing: '.18em', color: '#f3eee4', pointerEvents: 'none', animation: 'hnRise 1.4s .5s both' }}>已留在花径。</div>
       <div style={{ position: 'absolute', top: 376, left: 0, right: 0, textAlign: 'center', font: `400 12.5px ${SONG}`, letterSpacing: '.16em', color: 'rgba(235,205,140,.7)', pointerEvents: 'none', animation: 'hnRise 1.4s .8s both' }}>这朵花，会在未来等你。</div>
 
-      {/* 抄 — the one act that asks something of the hand. 临帖 is how this
-          poetry has always been absorbed; the app should not be read-only. */}
-      <div onClick={onCopy} style={{ position: 'absolute', top: 442, left: 58, right: 58, textAlign: 'center', padding: '14px 0', borderRadius: 28, background: 'radial-gradient(120% 140% at 50% 0%,rgba(235,205,140,.22),rgba(216,176,114,.1))', boxShadow: 'inset 0 0 0 1px rgba(216,176,114,.6),0 0 26px rgba(235,205,140,.14)', color: '#ebcd8c', font: `500 14px ${SONG}`, letterSpacing: '.34em', cursor: 'pointer', animation: 'hnRise 1.4s 1.3s both' }}>抄 一 遍</div>
-      <div style={{ position: 'absolute', top: 494, left: 34, right: 34, textAlign: 'center', font: `400 11px/1.7 ${SONG}`, letterSpacing: '.06em', color: 'rgba(243,238,228,.34)', pointerEvents: 'none', animation: 'hnRise 1.4s 1.5s both' }}>一笔一画写过，才算真的留下。</div>
+      {/* The card is the primary act here now. 抄一遍 used to hold this slot and
+          asked for a minute of finger-writing — a thing people admire and do
+          not do. What someone actually wants at this moment is to keep the
+          poem somewhere they'll see it again, or send it to one person. So the
+          gold goes to the card, and 花径 stays as the quiet way onward. */}
+      <div onClick={onShare} style={{ position: 'absolute', top: 442, left: 58, right: 58, textAlign: 'center', padding: '15px 0', borderRadius: 28, background: '#c9a86a', boxShadow: '0 6px 26px rgba(201,168,106,.24)', color: '#231b10', font: `500 14px ${SONG}`, letterSpacing: '.34em', textIndent: '.34em', cursor: 'pointer', animation: 'hnRise 1.4s 1.3s both' }}>存 为 卡 片</div>
+      <div style={{ position: 'absolute', top: 496, left: 34, right: 34, textAlign: 'center', font: `400 11px/1.7 ${SONG}`, letterSpacing: '.06em', color: 'rgba(243,238,228,.36)', pointerEvents: 'none', animation: 'hnRise 1.4s 1.5s both' }}>做成一张图，发给该看见的人。</div>
 
-      <div style={{ position: 'absolute', bottom: 52, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 20, animation: 'hnRise 1.4s 1.7s both' }}>
-        <span onClick={onShare} style={{ font: `400 12px ${SONG}`, letterSpacing: '.16em', color: 'rgba(243,238,228,.5)', cursor: 'pointer' }}>存为卡片</span>
-        <span style={{ color: 'rgba(243,238,228,.2)', fontSize: 11 }}>·</span>
+      <div style={{ position: 'absolute', bottom: 52, left: 0, right: 0, textAlign: 'center', animation: 'hnRise 1.4s 1.7s both' }}>
         <span onClick={onToPath} style={{ font: `400 12px ${SONG}`, letterSpacing: '.16em', color: 'rgba(243,238,228,.5)', cursor: 'pointer' }}>走进花径</span>
       </div>
     </div>
@@ -936,8 +921,22 @@ function ShareScreen({ poem, words, reason, place, photo, onBack }: {
   const [showReason, setShowReason] = useState(true)
   const [onlyLine, setOnlyLine] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
+  const [manual, setManual] = useState<string | null>(null)   // press-and-hold fallback
+  const [toast, setToast] = useState('')
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const draw = useRef(0)
+  const toastTimer = useRef<ReturnType<typeof setTimeout>>()
+
+  const flash = (msg: string) => {
+    setToast(msg)
+    clearTimeout(toastTimer.current)
+    toastTimer.current = setTimeout(() => setToast(''), 2400)
+  }
+
+  // The object URL behind the press-and-hold image is ours to release: when it
+  // is replaced, and on the way out.
+  useEffect(() => () => { if (manual) URL.revokeObjectURL(manual) }, [manual])
+  useEffect(() => () => clearTimeout(toastTimer.current), [])
 
   const input = (): PosterInput => ({
     title: poem.title, author: poem.author, dynasty: poem.dynasty, lines: poem.lines,
@@ -958,10 +957,19 @@ function ShareScreen({ poem, words, reason, place, photo, onBack }: {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [background, showWords, showReason, onlyLine])
 
+  // Whatever happens, say so. The old version swallowed every outcome, so on
+  // any phone where the OS share sheet is missing the button did nothing at
+  // all and looked identical to success.
   const save = () => {
     if (saving) return
     setSaving(true)
-    void sharePoster(input()).catch(() => {}).finally(() => setSaving(false))
+    void sharePoster(input())
+      .then(r => {
+        if (r.kind === 'manual') setManual(r.url)
+        else if (r.kind === 'downloaded') flash('已保存为图片')
+      })
+      .catch(() => flash('没能生成，再试一次'))
+      .finally(() => setSaving(false))
   }
 
   const Toggle = ({ on, label, onTap }: { on: boolean; label: string; onTap: () => void }) => (
@@ -1031,177 +1039,26 @@ function ShareScreen({ poem, words, reason, place, photo, onBack }: {
         {saving ? '生成中…' : '保存 · 分享'}
       </div>
       <div onClick={onBack} style={{ position: 'absolute', bottom: 34, left: 0, right: 0, textAlign: 'center', font: `400 12px ${SONG}`, letterSpacing: '.16em', color: 'rgba(243,238,228,.42)', cursor: 'pointer' }}>返回</div>
-    </div>
-  )
-}
 
-// ─────────────────────────────────────────────────────────────────────────
-// 抄 · COPY — 临摹, not 描红.
-//
-// It used to trace: the glyph sat pale on the paper and a finger inked it in,
-// scored by coverage. That was the *children's* form — 描红本 is a primary
-// school object, the 米字格 is a schoolbook grid, and a 55%-coverage threshold
-// meant a scribble passed, so the app pretended to check the writing and
-// didn't. Anything that grades you badly is worse than not grading you.
-//
-// Now: you choose the line that moved you, look at the model, and write it
-// yourself in an empty box. Nothing is scored and nothing auto-advances — you
-// tap when you are done. A traced character is the app's handwriting; a
-// written one is yours, wobbly and unmistakably a person's. That is what makes
-// the 抄 seal on 花径 mean anything.
-// ─────────────────────────────────────────────────────────────────────────
-const COPY_BOX = 226     // CSS px — the writing square
-const COPY_MODEL = 88    // the 帖 shown above it
-const COPY_BRUSH = 9     // a writing nib, not a filling brush
-
-function CopyScreen({ poem, onFinish, onExit }: { poem: Poem; onFinish: () => void; onExit: () => void }) {
-  // Which line moved you — chosen, not assumed. Copying all 20–28 characters
-  // was ten minutes of finger-work with no skill curve; one line is a minute.
-  const [lineIdx, setLineIdx] = useState<number | null>(null)
-  const [charIdx, setCharIdx] = useState(0)
-  const [inked, setInked] = useState(false)
-  const [ready, setReady] = useState(false)
-
-  const inkRef = useRef<HTMLCanvasElement | null>(null)
-  const drawing = useRef(false)
-  const last = useRef<{ x: number; y: number } | null>(null)
-
-  const line = lineIdx === null ? '' : poem.lines[lineIdx]
-  const chars = useMemo(() => [...line], [line])
-  const done = lineIdx !== null && charIdx >= chars.length
-  const ch = chars[charIdx] || ''
-  const dpr = () => Math.min(window.devicePixelRatio || 1, 3)
-
-  // the model must be the real 楷 — wait for the bundled webfont
-  useEffect(() => {
-    let alive = true
-    document.fonts.ready.then(() => { if (alive) setReady(true) })
-    return () => { alive = false }
-  }, [])
-
-  // fresh paper for each character
-  useEffect(() => {
-    if (lineIdx === null || done) return
-    const ink = inkRef.current
-    if (!ink) return
-    const px = Math.round(COPY_BOX * dpr())
-    ink.width = px; ink.height = px
-    const ctx = ink.getContext('2d')!
-    ctx.setTransform(1, 0, 0, 1, 0, 0)
-    ctx.clearRect(0, 0, px, px)
-    last.current = null; drawing.current = false
-    setInked(false)
-  }, [ch, lineIdx, done])
-
-  const at = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    const r = e.currentTarget.getBoundingClientRect()
-    return { x: e.clientX - r.left, y: e.clientY - r.top }
-  }
-  const strokeTo = (p: { x: number; y: number }) => {
-    const ink = inkRef.current
-    if (!ink) return
-    const ctx = ink.getContext('2d')!
-    const r = dpr()
-    ctx.setTransform(r, 0, 0, r, 0, 0)
-    ctx.lineCap = 'round'; ctx.lineJoin = 'round'
-    ctx.lineWidth = COPY_BRUSH
-    ctx.strokeStyle = '#231d2b'
-    const from = last.current || p
-    ctx.beginPath(); ctx.moveTo(from.x, from.y); ctx.lineTo(p.x, p.y); ctx.stroke()
-    last.current = p
-    if (!inked) setInked(true)
-  }
-  const clear = () => {
-    const ink = inkRef.current
-    if (!ink) return
-    const ctx = ink.getContext('2d')!
-    ctx.setTransform(1, 0, 0, 1, 0, 0)
-    ctx.clearRect(0, 0, ink.width, ink.height)
-    last.current = null
-    setInked(false)
-  }
-
-  const paper = 'radial-gradient(120% 60% at 50% -8%,#f5efe2 0%,#ece4d3 52%,transparent 80%),linear-gradient(180deg,#efe9db 0%,#e6decb 60%,#dcd3c1 100%)'
-
-  // ── choose the line ──
-  if (lineIdx === null) {
-    return (
-      <div style={{ position: 'absolute', inset: 0, animation: 'hnBloom .9s ease both', background: paper }}>
-        <StatusBar dark />
-        <div style={{ position: 'absolute', top: 56, left: 0, right: 0, textAlign: 'center', font: `400 12px ${SONG}`, letterSpacing: '.4em', color: 'rgba(42,36,56,.55)' }}>抄 一 句</div>
-        <div style={{ position: 'absolute', top: 104, left: 0, right: 0, textAlign: 'center', font: `400 12.5px ${SONG}`, letterSpacing: '.1em', color: 'rgba(42,36,56,.45)' }}>哪一句留住了你？</div>
-        <div style={{ position: 'absolute', top: 168, left: 24, right: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {poem.lines.map((l, i) => (
-            <div key={i} onClick={() => { setLineIdx(i); setCharIdx(0) }}
-              style={{ textAlign: 'center', padding: '15px 0', borderRadius: 8, background: 'rgba(255,255,255,.34)', boxShadow: 'inset 0 0 0 1px rgba(74,58,40,.12)', font: `400 20px ${KAI}`, letterSpacing: '.2em', textIndent: '.2em', color: '#231d2b', cursor: 'pointer', animation: `hnRise 1s ${(.15 + i * .1).toFixed(2)}s both` }}>
-              {l}
-            </div>
-          ))}
+      {toast && (
+        <div style={{ position: 'absolute', bottom: 126, left: 0, right: 0, textAlign: 'center', pointerEvents: 'none', animation: 'hnRise .5s both' }}>
+          <span style={{ display: 'inline-block', padding: '8px 18px', borderRadius: 18, background: 'rgba(12,10,18,.86)', boxShadow: 'inset 0 0 0 1px rgba(235,205,140,.28)', font: `400 12px ${SONG}`, letterSpacing: '.12em', color: 'rgba(243,238,228,.86)' }}>{toast}</span>
         </div>
-        <div onClick={onExit} style={{ position: 'absolute', bottom: 44, left: 0, right: 0, textAlign: 'center', font: `400 12px ${SONG}`, letterSpacing: '.16em', color: 'rgba(42,36,56,.42)', cursor: 'pointer' }}>下次再抄</div>
-      </div>
-    )
-  }
+      )}
 
-  // ── 抄毕 ──
-  if (done) {
-    const cols = buildCols(poem, '#231d2b')
-    return (
-      <div style={{ position: 'absolute', inset: 0, animation: 'hnBloom .9s ease both', background: paper }}>
-        <StatusBar dark />
-        <div style={{ position: 'absolute', top: 56, left: 0, right: 0, textAlign: 'center', font: `400 12px ${SONG}`, letterSpacing: '.4em', color: 'rgba(42,36,56,.55)', animation: 'hnRise 1.2s .2s both' }}>抄 毕</div>
-        <div style={{ position: 'absolute', top: 130, left: 0, right: 0, display: 'flex', flexDirection: 'row-reverse', justifyContent: 'center', alignItems: 'flex-start', gap: 5, animation: 'hnRise 1.4s .5s both' }}>
-          {cols.map((c, i) => <div key={i} style={c.style}>{c.text}</div>)}
+      {/* Press-and-hold sheet — the only route to the camera roll inside 微信.
+          The image here is the finished PNG, not the preview canvas, so what
+          gets saved is the file itself. */}
+      {manual && (
+        <div style={{ position: 'absolute', inset: 0, zIndex: 30, background: 'rgba(6,6,11,.94)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20, animation: 'hnBloom .45s ease both' }}>
+          <img src={manual} alt={poem.title} style={{ width: 246, height: 328, borderRadius: 6, display: 'block', boxShadow: '0 18px 46px rgba(0,0,0,.6)' }} />
+          <div style={{ textAlign: 'center', font: `400 13px/1.9 ${SONG}`, letterSpacing: '.14em', color: 'rgba(235,205,140,.82)' }}>
+            长按图片，保存到相册
+            <div style={{ marginTop: 2, font: `400 11px ${SONG}`, letterSpacing: '.08em', color: 'rgba(243,238,228,.4)' }}>存好之后，就可以发出去了</div>
+          </div>
+          <div onClick={() => setManual(null)} style={{ marginTop: 6, padding: '10px 34px', borderRadius: 22, boxShadow: 'inset 0 0 0 1px rgba(243,238,228,.22)', font: `400 12px ${SONG}`, letterSpacing: '.2em', color: 'rgba(243,238,228,.7)', cursor: 'pointer' }}>完 成</div>
         </div>
-        <div style={{ position: 'absolute', bottom: 122, left: 34, right: 34, textAlign: 'center', font: `400 12.5px/1.8 ${SONG}`, letterSpacing: '.1em', color: 'rgba(42,36,56,.55)', animation: 'hnRise 1.3s 1.2s both' }}>「{line}」——你亲手写过一遍。</div>
-        <div onClick={onFinish} style={{ position: 'absolute', bottom: 56, left: 58, right: 58, textAlign: 'center', padding: '13px 0', borderRadius: 26, background: '#c9a86a', color: '#231b10', font: `500 14px ${SONG}`, letterSpacing: '.28em', cursor: 'pointer', animation: 'hnRise 1.3s 1.5s both' }}>走进花径</div>
-      </div>
-    )
-  }
-
-  // ── write it ──
-  const advance = () => { if (charIdx < chars.length) setCharIdx(i => i + 1) }
-  const isLast = charIdx === chars.length - 1
-
-  return (
-    <div style={{ position: 'absolute', inset: 0, animation: 'hnBloom .9s ease both', background: paper }}>
-      <StatusBar dark />
-      <div style={{ position: 'absolute', top: 56, left: 0, right: 0, textAlign: 'center', font: `400 12px ${SONG}`, letterSpacing: '.4em', color: 'rgba(42,36,56,.55)' }}>临 摹</div>
-
-      {/* the line, lighting up as you go */}
-      <div style={{ position: 'absolute', top: 96, left: 0, right: 0, textAlign: 'center', font: `400 17px ${KAI}`, letterSpacing: '.2em', textIndent: '.2em' }}>
-        {chars.map((c, i) => (
-          <span key={i} style={{ color: i < charIdx ? 'rgba(35,29,43,.82)' : i === charIdx ? '#a83a2a' : 'rgba(35,29,43,.22)', transition: 'color .5s' }}>{c}</span>
-        ))}
-      </div>
-
-      {/* 帖 — the model you look at. You are copying it, not tracing it. */}
-      <div style={{ position: 'absolute', top: 142, left: 0, right: 0, textAlign: 'center', font: `${COPY_MODEL}px ${KAI}`, lineHeight: 1, color: 'rgba(35,29,43,.30)', pointerEvents: 'none' }}>
-        {ready ? ch : ''}
-      </div>
-
-      {/* empty paper — your hand, not the app's */}
-      <div style={{ position: 'absolute', top: 268, left: '50%', transform: 'translateX(-50%)', width: COPY_BOX, height: COPY_BOX, borderRadius: 4, background: 'linear-gradient(180deg,#f7f1e5,#f1e9db)', boxShadow: '0 2px 18px rgba(74,58,40,.12),inset 0 0 0 1px rgba(74,58,40,.10)' }}>
-        <canvas
-          ref={inkRef}
-          style={{ position: 'absolute', inset: 0, width: COPY_BOX, height: COPY_BOX, touchAction: 'none', cursor: 'crosshair' }}
-          onPointerDown={e => { try { e.currentTarget.setPointerCapture(e.pointerId) } catch { /* pointer already released */ } drawing.current = true; last.current = null; strokeTo(at(e)) }}
-          onPointerMove={e => { if (drawing.current) strokeTo(at(e)) }}
-          onPointerUp={() => { drawing.current = false; last.current = null }}
-          onPointerCancel={() => { drawing.current = false; last.current = null }}
-        />
-      </div>
-
-      <div style={{ position: 'absolute', top: 516, left: 0, right: 0, textAlign: 'center', font: `400 11px ${SONG}`, letterSpacing: '.14em', color: 'rgba(42,36,56,.4)' }}>
-        {charIdx + 1} / {chars.length} · 照着写，不用写好
-      </div>
-
-      <div style={{ position: 'absolute', bottom: 82, left: 24, right: 24, display: 'flex', gap: 12 }}>
-        <div onClick={clear} style={{ flex: 1, textAlign: 'center', padding: '12px 0', borderRadius: 24, border: '1px solid rgba(42,36,56,.22)', font: `400 13px ${SONG}`, letterSpacing: '.12em', color: inked ? 'rgba(42,36,56,.7)' : 'rgba(42,36,56,.3)', cursor: inked ? 'pointer' : 'default' }}>重 写</div>
-        <div onClick={advance} style={{ flex: 1.3, textAlign: 'center', padding: '12px 0', borderRadius: 24, background: '#c9a86a', font: `500 13px ${SONG}`, letterSpacing: '.12em', color: '#231b10', cursor: 'pointer' }}>{isLast ? '写完了' : '下 一 字'}</div>
-      </div>
-
-      <div onClick={onExit} style={{ position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', font: `400 12px ${SONG}`, letterSpacing: '.16em', color: 'rgba(42,36,56,.42)', cursor: 'pointer' }}>就抄到这里</div>
+      )}
     </div>
   )
 }
@@ -1288,12 +1145,7 @@ function PathScreen({ moments, fireflyField2, cur, onNav, onReplayIntro }: { mom
             ))}
             {path.nodes.map((nd, i) => (
               <div key={'l' + i} style={nd.label}>
-                <div style={nd.dateStyle}>
-                  {nd.date}
-                  {nd.copied && (
-                    <span style={{ marginLeft: 5, padding: '1px 3px', borderRadius: 2, background: 'rgba(168,58,42,.9)', color: '#f6ece0', font: `500 8px ${SONG}`, letterSpacing: 0 }}>抄</span>
-                  )}
-                </div>
+                <div style={nd.dateStyle}>{nd.date}</div>
                 <div style={nd.titleStyle}>{nd.title}</div>
                 <div style={nd.lineStyle}>{nd.line}</div>
                 {nd.note && <div style={nd.noteStyle}>{nd.note}</div>}
@@ -1349,7 +1201,7 @@ function FlowerBloom({ rgb, petals, size }: { rgb: string; petals: number; size:
 interface PathNode {
   bloomWrap: CSSProperties; rgb: string; petals: number
   label: CSSProperties
-  date: string; title: string; line: string; note: string; copied: boolean
+  date: string; title: string; line: string; note: string
   dateStyle: CSSProperties; titleStyle: CSSProperties; lineStyle: CSSProperties; noteStyle: CSSProperties
 }
 function buildPath(moments: Moment[]): { d: string; H: number; nodes: PathNode[] } {
@@ -1396,7 +1248,6 @@ function buildPath(moments: Moment[]): { d: string; H: number; nodes: PathNode[]
       title: `${poem.title} · ${poem.author}`,
       line: poem.lines[0],
       note: note ? `「${note}」` : '',
-      copied: !!p.mo.copied,
       dateStyle: { font: `400 9px ${SONG}`, letterSpacing: '.14em', color: 'rgba(235,205,140,.72)' },
       titleStyle: { font: `500 13px ${SONG}`, color: '#f3eee4' },
       lineStyle: { font: `400 10.5px ${SONG}`, color: 'rgba(243,238,228,.55)', letterSpacing: '.04em', marginTop: 1 },

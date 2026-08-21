@@ -319,24 +319,46 @@ export async function drawPoster(input: PosterInput): Promise<Blob> {
 }
 
 /** Share natively where possible; fall back to a download. */
-export async function sharePoster(input: PosterInput): Promise<'shared' | 'downloaded'> {
+/** What happened to the card. 'manual' means nothing was saved yet and the
+ *  caller must show the image so it can be pressed and saved by hand — it
+ *  carries an object URL the caller owns and must revoke. */
+export type ShareOutcome =
+  | { kind: 'shared' }
+  | { kind: 'downloaded' }
+  | { kind: 'manual'; url: string }
+
+export async function sharePoster(input: PosterInput): Promise<ShareOutcome> {
   const blob = await drawPoster(input)
   const name = `此时此地-${input.title}.png`
   const file = new File([blob], name, { type: 'image/png' })
 
+  // Best case: the OS share sheet, straight into 微信 / 小红书 / 相册.
   const nav = navigator as Navigator & {
     canShare?: (d: { files: File[] }) => boolean
     share?: (d: { files: File[]; title?: string }) => Promise<void>
   }
   if (nav.canShare?.({ files: [file] }) && nav.share) {
-    try { await nav.share({ files: [file], title: input.title }); return 'shared' } catch { /* dismissed */ }
+    try { await nav.share({ files: [file], title: input.title }); return { kind: 'shared' } }
+    catch { /* dismissed, or the sheet refused — fall through to a file */ }
   }
 
   const url = URL.createObjectURL(blob)
+
+  // On a phone with no Share API — WeChat's in-app browser above all, which is
+  // where most of this app's sharing will actually happen — `download` is
+  // inert. The button would appear to do nothing. Hand the image back instead
+  // and let the caller show it: press-and-hold to save is the gesture people
+  // already know there.
+  const phone = typeof matchMedia === 'function' && matchMedia('(pointer: coarse)').matches
+  if (phone) return { kind: 'manual', url }
+
   const a = document.createElement('a')
   a.href = url
   a.download = name
+  a.rel = 'noopener'
+  document.body.appendChild(a)   // a detached anchor's click is ignored in Firefox
   a.click()
+  a.remove()
   setTimeout(() => URL.revokeObjectURL(url), 4000)
-  return 'downloaded'
+  return { kind: 'downloaded' }
 }
