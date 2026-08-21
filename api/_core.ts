@@ -17,7 +17,7 @@
 // POEMS before it leaves this file, and again on the client. The guarantee is
 // preserved; it just lives in code now rather than in the API contract.
 
-import { POEMS } from '../src/ritual/data'
+import { POEMS } from '../src/ritual/data.js'   // .js is required — see the note in oracle.ts
 
 export interface OraclePick {
   id: string

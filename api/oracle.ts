@@ -6,7 +6,13 @@
 // All the thinking is in ./_core.ts, which is host-agnostic — the Vite dev
 // middleware calls the same function, so `npm run dev` behaves like production.
 
-import { runOracle, type OraclePick } from './_core'
+// NOTE the .js extension. package.json is `"type": "module"`, so Vercel runs
+// this as real ESM, where Node's resolver does NOT guess extensions — a bare
+// './_core' throws ERR_MODULE_NOT_FOUND at load time, which surfaces as
+// FUNCTION_INVOCATION_FAILED before any of the error handling below can run.
+// The file on disk is _core.ts; '.js' is the ESM-correct spelling of it, and
+// both tsc and esbuild map it back. Do not "tidy" the extension away.
+import { runOracle, type OraclePick } from './_core.js'
 
 interface Req {
   method?: string
