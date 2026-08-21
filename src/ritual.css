@@ -1,0 +1,104 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   此时此地 · Here & Now — the ritual
+   Faithful port of design-reference/…/Here & Now - Ritual.dc.html
+   Base + the reference's full keyframe vocabulary. All screens live in App.tsx.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* poem 楷 voice — LXGW WenKai first (the reference's soft calligraphic hand),
+     then system Kai, then Noto Serif SC as final fallback */
+  --hn-kai: 'LXGW WenKai Lite', 'Kaiti SC', 'STKaiti', 'KaiTi', 'Noto Serif SC', serif;
+  --hn-song: 'Noto Serif SC', 'Songti SC', serif;
+  --hn-en: 'Cormorant Garamond', serif;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: #08080d;
+  font-family: var(--hn-song);
+  color: #e8e2d4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The stage — the phone screen. On a real device it fills the viewport;
+   on desktop it centers as a tall mobile column. The reference's inner
+   screen is 318×702; we keep those coordinates and let the stage fill. */
+.hn-backdrop {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 26%, #141019, #08080d 70%);
+}
+
+.hn-stage {
+  position: relative;
+  width: 100%;
+  max-width: 384px;
+  height: 100dvh;
+  max-height: 812px;
+  overflow: hidden;
+  background: #09090f;
+  color: #e8e2d4;
+}
+@media (min-width: 420px) {
+  .hn-stage { border-radius: 34px; box-shadow: 0 42px 96px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.05); }
+}
+
+/* Native scrollbars are a hard break in the illusion — a grey OS chrome bar
+   down the side of a night garden. Content still scrolls; only the bar goes. */
+.hn-stage *::-webkit-scrollbar { width: 0; height: 0; }
+.hn-stage * { scrollbar-width: none; -ms-overflow-style: none; }
+
+.hn-stage textarea { font-family: var(--hn-song); }
+.hn-stage textarea::placeholder { color: rgba(243,238,228,.32); }
+.hn-stage textarea:focus { outline: none; }
+
+/* ── the reference's animation vocabulary ── */
+@keyframes hnRise { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes hnBloom { from { opacity: 0; filter: blur(13px); transform: scale(1.016); } to { opacity: 1; filter: blur(0); transform: none; } }
+@keyframes hnMist { from { transform: translate3d(-7%,0,0); } to { transform: translate3d(7%,0,0); } }
+@keyframes hnGlow { 0%,100% { opacity: .1; } 50% { opacity: .95; } }
+@keyframes hnFloat { from { transform: translateY(0); } to { transform: translateY(-16px); } }
+@keyframes hnDrift { 0% { transform: translateY(6px) translateX(0); opacity: 0; } 18% { opacity: .85; } 100% { transform: translateY(-120px) translateX(14px); opacity: 0; } }
+@keyframes hnMoon { 0%,100% { opacity: .82; } 50% { opacity: 1; } }
+@keyframes hnRing { 0% { transform: translate(-50%,-50%) scale(.35); opacity: 0; } 22% { opacity: .5; } 100% { transform: translate(-50%,-50%) scale(1.5); opacity: 0; } }
+@keyframes hnShimmer { 0%,100% { opacity: .35; transform: translateX(-50%) scaleY(.94); } 50% { opacity: .7; transform: translateX(-50%) scaleY(1.06); } }
+/* The moon broken across moving water — 共看明月皆如此. Every step repeats the
+   translateX, because an animated transform REPLACES the inline one. */
+@keyframes hnMoonRipple {
+  0%, 100% { transform: translateX(-50%) scaleX(1);    opacity: .5; }
+  50%      { transform: translateX(-50%) scaleX(1.24); opacity: .95; }
+}
+@keyframes hnBreathe { 0%,100% { transform: scale(.97); opacity: .85; } 50% { transform: scale(1.03); opacity: 1; } }
+@keyframes hnToast { 0% { opacity: 0; transform: translate(-50%,8px); } 12% { opacity: 1; transform: translate(-50%,0); } 88% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes hnSnow { 0% { transform: translateY(-30px); opacity: 0; } 12% { opacity: .7; } 100% { transform: translateY(760px); opacity: 0; } }
+/* Both spins declare `from` explicitly. With only a `to`, the implicit `from`
+   is the element's CURRENT transform — so on a node carrying
+   `translate(-50%,-50%)` the browser matrix-interpolates translate→rotate:
+   the ring drifts out of position AND its rotation is not a linear 0→360,
+   which no counter-spin can cancel. Never animate rotation on the same element
+   that carries the positioning transform. */
+@keyframes hnSpinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+/* Counter-rotation for glyphs riding the ring: without it 春夏秋冬 turn with it
+   and read upside-down at 180°, like a toy — the wrong register entirely.
+   Same duration and timing function as hnSpinSlow, so they cancel exactly. */
+@keyframes hnSpinBack { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+@keyframes hnWordDrift { 0% { opacity: 0; transform: translateY(10px); } 30% { opacity: .8; } 70% { opacity: .8; } 100% { opacity: 0; transform: translateY(-18px); } }
+@keyframes hnSmoke { 0%,100% { transform: translateX(0) scaleY(1); opacity: .5; } 50% { transform: translateX(3px) scaleY(1.05); opacity: .72; } }
+@keyframes hnPetalFall { 0% { transform: translateY(-24px) rotate(0); opacity: 0; } 12% { opacity: .75; } 90% { opacity: .5; } 100% { transform: translateY(540px) rotate(230deg); opacity: 0; } }
+@keyframes hnFlutter { 0% { transform: translate(0,0) rotate(-5deg); } 50% { transform: translate(18px,-24px) rotate(7deg); } 100% { transform: translate(38px,6px) rotate(-5deg); } }
+@keyframes hnBoat { 0%,100% { transform: translateX(-30%) translateY(0) rotate(-1deg); } 50% { transform: translateX(-30%) translateY(-3px) rotate(1deg); } }
+
+/* Respect reduced-motion: still up (opacity), but hold still. */
+@media (prefers-reduced-motion: reduce) {
+  .hn-stage *,
+  .hn-stage *::before,
+  .hn-stage *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+  }
+}

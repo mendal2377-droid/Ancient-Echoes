@@ -1,0 +1,997 @@
+{
+  "schema_version": "0.1",
+  "default_lang": "zh",
+  "supported_langs": [
+    "zh",
+    "en"
+  ],
+  "city": {
+    "id": "city_luoyang",
+    "name": {
+      "zh": "洛阳",
+      "en": "Luoyang"
+    },
+    "historical_names": {
+      "zh": [
+        "洛邑",
+        "东都",
+        "神都",
+        "洛京"
+      ],
+      "en": [
+        "Luoyi",
+        "Eastern Capital",
+        "Divine Capital"
+      ]
+    }
+  },
+  "places": [
+    {
+      "id": "place_longmen_grottoes",
+      "name": {
+        "zh": "龙门石窟",
+        "en": "Longmen Grottoes"
+      },
+      "coordinates": {
+        "lat": 34.56,
+        "lng": 112.473
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "世界文化遗产，洛阳城南伊水两岸，凿于北魏，盛于隋唐，历时四百余年，现存窟龛两千余个，造像十万余尊。武则天将自己的形象融入卢舍那大佛，使龙门成为唐代皇权与佛教融合的最高象征。今日游客面对千年石佛，仍能感受到大唐盛世的雄浑气魄与信仰的力量，伊水依旧潺潺，佛容依然慈悲。",
+        "en": "A UNESCO World Heritage Site on both banks of the Yi River south of Luoyang, carved from the Northern Wei through Tang dynasties over four centuries. Over 2,000 caves and 100,000 statues survive. Empress Wu Zetian incorporated her own features into the great Vairocana Buddha, making Longmen the supreme symbol of Tang imperial power fused with Buddhism. Today visitors face thousand-year stone Buddhas and still feel the might of the Tang at its height — the Yi River still murmurs, the Buddha's expression still serene."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Longmen_Grottoes_Luoyang.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_white_horse_temple",
+      "name": {
+        "zh": "白马寺",
+        "en": "White Horse Temple"
+      },
+      "coordinates": {
+        "lat": 34.6888,
+        "lng": 112.6117
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "中国第一座官立佛寺，创建于东汉永平年间，因两位印度僧人以白马驮经而来得名。历经两千年，几经兴废，今仍香火鼎盛。寺内保存有东汉时期的古建筑与石刻，齐云塔巍然矗立，是中国佛教史上的圣地。每逢农历重大节日，来自全国乃至世界各地的信众汇聚于此，钟磬之声回荡于古柏之间，令访者感受到佛法东传两千年的深远脉络。",
+        "en": "China's first officially established Buddhist temple, founded in the Eastern Han dynasty when two Indian monks arrived on white horses carrying sutras. Though it has survived two millennia of rise and fall, it still draws devoted pilgrims. Ancient Han-dynasty architecture and stone carvings survive within; the Qiyun Pagoda stands tall against the sky. On major lunar festival days, worshippers from across China and the world gather here, and the sound of bells and chimes among ancient cypresses conveys two thousand years of Buddhism's eastward journey."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/White_Horse_Temple_Luoyang.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_tianjin_bridge",
+      "name": {
+        "zh": "天津桥",
+        "en": "Tianjin Bridge"
+      },
+      "coordinates": {
+        "lat": 34.676,
+        "lng": 112.452
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "隋唐时期洛阳城最重要的桥梁，横跨洛水，连接皇城与民间。李白、杜甫、元稹、白居易等众多诗人曾驻足于此，以桥为题写下无数名篇。天津桥一带曾是洛阳最繁华的景观之地，夜晚灯火与水中倒影交相辉映，令过客流连忘返。古桥今已不存，遗址约在今洛阳桥附近，但那份历史的诗意，仍在洛水边悄然流淌。",
+        "en": "The most important bridge of Sui-Tang Luoyang, spanning the Luo River and connecting the imperial city to the people. Li Bai, Du Fu, Yuan Zhen, Bai Juyi — nearly every major Tang poet paused here and composed. The Tianjin Bridge area was Luoyang's most celebrated scenic spot; at night, lanterns and their reflections shimmered in the water, and travelers lingered. The ancient bridge is gone, its site near modern Luoyang Bridge, but the poetry it inspired still flows like the Luo River alongside it."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Luo_River_Luoyang.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_luoyang_palace",
+      "name": {
+        "zh": "洛阳宫城",
+        "en": "Luoyang Palace City"
+      },
+      "coordinates": {
+        "lat": 34.7,
+        "lng": 112.435
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "隋唐洛阳宫城（含仁定宫、乾元殿等），曾是武则天建立武周政权的权力中枢，也是唐代皇帝东巡时的行宫。昔日宫殿巍峨，今已夷为平地，仅部分遗址可供考古发掘。今洛阳隋唐遗址植物园在原址附近建立，以园林形式保护和展示这段历史。盛唐气象虽已成追忆，但脚下的厚土仍埋藏着无数帝王将相的故事。",
+        "en": "The Sui-Tang Luoyang Palace City, including the Rending Palace and Qianyuan Hall, served as the power center of Empress Wu Zetian's Zhou dynasty and a secondary imperial palace for Tang emperors. The magnificent halls are long gone, leveled to earth, with only archaeological remains beneath the soil. The Sui-Tang Heritage Botanical Garden now stands near the site, preserving and presenting this history through garden design. The grandeur of the High Tang is memory now — but the deep earth still holds the stories of emperors and ministers."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Sui_Tang_Heritage_Luoyang.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_mang_mountain",
+      "name": {
+        "zh": "北邙山",
+        "en": "Mang Mountain"
+      },
+      "coordinates": {
+        "lat": 34.762,
+        "lng": 112.449
+      },
+      "coord_precision": "approximate",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "洛阳城北的邙山，自古为皇族与贵族的葬地，有『生于苏杭，死葬北邙』之说。山上古冢累累，历代帝王将相长眠于此。杜甫、白居易等诗人登邙山远眺，写下对人生无常与历史苍凉的深刻感悟。今日邙山仍苍翠葱郁，部分古墓已开放为博物馆，让访者能在土冢之间体悟生死的哲学，感受大唐盛世的繁华与消逝。",
+        "en": "The hills north of Luoyang have served as burial grounds for emperors and nobles since antiquity — hence the saying 'live in Suzhou and Hangzhou, be buried on Mang Mountain.' The hillsides bear ancient mounds beyond counting; emperors and ministers of every dynasty sleep here. Du Fu, Bai Juyi, and other poets climbed these hills to gaze south over the city, writing meditations on human transience and history's melancholy. Today the mountain remains forested and green; some ancient tombs are open as museums, where visitors can contemplate life, death, and the passage of Tang glory."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Mang_Mountain_Luoyang.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    }
+  ],
+  "poets": [
+    {
+      "id": "poet_du_fu",
+      "name": {
+        "zh": "杜甫",
+        "en": "Du Fu"
+      },
+      "courtesy_name": {
+        "zh": "子美",
+        "en": "Zimei"
+      },
+      "lifespan": {
+        "born": 712,
+        "died": 770
+      },
+      "epithet": {
+        "zh": "诗圣",
+        "en": "the Sage of Poetry"
+      },
+      "biography": {
+        "zh": "唐代最伟大的现实主义诗人，被尊为『诗圣』。祖籍洛阳巩县，与洛阳有深厚渊源。年轻时在洛阳与李白相遇，二人相见恨晚，诗酒唱和，传为千古佳话。安史之乱后颠沛流离，以沉郁顿挫的笔触记录了盛唐走向衰落的历史，被誉为『诗史』。其诗歌深刻关怀民生疾苦，忧国忧民之情贯穿一生。在洛阳、长安、成都等地留下大量传世之作，构成唐代现实主义诗歌的最高峰。",
+        "en": "The greatest realist poet of Tang, revered as the 'Sage of Poetry,' whose ancestral home was Gongxian near Luoyang. In his youth, he met Li Bai in Luoyang — a legendary encounter of the two greatest Tang poets. After the An Lushan Rebellion, he wandered in exile, recording the decline of the High Tang in verse of deep, restrained power. His poetry, called 'the history in verse,' cares deeply for common people and the fate of the nation. His works in Luoyang, Chang'an, and Chengdu form the summit of Tang realist poetry."
+      },
+      "major_events": [
+        {
+          "year": 712,
+          "event": {
+            "zh": "生于河南巩县（今洛阳巩义），祖籍洛阳，出身儒学世家",
+            "en": "Born in Gong County near Luoyang; Confucian scholarly family"
+          },
+          "location": "巩县"
+        },
+        {
+          "year": 730,
+          "event": {
+            "zh": "首次赴长安参加科举落第，开始漫游齐鲁大地",
+            "en": "First attempt at imperial examination fails; begins travels through northern China"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 744,
+          "event": {
+            "zh": "在洛阳与李白相遇，二人相见恨晚，同游梁宋，留下千古佳话",
+            "en": "Meets Li Bai in Luoyang — legendary encounter; they travel together through central China"
+          },
+          "location": "洛阳"
+        },
+        {
+          "year": 755,
+          "event": {
+            "zh": "安史之乱爆发，流离失所，途中目睹民间疾苦，创作大量反映社会现实的诗篇",
+            "en": "An Lushan Rebellion erupts; homeless exile; witnesses the people's suffering, composes major realist works"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 759,
+          "event": {
+            "zh": "弃官入蜀，辗转至成都，建草堂定居，迎来创作最丰盛的时期",
+            "en": "Resigns post, heads to Sichuan; builds thatched cottage in Chengdu; most prolific creative period"
+          },
+          "location": "成都"
+        },
+        {
+          "year": 765,
+          "event": {
+            "zh": "离开成都，乘舟漂泊于夔州、荆楚之间，晚年诗歌愈发沉郁深邃",
+            "en": "Leaves Chengdu; drifts by boat between Kuizhou and Jingchu; late verse grows ever deeper"
+          },
+          "location": "夔州"
+        },
+        {
+          "year": 770,
+          "event": {
+            "zh": "病逝于湖南耒阳舟中，终年59岁，一生未得重用，却成为中国诗歌史上最伟大的名字之一",
+            "en": "Dies on a boat in Hunan, age 59; never achieved political ambitions, yet became one of the greatest names in Chinese literary history"
+          },
+          "location": "耒阳"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_tianjin_bridge",
+          "period": {
+            "zh": "744年（与李白同游洛阳）",
+            "en": "744 (traveling with Li Bai in Luoyang)"
+          }
+        },
+        {
+          "place_id": "place_mang_mountain",
+          "period": {
+            "zh": "早年游历洛阳时",
+            "en": "early years, travels in Luoyang"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "met",
+          "year": 744,
+          "description": {
+            "zh": "744年在洛阳相遇，随后同游梁宋，把酒言欢，是中国文学史上最著名的友谊。杜甫对李白推崇备至，一生写下二十余首思念李白的诗篇。",
+            "en": "Met in Luoyang in 744, then traveled together through central China — the most celebrated friendship in Chinese literary history. Du Fu wrote over twenty poems longing for Li Bai throughout his life."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_bai_juyi",
+          "relation_type": "influenced",
+          "description": {
+            "zh": "杜甫的现实主义精神与对民间疾苦的深切关怀，深深影响了白居易的新乐府运动，白居易自称继承杜甫的诗学传统。",
+            "en": "Du Fu's realist spirit and deep concern for the people's suffering profoundly influenced Bai Juyi's New Yuefu movement; Bai Juyi claimed Du Fu's poetic tradition as his own inheritance."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_yuan_zhen",
+          "relation_type": "influenced",
+          "description": {
+            "zh": "元稹与白居易共同发起新乐府运动，明确以杜甫为精神先驱，继承其以诗干预现实、关怀民生的传统。",
+            "en": "Yuan Zhen and Bai Juyi launched the New Yuefu movement together, explicitly honoring Du Fu as their spiritual predecessor, inheriting his tradition of using poetry to engage with social reality."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_bai_juyi",
+      "name": {
+        "zh": "白居易",
+        "en": "Bai Juyi"
+      },
+      "courtesy_name": {
+        "zh": "乐天",
+        "en": "Letian"
+      },
+      "lifespan": {
+        "born": 772,
+        "died": 846
+      },
+      "epithet": {
+        "zh": "诗魔",
+        "en": "the Demon of Poetry"
+      },
+      "biography": {
+        "zh": "中唐最重要的诗人之一，晚年长居洛阳，以『香山居士』自号，留下大量描绘洛阳生活的诗篇。与元稹并称『元白』，共同发起新乐府运动，以浅显易懂的语言写出关怀民生的诗歌。据说每作一首诗，必先读给不识字的老妪听，若能听懂方才定稿，体现了其对平民读者的深切关怀。洛阳是他人生最后的归宿，伊水与龙门的山水成为他暮年诗思的最重要来源。",
+        "en": "One of mid-Tang's most important poets, he retired to Luoyang in his final decades, calling himself 'Hermit of Xiangshan.' With Yuan Zhen he launched the New Yuefu movement, writing accessible verse about social realities. Legend says he read every poem to an illiterate old woman — if she understood it, he kept it — expressing his deep commitment to common readers. Luoyang became his final home; the Yi River and Longmen's mountains were the chief sources of his late poetry's imagery."
+      },
+      "major_events": [
+        {
+          "year": 772,
+          "event": {
+            "zh": "生于河南新郑，幼年随父辗转各地，饱经离乱",
+            "en": "Born in Xinzheng, Henan; childhood marked by displacement and hardship"
+          },
+          "location": "新郑"
+        },
+        {
+          "year": 800,
+          "event": {
+            "zh": "进士及第，开始仕途，以诗文名震京师",
+            "en": "Passes examination; begins official career; poetic fame spreads through Chang'an"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 806,
+          "event": {
+            "zh": "创作『长恨歌』，以杨贵妃故事写尽爱情与政治的纠葛，轰动一时",
+            "en": "Composes 'Song of Everlasting Regret,' the Yang Guifei epic; an immediate sensation"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 815,
+          "event": {
+            "zh": "因直言进谏被贬为江州司马，创作『琵琶行』，感慨身世之悲",
+            "en": "Demoted to Jiangzhou for outspoken remonstrance; composes 'Pipa Song,' lamenting his fate"
+          },
+          "location": "江州"
+        },
+        {
+          "year": 822,
+          "event": {
+            "zh": "任杭州刺史，筑白堤，政绩卓著，留下大量描绘西湖美景的诗篇",
+            "en": "Governor of Hangzhou; builds the Bai Causeway; writes celebrated West Lake poems"
+          },
+          "location": "杭州"
+        },
+        {
+          "year": 829,
+          "event": {
+            "zh": "定居洛阳，自号香山居士，与诗友结香山九老会，吟诗饮酒，怡然自得",
+            "en": "Settles in Luoyang; calls himself Hermit of Xiangshan; founds the Nine Elders of Xiangshan poetry club"
+          },
+          "location": "洛阳"
+        },
+        {
+          "year": 846,
+          "event": {
+            "zh": "病逝洛阳，终年75岁，遗命葬于香山，长眠于他深爱的洛阳土地",
+            "en": "Dies in Luoyang at age 75; buried on Xiangshan by his own wish, resting forever in the city he loved"
+          },
+          "location": "洛阳"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_longmen_grottoes",
+          "period": {
+            "zh": "829-846年（晚年定居洛阳，多次游览）",
+            "en": "829-846 (settled in Luoyang, frequent visits)"
+          }
+        },
+        {
+          "place_id": "place_tianjin_bridge",
+          "period": {
+            "zh": "829-846年（洛阳岁月）",
+            "en": "829-846 (Luoyang years)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_du_fu",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "白居易自称继承杜甫现实主义传统，新乐府运动正是杜甫『诗史』精神的延续与发展。",
+            "en": "Bai Juyi claimed Du Fu's realist tradition as his inheritance; the New Yuefu movement extended and developed Du Fu's 'history in verse' spirit."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_yuan_zhen",
+          "relation_type": "met",
+          "year": 803,
+          "description": {
+            "zh": "白居易与元稹是唐代最著名的诗交，二人同年进士，相交数十年，以诗互诉衷情，情谊深厚，世称『元白』。",
+            "en": "Bai Juyi and Yuan Zhen formed the most celebrated poetic friendship of Tang — both passed the examination the same year, exchanged poems for decades in an intimate bond, known together as 'Yuan-Bai.'"
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_liu_yuxi",
+          "relation_type": "met",
+          "year": 826,
+          "description": {
+            "zh": "白居易与刘禹锡是中唐诗坛的挚友，两人曾在扬州初遇，此后诗酒往来频繁，互为知己，白居易对刘禹锡的『诗豪』精神极为推崇。",
+            "en": "Bai Juyi and Liu Yuxi were intimate friends of mid-Tang — first meeting in Yangzhou, they exchanged poems and wine for years, mutual admirers. Bai Juyi deeply revered Liu's indomitable 'hero spirit.'"
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_yuan_zhen",
+      "name": {
+        "zh": "元稹",
+        "en": "Yuan Zhen"
+      },
+      "courtesy_name": {
+        "zh": "微之",
+        "en": "Weizhi"
+      },
+      "lifespan": {
+        "born": 779,
+        "died": 831
+      },
+      "epithet": {
+        "zh": null,
+        "en": null
+      },
+      "biography": {
+        "zh": "中唐著名诗人，与白居易并称『元白』，共同发起新乐府运动。祖籍洛阳，深受洛阳文化熏陶。其爱情诗尤为脍炙人口，悼亡诗『离思』系列以深沉的情感打动无数读者。仕途坎坷，数度沉浮，但始终以诗歌记录时代的变迁与内心的深情。与白居易的数十年诗交是中国文学史上最动人的友谊之一，二人以诗传情，跨越山河，成为千古佳话。",
+        "en": "A major mid-Tang poet, paired with Bai Juyi as 'Yuan-Bai,' together launching the New Yuefu movement. His ancestral home was Luoyang, and he absorbed the city's literary culture deeply. His love poetry is celebrated above all — the 'Thinking of the Departed' series moves readers with its profound emotion. His official career had many reversals, but he always used poetry to record the era's changes and his own deep feelings. His decades-long poetic friendship with Bai Juyi is one of the most moving in Chinese literary history."
+      },
+      "major_events": [
+        {
+          "year": 779,
+          "event": {
+            "zh": "生于洛阳，祖籍北魏皇族拓跋氏后裔，家学深厚",
+            "en": "Born in Luoyang; descended from the imperial Tuoba clan of Northern Wei; scholarly family heritage"
+          },
+          "location": "洛阳"
+        },
+        {
+          "year": 793,
+          "event": {
+            "zh": "以明经及第，少年得志，在洛阳文人圈中初露头角",
+            "en": "Passes examination by the classical path at a young age; begins making his mark in Luoyang literary circles"
+          },
+          "location": "洛阳"
+        },
+        {
+          "year": 803,
+          "event": {
+            "zh": "与白居易同年登进士第，二人一见如故，开始数十年的深厚诗交",
+            "en": "Passes the jinshi examination the same year as Bai Juyi; immediate bond begins their decades-long friendship"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 810,
+          "event": {
+            "zh": "因上疏言事触怒权贵，被贬出京，仕途开始漂泊，创作大量描写离愁别绪的诗篇",
+            "en": "Exiled for outspoken remonstrance; wandering official career begins; composes poems of separation and longing"
+          },
+          "location": "江陵"
+        },
+        {
+          "year": 812,
+          "event": {
+            "zh": "妻子韦丛去世，写下著名悼亡诗『离思』系列，情深意切，令人动容",
+            "en": "Wife Wei Cong dies; composes the celebrated 'Thinking of the Departed' series, moving readers with its depth of feeling"
+          },
+          "location": "江陵"
+        },
+        {
+          "year": 820,
+          "event": {
+            "zh": "官至宰相，位极人臣，但仕途顺遂时反而诗意渐淡，不及困顿时的深沉",
+            "en": "Rises to chief minister — the highest office. Yet political success dulls the poetic depth of his hardship years"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 831,
+          "event": {
+            "zh": "病逝武昌，终年53岁，白居易闻讯痛哭，以挚友之情写下感人悼文",
+            "en": "Dies in Wuchang, age 53; Bai Juyi, devastated, writes a heartfelt eulogy for his closest friend"
+          },
+          "location": "武昌"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_tianjin_bridge",
+          "period": {
+            "zh": "早年在洛阳游历",
+            "en": "early years, travels in Luoyang"
+          }
+        },
+        {
+          "place_id": "place_mang_mountain",
+          "period": {
+            "zh": "洛阳岁月中多次登临",
+            "en": "multiple visits during Luoyang years"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_bai_juyi",
+          "relation_type": "met",
+          "year": 803,
+          "description": {
+            "zh": "元白之交是唐代文学史上最著名的诗人情谊，二人以诗互诉衷肠，跨越贬谪与疏离，数十年不辍，留下大量唱和之作。",
+            "en": "The Yuan-Bai friendship is the most celebrated poetic bond in Tang literary history — decades of poems exchanged across exile, separation, and reunion, a corpus of mutual devotion."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_du_fu",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "元稹明确以杜甫为诗学先驱，新乐府运动即杜甫现实主义精神的中唐延续。元稹还为杜甫诗集作序，推崇备至。",
+            "en": "Yuan Zhen explicitly honored Du Fu as his poetic predecessor; he wrote a celebrated preface for Du Fu's collected poems and viewed the New Yuefu movement as a direct continuation of Du Fu's realist spirit."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "poem_zeng_li_bai_luoyang",
+      "title": {
+        "zh": "赠李白",
+        "en": "For Li Bai"
+      },
+      "author_id": "poet_du_fu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 744,
+        "precision": "circa",
+        "note": {
+          "zh": "杜甫与李白在洛阳相会后所作，寄托对友人的深情。",
+          "en": "Written after Du Fu met Li Bai in the Luoyang area, expressing deep feeling for his friend."
+        }
+      },
+      "body": {
+        "zh": [
+          "秋来相顾尚飘蓬，",
+          "未就丹砂愧葛洪。",
+          "痛饮狂歌空度日，",
+          "飞扬跋扈为谁雄。"
+        ],
+        "en": [
+          "In autumn we look at each other, still drifting like tumbleweeds;",
+          "the elixir unfinished — ashamed before the hermit Ge Hong.",
+          "Drinking deep and singing wildly, we spend the days for nothing —",
+          "soaring and unbridled: for whose glory do we strive?",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_tianjin_bridge",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "杜甫与李白744年在洛阳相遇后同游，天津桥一带是他们流连之处。",
+            "en": "After meeting Li Bai in Luoyang in 744, the Tianjin Bridge area was where the two poets wandered together."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "友情",
+          "漂泊",
+          "理想"
+        ],
+        "en": [
+          "friendship",
+          "wandering",
+          "unfulfilled ambition"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "友情",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_yue_ye_yi_di",
+      "title": {
+        "zh": "月夜忆舍弟",
+        "en": "Moonlit Night: Thinking of My Brothers"
+      },
+      "author_id": "poet_du_fu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "五言律诗",
+        "en": "wulü (5-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 759,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "戍鼓断人行，",
+          "边秋一雁声。",
+          "露从今夜白，",
+          "月是故乡明。",
+          "有弟皆分散，",
+          "无家问死生。",
+          "寄书长不达，",
+          "况乃未休兵。"
+        ],
+        "en": [
+          "The garrison drum cuts off travelers on the road;",
+          "in the border autumn, the cry of a single wild goose.",
+          "From tonight's dew, White Dew begins;",
+          "the moon is brightest over my old home.",
+          "I have brothers, but all are scattered;",
+          "no home to ask if they live or have died.",
+          "Letters I send never arrive;",
+          "all the more so since the war has not yet ended.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_mang_mountain",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "杜甫流亡途中思念故乡洛阳及散落各地的兄弟，邙山一带是他心中故乡的象征。",
+            "en": "Written in exile, longing for Luoyang home and brothers scattered by war; Mang Mountain embodies his remembered homeland."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "思乡",
+          "战乱",
+          "手足情"
+        ],
+        "en": [
+          "homesickness",
+          "war",
+          "family separation"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 30,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_wen_liu_shijiu",
+      "title": {
+        "zh": "问刘十九",
+        "en": "An Invitation to Liu the Nineteenth"
+      },
+      "author_id": "poet_bai_juyi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "五言绝句",
+        "en": "wujue (5-char quatrain)"
+      },
+      "date_composed": {
+        "year": 830,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "绿蚁新醅酒，",
+          "红泥小火炉。",
+          "晚来天欲雪，",
+          "能饮一杯无。"
+        ],
+        "en": [
+          "Green froth on freshly brewed wine;",
+          "a small fire burning in a red clay stove.",
+          "Evening comes, and it looks like snow —",
+          "can you come for a cup?",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_longmen_grottoes",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "白居易晚年居洛阳香山，龙门石窟附近，这首小诗写于一个即将落雪的傍晚，邀友饮酒。",
+            "en": "Bai Juyi wrote this in his Luoyang years near Xiangshan by Longmen, inviting a friend on an evening when snow was coming."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "友情",
+          "闲适",
+          "冬日"
+        ],
+        "en": [
+          "friendship",
+          "leisure",
+          "winter warmth"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "友情",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 50,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_hua_fei_hua",
+      "title": {
+        "zh": "花非花",
+        "en": "Flowers, Not Flowers"
+      },
+      "author_id": "poet_bai_juyi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "杂言诗",
+        "en": "mixed-meter verse"
+      },
+      "date_composed": {
+        "year": 835,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "花非花，雾非雾，",
+          "夜半来，天明去。",
+          "来如春梦几多时，",
+          "去似朝云无觅处。"
+        ],
+        "en": [
+          "Flowers, yet not flowers; mist, yet not mist —",
+          "it comes at midnight, leaves when day breaks.",
+          "It comes like a spring dream: how long does it last?",
+          "It goes like morning clouds: nowhere to be found.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_white_horse_temple",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "白居易晚年佛缘颇深，常游白马寺一带，这首充满禅意的小诗或与其洛阳晚年佛思相关。",
+            "en": "In his Luoyang years, Bai Juyi was deeply drawn to Buddhism and often visited White Horse Temple; this cryptic, Zen-like poem reflects his late spiritual inquiry."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "禅思",
+          "无常",
+          "梦境"
+        ],
+        "en": [
+          "Buddhist thought",
+          "impermanence",
+          "dream and waking"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "独居",
+          "primary": true,
+          "percentage": 85,
+          "confidence": "high"
+        },
+        {
+          "type": "相思",
+          "primary": false,
+          "percentage": 70,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_li_si_yuan_zhen",
+      "title": {
+        "zh": "离思·其四",
+        "en": "Thinking of the Departed — IV"
+      },
+      "author_id": "poet_yuan_zhen",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 812,
+        "precision": "circa",
+        "note": {
+          "zh": "悼亡妻韦丛所作，情深意切。",
+          "en": "Written mourning his wife Wei Cong, with profound depth of feeling."
+        }
+      },
+      "body": {
+        "zh": [
+          "曾经沧海难为水，",
+          "除却巫山不是云。",
+          "取次花丛懒回顾，",
+          "半缘修道半缘君。"
+        ],
+        "en": [
+          "Having once seen the ocean, no other water can compare;",
+          "beyond the clouds of Wu Mountain, no other clouds exist.",
+          "I pass through the flowers indifferently, not looking back —",
+          "half because of my practice, half because of you.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_tianjin_bridge",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "元稹写下此悼亡名篇时或居洛阳，天津桥是洛阳文人常聚之地，承载着无数离别与思念。",
+            "en": "Yuan Zhen may have written this celebrated elegy while in Luoyang; Tianjin Bridge was where Luoyang's literary men gathered, a place heavy with partings and longing."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "爱情",
+          "悼亡",
+          "忠贞"
+        ],
+        "en": [
+          "love",
+          "grief",
+          "devotion"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "相思",
+          "primary": true,
+          "percentage": 98,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_ju_hua_yuan_zhen",
+      "title": {
+        "zh": "菊花",
+        "en": "Chrysanthemum"
+      },
+      "author_id": "poet_yuan_zhen",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 815,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "秋丛绕舍似陶家，",
+          "遍绕篱边日渐斜。",
+          "不是花中偏爱菊，",
+          "此花开尽更无花。"
+        ],
+        "en": [
+          "Autumn chrysanthemums ring the house like Tao Yuanming's homestead;",
+          "I walk around the fence again and again as the sun slowly sets.",
+          "It is not that among all flowers I especially love the chrysanthemum —",
+          "it is that when this flower is done, there are no more flowers.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_mang_mountain",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          },
+          "note": {
+            "zh": "元稹秋日在洛阳郊外赏菊所作，邙山一带秋色深沉，菊花傲然，正是此诗的意境所在。",
+            "en": "Written viewing chrysanthemums in the Luoyang countryside in autumn; Mang Mountain's deep autumn colors and proud chrysanthemums match this poem's mood."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "秋日",
+          "自然",
+          "孤高"
+        ],
+        "en": [
+          "autumn",
+          "nature",
+          "solitary dignity"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "相思",
+          "primary": true,
+          "percentage": 80,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 65,
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

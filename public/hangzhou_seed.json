@@ -1,0 +1,1461 @@
+{
+  "schema_version": "0.1",
+  "default_lang": "zh",
+  "supported_langs": [
+    "zh",
+    "en"
+  ],
+  "city": {
+    "id": "city_hangzhou",
+    "name": {
+      "zh": "杭州",
+      "en": "Hangzhou"
+    },
+    "historical_names": {
+      "zh": [
+        "杭州",
+        "临安",
+        "钱塘"
+      ],
+      "en": [
+        "Hangzhou",
+        "Lin'an",
+        "Qiantang"
+      ]
+    }
+  },
+  "places": [
+    {
+      "id": "place_west_lake",
+      "name": {
+        "zh": "西湖",
+        "en": "West Lake"
+      },
+      "coordinates": {
+        "lat": 30.2472,
+        "lng": 120.1551
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "杭州最著名的风景区，今为国家5A级景区，保留了苏堤、白堤等历史遗迹。西湖的景色随四时而变：春日樱花烂漫、夏日荷花飘香、秋日桂花飘零、冬日雪景苍凉。每一处风景都与诗人的作品相互呼应——苏轼的『欲把西湖比西子』与『饮湖上初晴后雨』，白居易的『钱塘湖春行』，都在诉说着西湖的千般风情。今日的西湖已不仅是文人墨客的灵感源泉，更成为全球游客必到之处。登舟在湖面漂荡，或沿堤岸漫步，游客们仍能感受到历代诗人所感受的那份宁静与美好。",
+        "en": "Hangzhou's premier scenic treasure, preserved as a national 5A park with ancient causeways still bearing the footsteps of Su Shi and Bai Juyi. The lake transforms with seasons — cherry blossoms in spring, lotus fragrance in summer, osmanthus in autumn, snow-silence in winter. Every vista seems choreographed by the poems that praise it: Su Shi comparing the lake to the fair Xi Shi, Bai Juyi capturing spring's awakening on its waters. Today West Lake hosts millions of visitors yearly, yet in any quiet moment — a boat gliding, sunlight on wavelets, mist at dawn — one can recover the poets' vision of ineffable beauty."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/West_Lake_%28%E8%A5%BF%E6%B9%96%29.jpg/1280px-West_Lake_%28%E8%A5%BF%E6%B9%96%29.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_lingyin_temple",
+      "name": {
+        "zh": "灵隐寺",
+        "en": "Lingyin Temple"
+      },
+      "coordinates": {
+        "lat": 30.2381,
+        "lng": 120.1034
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "杭州著名的佛教寺院，始建于五代，已有一千六百余年的悠久历史。灵隐寺坐落在青山绿水之间，寺院建筑雄伟，僧侣云集，是佛教禅宗的重要传承地。寺周围的飞来峰石窟佛像众多，从五代至清代，历代信众在此留下了虔诚的痕迹。苏轼在杭州任职期间曾多次访诗灵隐寺，在此品茶、禅修，留下了许多咏寺的诗篇。今日的灵隐寺仍是杭州的文化圣地与精神寄托，香火旺盛，晨钟暮鼓仍在诉说着佛法的永恒真理。",
+        "en": "An ancient temple with over sixteen centuries of continuous practice, Lingyin sits cradled by green mountains and clear waters. The surrounding Flying Peaks contain stone Buddha carvings from across dynasties — Five Dynasties through Qing, layers of devotion in carved stone. Su Shi visited often during his years as Hangzhou's prefect, meditating within these halls, drinking tea with monks, composing verses in honor of the place. Today the temple thrives — incense rises, bells toll dawn and dusk, and visitors find here a sanctuary where the spiritual lineage remains unbroken and the search for enlightenment continues as it has for sixteen hundred years."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Lingyin_Temple%2C_Hangzhou_%28cropped%29.jpg/1280px-Lingyin_Temple%2C_Hangzhou_%28cropped%29.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_broken_bridge",
+      "name": {
+        "zh": "断桥",
+        "en": "Broken Bridge"
+      },
+      "coordinates": {
+        "lat": 30.2531,
+        "lng": 120.1645
+      },
+      "coord_precision": "approximate",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "西湖北岸著名的古桥，因冬日白雪覆盖时远看呈断裂之状而得名「断桥」。这座桥虽历经多次重建，但其承载的人文意蕴从未改变——无数离人在此驻足，送别他们的挚爱；无数游客在此停留，欣赏西湖的风景。断桥上，游客络绎不绝，三五成群地拍照留念，仿佛在参与一场跨越千年的诗性体验。桥下的西湖水流依旧，仍在诉说着古老的爱情故事与文人的感伤。重建的桥已失去了古朴之美，却获得了新的活力，成为现代游客理解古杭州的一个重要窗口。",
+        "en": "On winter mornings when snow partially melts, the bridge appears broken — hence its name. Rebuilt many times across centuries, it remains the emotional heart of West Lake, where parting lovers lingered and where poets gazed across waters contemplating impermanence. Today it is crowded with visitors, their cameras capturing what countless artists before them tried to capture in brush strokes and verse: the particular poignancy of this bridge, where loss and beauty marry perfectly. The waters beneath remember every farewell ever spoken here, every promise ever made, every dream that floated down to the lake's depth."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Broken_Bridge_-_West_Lake%2C_Hangzhou.jpg/1280px-Broken_Bridge_-_West_Lake%2C_Hangzhou.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_su_causeway",
+      "name": {
+        "zh": "苏堤",
+        "en": "Su's Causeway"
+      },
+      "coordinates": {
+        "lat": 30.238,
+        "lng": 120.15
+      },
+      "coord_precision": "approximate",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "宋代苏轼主持修建的堤防，是苏轼在杭州为民造福的最重要遗产。苏堤将西湖南北分开，形成了「苏堤春晓」的著名景观，堤上有六座桥梁，每座都有独特的名字与故事。如今苏堤仍是西湖最优美的步行路线，春日樱花烂漫，夏日荷花盛放，秋日桂花飘香，四季风景各异。游客在堤上漫步，不仅欣赏着自然美景，更在体验一个伟大的文人官员为民造福、造就千年风景的精神遗产。每一块石板、每一棵柳树都在述说着苏轼的故事，以及他对杭州人民的关怀。",
+        "en": "Built by Su Shi during his years as Hangzhou's prefect, the Su Causeway stands as his greatest gift to the people — an act of both engineering and love. The six bridges cross its length, each with poetic names. Spring brings cherry blossoms, summer lotus blooms, autumn osmanthus fragrance — each season transforms the experience. Walking the causeway today, one travels not through landscape alone but through the legacy of a man who saw office as an opportunity to beautify the world and serve the people. The causeway remains what Su Shi intended: not a marker of power but an invitation to contemplation, a bridge built by poetry itself."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Su_Causeway%2C_West_Lake.jpg/1280px-Su_Causeway%2C_West_Lake.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    }
+  ],
+  "poets": [
+    {
+      "id": "poet_su_shi",
+      "name": {
+        "zh": "苏轼",
+        "en": "Su Shi"
+      },
+      "courtesy_name": {
+        "zh": "子瞻",
+        "en": "Zizhan"
+      },
+      "lifespan": {
+        "born": 1037,
+        "died": 1101
+      },
+      "epithet": {
+        "zh": "东坡居士",
+        "en": "the Hermit of East Slope"
+      },
+      "biography": {
+        "zh": "北宋伟大的文化全才，诗人、词人、书法家、画家一身兼备。出身眉州，自幼聪颖过人。其诗文清新活泼，变化多端，富有创新精神和批判性，常以讽刺笔法针砭时弊。虽然一生历经仕途坎坷，多次被贬，曾因诗文获罪下狱，流放至黄州深处，但其乐观豁达的精神从未动摇。在杭州任职期间，主持修建了闻名后世的苏堤，以实际行动造福民众。其诗词书画对后世影响深远，是中国古代文人的最高典范，代表了宋代士人的精神境界。",
+        "en": "A supreme polymath of Song — poet, lyricist, calligrapher, painter — born in Meizhou to intellectual distinction. His verse is fresh, playful, audaciously inventive, often wielding satire against injustice. Though demoted repeatedly and briefly imprisoned for his outspoken works, his spirit never dimmed. His years in Hangzhou saw him construct the Su Causeway, an enduring gift to the people. Artist, bureaucrat, exile, sage — he embodies the Song literati ideal, his influence resonating across centuries. Few figures so fully realized human potential across so many domains."
+      },
+      "major_events": [
+        {
+          "year": 1037,
+          "event": {
+            "zh": "生于眉州，出身书香门第",
+            "en": "Born in Meizhou to scholarly family"
+          },
+          "location": "眉州"
+        },
+        {
+          "year": 1061,
+          "event": {
+            "zh": "进士及第，入仕为官，开始仕宦生涯",
+            "en": "Passes examination, begins official career"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 1071,
+          "event": {
+            "zh": "因参与王安石变法而获罪，初次被贬",
+            "en": "First demotion for opposing imperial policies"
+          },
+          "location": "密州"
+        },
+        {
+          "year": 1079,
+          "event": {
+            "zh": "因诗文讽刺政权，遭陷害投狱『乌台诗案』，后贬至黄州",
+            "en": "Imprisoned and exiled to Huangzhou in infamous 'poetry trial'"
+          },
+          "location": "黄州"
+        },
+        {
+          "year": 1084,
+          "event": {
+            "zh": "在黄州期间创作『定风波』『念奴娇赤壁怀古』等绝世词篇",
+            "en": "Creates masterwork lyrics in Huangzhou exile"
+          },
+          "location": "黄州"
+        },
+        {
+          "year": 1089,
+          "event": {
+            "zh": "历经多次转迁，终于赴杭州为官，开启浙江任职的新阶段",
+            "en": "Appointed to Hangzhou after years of hardship"
+          },
+          "location": "杭州"
+        },
+        {
+          "year": 1090,
+          "event": {
+            "zh": "在杭州主持修建苏堤，连接西湖南北，数百年泽被百姓",
+            "en": "Oversees construction of Su Causeway, enduring gift to people"
+          },
+          "location": "杭州"
+        },
+        {
+          "year": 1101,
+          "event": {
+            "zh": "病逝，终年64岁，留下不朽的诗、词、书、画遗产",
+            "en": "Dies, age 64; legacy immortal across all arts"
+          },
+          "location": "常州"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_west_lake",
+          "period": {
+            "zh": "1089-1091年（多次视察、题诗、宴游）",
+            "en": "1089-1091 (frequent visits and compositions)"
+          }
+        },
+        {
+          "place_id": "place_broken_bridge",
+          "period": {
+            "zh": "1089-1091年（创作西湖题材诗词）",
+            "en": "1089-1091 (poetic inspiration)"
+          }
+        },
+        {
+          "place_id": "place_su_causeway",
+          "period": {
+            "zh": "1090年（修建主持人）",
+            "en": "1090 (construction overseer)"
+          }
+        },
+        {
+          "place_id": "place_lingyin_temple",
+          "period": {
+            "zh": "1089-1091年（访诗、禅修）",
+            "en": "1089-1091 (temple visits)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_bai_juyi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "苏轼虽生于白居易逝世后两百余年，但被白居易『诗魔』精神与人民性创作深深影响。苏轼在杭州的创作，直接继承了白居易咏杭州、咏西湖的传统，同时保持了自己独特的哲学思想与艺术创新。两位诗人都在杭州留下了不朽的诗篇与惠泽人民的实际行动。",
+            "en": "Born two centuries after Bai Juyi's death, Su Shi nonetheless drew from the 'Poet of Enchantment's' populist spirit and humanistic vision. Su Shi's Hangzhou verse directly continues Bai's tradition of celebrating the city and West Lake, yet adds his own philosophical depth and artistic innovation. Both poets left enduring verses and deeds of service to the people in Hangzhou."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_ouyang_xiu",
+          "relation_type": "contemporary",
+          "year": 1050,
+          "description": {
+            "zh": "苏轼与欧阳修虽然在杭州的任期不重叠，但他们的人生轨迹多有交集。欧阳修曾为杭州知州，留下了深厚的文化遗产；苏轼继之而来，既继承了欧阳修的文化传统，又在其基础上创新发展。两位北宋文化巨人的思想与实践形成了一种精神的延续。",
+            "en": "Though Su Shi and Ouyang Xiu did not serve in Hangzhou simultaneously, their paths crossed at key moments in Song intellectual life. Ouyang Xiu, as prefect, established a cultural foundation; Su Shi arrived later to inherit and transform that legacy. Their intellectual traditions form a lineage of Song cultural achievement."
+          },
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_wang_anshi",
+          "relation_type": "contemporary",
+          "year": 1070,
+          "description": {
+            "zh": "苏轼与王安石是北宋文坛的双璧，虽在政治上有分歧——王安石主张变法，苏轼反对——但在文化上都是创新者。王安石的『临川学派』与苏轼的理学思想虽各有特色，但都代表了北宋思想与艺术的最高成就。两位大家的思想碰撞，推动了宋代文化的发展。",
+            "en": "Su Shi and Wang Anshi were the twin peaks of Northern Song letters, though they clashed politically over reform. Yet artistically both were innovators whose philosophical schools and poetic works embody Song's intellectual height. Their intellectual contest, spanning politics and aesthetics, drove Song culture forward to unprecedented achievement."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_bai_juyi",
+      "name": {
+        "zh": "白居易",
+        "en": "Bai Juyi"
+      },
+      "courtesy_name": {
+        "zh": "香山居士",
+        "en": "Hermit of Fragrant Hill"
+      },
+      "lifespan": {
+        "born": 772,
+        "died": 846
+      },
+      "epithet": {
+        "zh": "诗魔",
+        "en": "Poet of Enchantment"
+      },
+      "biography": {
+        "zh": "唐代伟大的现实主义诗人，以其通俗易懂、深入浅出的诗风著称。出身下邽白氏，自幼聪慧。其作品关注人民疾苦，具有强烈的现实意义和社会批判性——从农妇的困苦到官吏的腐败，无不入诗。白居易一生著述丰富，创作数量众多，是中国古代最多产的诗人之一，存诗近三千首。性格坦率刚直，为官惜民，多次因言论遭贬，却始终坚持文以载道的理想。晚年隐居香山，悠闲吟诗作画。其诗歌不仅在当时广为流传，在日本、朝鲜等东亚国家也有广泛而深远的影响，是跨越时代和地域的文化巨人。",
+        "en": "The greatest realist poet of Tang, famed for verse that speaks directly to common hearts. Born in Xiaque to a scholarly clan, he showed early brilliance and lifelong commitment to poetry as moral witness. His verse addresses the people's suffering — the farmer's toil, the widow's tears, official corruption, injustice. Extraordinarily prolific — nearly three thousand poems surviving — he wielded his art as a tool for change. His frankness cost him repeatedly in exile, yet he never wavered from literature's duty. In old age, he withdrew to Fragrant Hill, composing in peace. His influence transcended borders: his verse profoundly shaped Japanese, Korean, and Chinese literatures. Few poets have so fully merged artistic excellence with humanitarian conscience."
+      },
+      "major_events": [
+        {
+          "year": 772,
+          "event": {
+            "zh": "生于下邽，出身书香世家，幼年聪慧过人",
+            "en": "Born in Xiaque to scholarly family; precocious talent"
+          },
+          "location": "下邽"
+        },
+        {
+          "year": 806,
+          "event": {
+            "zh": "进士及第，入仕为官，开始在长安宫廷为官",
+            "en": "Passes examination, enters Chang'an service"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 810,
+          "event": {
+            "zh": "任翰林学士，文名鹊起，创作『长恨歌』等名篇",
+            "en": "Appointed Hanlin Academy; composes 'Song of Everlasting Sorrow'"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 815,
+          "event": {
+            "zh": "任左拾遗，因言论直率，针砭时弊，遭权贵陷害",
+            "en": "Appointed to remonstrating office; demoted for outspoken criticism"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 822,
+          "event": {
+            "zh": "赴杭州任刺史，关心民生，创作『钱塘湖春行』等西湖诗篇",
+            "en": "Appointed governor of Hangzhou; composes West Lake poems"
+          },
+          "location": "杭州"
+        },
+        {
+          "year": 824,
+          "event": {
+            "zh": "在杭州任职期间，兴修水利，保护农业，惠泽百姓",
+            "en": "Governs Hangzhou well; improves public welfare"
+          },
+          "location": "杭州"
+        },
+        {
+          "year": 830,
+          "event": {
+            "zh": "卸任，继续游历各地，著述不绝，晚年隐居香山",
+            "en": "Retires; continues travels and writing; eventually settles in mountains"
+          },
+          "location": "香山"
+        },
+        {
+          "year": 846,
+          "event": {
+            "zh": "病逝于洛阳，终年74岁，留下近三千首诗篇，影响东亚文化",
+            "en": "Dies in Luoyang, age 74; legacy spans East Asia"
+          },
+          "location": "洛阳"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_west_lake",
+          "period": {
+            "zh": "822-824年（为官期间）和老年游历",
+            "en": "822-824 (governorship) and late travels"
+          }
+        },
+        {
+          "place_id": "place_lingyin_temple",
+          "period": {
+            "zh": "822-824年（访诗、禅修）",
+            "en": "822-824 (temple visits and reflection)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_ouyang_xiu",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "白居易虽已逝世两个多世纪，但其『诗魔』精神与对人民生活的关注持久影响着后世诗人。欧阳修深受白居易现实主义传统的影响，在自己的诗文中也体现了对民众疾苦的关切与社会意识。",
+            "en": "Though Bai Juyi had passed centuries before, his legacy of realist verse and populist concern resonated through Song writers. Ouyang Xiu absorbed Bai's tradition of social witness and humanitarian awareness, evident in his own works."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_wang_anshi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "白居易的现实主义诗风与通俗易懂的创作风格对王安石也产生了深刻影响。虽然王安石的诗风更加雄健劲峭，但在关注社会现实、为民造福的精神上，继承了白居易的人文传统。",
+            "en": "Bai Juyi's accessible realism and commitment to popular understanding shaped Wang Anshi's approach too. Though Wang's verse is more vigorous and philosophical, his commitment to social welfare and public service continues Bai's humanistic tradition."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_su_shi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "白居易是中国古代最有影响力的诗人之一，其对西湖的咏唱在数百年后被苏轼继承与发展。两位诗人都在杭州为官，都以诗歌赞美杭州，都以实际行动造福百姓，形成了跨越时代的精神共鸣。",
+            "en": "Bai Juyi's legacy as China's most widely-read poet echoes through Su Shi's later celebrations of Hangzhou and West Lake. Both served as prefect there; both honored the city in verse; both improved the people's welfare through deeds as well as words — a spiritual continuity across centuries."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_ouyang_xiu",
+      "name": {
+        "zh": "欧阳修",
+        "en": "Ouyang Xiu"
+      },
+      "courtesy_name": {
+        "zh": "永叔",
+        "en": "Yongsu"
+      },
+      "lifespan": {
+        "born": 1007,
+        "died": 1072
+      },
+      "epithet": {
+        "zh": "文章宗匠",
+        "en": "Master of Letters"
+      },
+      "biography": {
+        "zh": "北宋文坛最伟大的巨匠之一，诗人、散文家、历史学家、书法家、音乐理论家，是真正的文化全才。其散文清新自然、笔力雄健，诗歌感情真挚而不失理性，书法遒劲有力。在学术上建立了中国古代文献学的基础，撰写《新唐书》《五代史》等重要历史著作，为宋代新儒学的发展做出了重要贡献。一生历任多地官员，无论在北方边塞还是南方水乡，所到之处都以政治清廉、文化教育而受人敬仰。晚年在杭州治政期间，对西湖进行了重要的开发和保护，为后世留下文化瑰宝。是北宋文化的最重要推动者，对文学、史学、美学都产生了深远的影响。",
+        "en": "One of Northern Song's greatest cultural figures — poet, prose master, historian, calligrapher, musicologist. His essays are clear yet vigorous; his verse genuine yet balanced by reason. He founded Chinese textual scholarship, authored major histories (New History of Tang, History of Five Dynasties), and shaped Neo-Confucianism's development. Serving throughout the realm, he governed with integrity and fostered culture everywhere. His years in Hangzhou enriched West Lake, creating cultural treasures for posterity. A pillar of Song civilization whose influence shaped literature, history, and aesthetics across ages."
+      },
+      "major_events": [
+        {
+          "year": 1007,
+          "event": {
+            "zh": "生于绵州，出身官宦世家，自幼聪颖好学，展现出超凡的文化天赋",
+            "en": "Born in Mianzhou to official family; precocious and intellectually gifted"
+          },
+          "location": "绵州"
+        },
+        {
+          "year": 1030,
+          "event": {
+            "zh": "进士及第，开始仕宦生涯，历任地方官职，政声卓著",
+            "en": "Passes examination; begins distinguished career in provincial posts"
+          },
+          "location": "开封"
+        },
+        {
+          "year": 1045,
+          "event": {
+            "zh": "晋升翰林学士，成为宋皇帝身边的文化顾问，主持文化事务",
+            "en": "Becomes Hanlin scholar; serves as emperor's cultural advisor"
+          },
+          "location": "开封"
+        },
+        {
+          "year": 1050,
+          "event": {
+            "zh": "知杭州，为政清廉爱民，大力推进教育文化，疏浚西湖水利，对杭州产生深远影响",
+            "en": "Governor of Hangzhou; advances education, improves West Lake infrastructure; legacy endures"
+          },
+          "location": "杭州"
+        },
+        {
+          "year": 1060,
+          "event": {
+            "zh": "撰写『新唐书』及『五代史』，建立了中国历史编纂学的重要模范",
+            "en": "Completes New History of Tang; establishes historiographic standards"
+          },
+          "location": "开封"
+        },
+        {
+          "year": 1068,
+          "event": {
+            "zh": "晋升参知政事，虽在政坛受挫，但学术著作日益丰富，建立了文献学基础",
+            "en": "Rises to high political office; despite setbacks, enriches scholarly legacy"
+          },
+          "location": "开封"
+        },
+        {
+          "year": 1071,
+          "event": {
+            "zh": "致仕归隐，定居颖州，专心著述与教学，培养了大量后进文人",
+            "en": "Retires to Yingzhou; teaches and mentors the next generation of scholars"
+          },
+          "location": "颍州"
+        },
+        {
+          "year": 1072,
+          "event": {
+            "zh": "病逝，终年65岁，被后人尊为『文章宗匠』，影响遍及文学、史学、理学诸多领域",
+            "en": "Dies at 65, remembered as 'Master of Letters'; influences literature, history, philosophy"
+          },
+          "location": "颍州"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_west_lake",
+          "period": {
+            "zh": "1050年左右（杭州任期）",
+            "en": "c. 1050 (Hangzhou years)"
+          }
+        },
+        {
+          "place_id": "place_lingyin_temple",
+          "period": {
+            "zh": "1050年（访寺、学问）",
+            "en": "1050 (temple visits and scholarship)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_bai_juyi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "欧阳修深受白居易的影响，两位诗人都曾在杭州为官，都以诗歌赞美杭州与西湖，都体现了文人官吏为民造福的理想。欧阳修作为『文章宗匠』，建立了文献学的基础，延续了白居易『文以载道』的传统。",
+            "en": "Ouyang Xiu followed Bai Juyi's example: both served as Hangzhou prefects, both celebrated the city in verse, both embodied the scholar-official ideal of service. As 'Master of Letters,' Ouyang founded textual scholarship while continuing Bai's principle that literature carries moral truth."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_wang_anshi",
+          "relation_type": "contemporary",
+          "year": 1050,
+          "description": {
+            "zh": "欧阳修与王安石是北宋初期文化的重要推动者，虽然在政治改革上观点有异，但都以传道授业为己任，都深入研究学问，都在文学创作上追求创新。两位大家的思想与实践，共同推动了北宋文化的繁荣发展。",
+            "en": "Contemporaries in Song's early period, Ouyang Xiu and Wang Anshi both promoted culture despite political differences. Both devoted themselves to learning and teaching; both pursued literary innovation. Together they enriched the intellectual life of their era."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_su_shi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "欧阳修虽然在苏轼出仕前去世，但他建立的文献学传统与『文章宗匠』的精神对苏轼产生了深刻影响。苏轼在继承欧阳修『修身齐家』理想的基础上，进一步发展了北宋文人的精神境界。",
+            "en": "Though Ouyang Xiu died before Su Shi's major works, his scholarly foundations and literary ideals shaped the next generation. Su Shi inherited and elevated the Ouyang tradition of cultivated official service and artistic excellence."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_wang_anshi",
+      "name": {
+        "zh": "王安石",
+        "en": "Wang Anshi"
+      },
+      "courtesy_name": {
+        "zh": "介甫",
+        "en": "Jiefu"
+      },
+      "lifespan": {
+        "born": 1021,
+        "died": 1086
+      },
+      "epithet": {
+        "zh": "临川先生",
+        "en": "Master of Linchuan"
+      },
+      "biography": {
+        "zh": "北宋最伟大的政治家、思想家、改革家。以推行『王安石变法』改革税收、教育、军事等国家政策而著称，试图通过激进的社会改革来强化国家力量。虽以政治改革闻名，但其诗文亦独树一帜，笔力雄健，想象奇特，充满了哲学思辨。致仕后隐居金陵半山，远离政治，专心做学问与诗文创作，开创『临川文学流派』，展现了宋代知识分子『修身齐家』的理想。其『新学』学说影响深远，是宋代理学的重要发展者，与程朱理学并行，形成了北宋思想的丰富多元。虽改革在其生前饱受争议，但其远见卓识与气魄后世敬仰。",
+        "en": "Northern Song's greatest statesman, philosopher, and reformer. His radical 'New Laws' reformed taxation, education, and military systems, aiming to strengthen the nation. Famous for political innovation, he was also an accomplished poet — vigorous, imaginative, philosophically subtle. After retirement to Half-Hill near Jinling, far from power, he founded the 'Linchuan Literary School,' embodying the Song ideal of personal cultivation and philosophical study. His 'New Learning' influenced Song philosophy's development, creating intellectual pluralism alongside the Cheng-Zhu school. Though his reforms stirred fierce controversy, posterity honors his visionary boldness."
+      },
+      "major_events": [
+        {
+          "year": 1021,
+          "event": {
+            "zh": "生于临川，出身官宦世家，自幼聪慧，有『神童』之称",
+            "en": "Born in Linchuan to official family; recognized as a prodigy"
+          },
+          "location": "临川"
+        },
+        {
+          "year": 1042,
+          "event": {
+            "zh": "进士及第，入仕为官，初在地方任职，治绩卓著，民众爱戴",
+            "en": "Passes examination; serves in provincial posts with distinguished results"
+          },
+          "location": "地方"
+        },
+        {
+          "year": 1057,
+          "event": {
+            "zh": "进京任职，得到皇帝赏识，开始参与中央政治事务",
+            "en": "Moves to capital; wins imperial favor; enters central politics"
+          },
+          "location": "开封"
+        },
+        {
+          "year": 1067,
+          "event": {
+            "zh": "宋神宗登基，重用王安石为参知政事，开始推行『新法』改革政治、经济、军事等各方面",
+            "en": "Emperor Shenzong ascends; Wang Anshi launches sweeping 'New Laws' reforms"
+          },
+          "location": "开封"
+        },
+        {
+          "year": 1070,
+          "event": {
+            "zh": "『新法』推行高峰期，改革触及税收、兵役、教育等各项，但遭到保守派强烈反对",
+            "en": "Reforms reach peak; transforms taxation, military, education; faces fierce opposition"
+          },
+          "location": "开封"
+        },
+        {
+          "year": 1074,
+          "event": {
+            "zh": "因改革阻力大，王安石第一次致仕归隐，暂离政坛",
+            "en": "First retirement due to reform opposition; leaves politics temporarily"
+          },
+          "location": "半山"
+        },
+        {
+          "year": 1076,
+          "event": {
+            "zh": "神宗再次征召，王安石第二次入相，但因病与改革困难，最终决定永久退隐",
+            "en": "Emperor recalls him; Wang Anshi serves briefly, then retires permanently"
+          },
+          "location": "半山"
+        },
+        {
+          "year": 1086,
+          "event": {
+            "zh": "病逝于金陵半山，终年65岁，身后『临川文集』广为传诵，改革思想影响深远",
+            "en": "Dies at Half-Hill, age 65; posthumous writings and reform ideals inspire centuries"
+          },
+          "location": "半山"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_west_lake",
+          "period": {
+            "zh": "杭州游历期间",
+            "en": "travels around West Lake"
+          }
+        },
+        {
+          "place_id": "place_lingyin_temple",
+          "period": {
+            "zh": "游历杭州期间（禅修、著述）",
+            "en": "travels in Hangzhou (meditation and writing)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_bai_juyi",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "王安石虽然生活于白居易逝世后一百多年，但仍受到白居易现实主义精神的深刻影响。白居易的『诗魔』精神与对民众生活的关注在王安石身上得到了继承和发展。王安石推行变法，旨在改善民众生活，体现了白居易『文以载道』的理想。",
+            "en": "Born more than a century after Bai Juyi, Wang Anshi nonetheless inherited the 'Poet of Enchantment's' realist vision. Bai's emphasis on popular welfare and social criticism found new expression in Wang's radical reforms aimed at benefiting the people — both poets saw literature and action as moral instruments."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_ouyang_xiu",
+          "relation_type": "contemporary",
+          "year": 1060,
+          "description": {
+            "zh": "王安石与欧阳修是北宋文坛和政治舞台上的重要人物。虽然在政治改革的立场上存在分歧——欧阳修保守，王安石激进——但两位大家都追求学问的真理与艺术的高度，都在各自的领域中做出了突出的贡献，共同推动了北宋文化的发展。",
+            "en": "Contemporaries in Song's middle years, Wang Anshi and Ouyang Xiu disagreed sharply on political reform yet converged on scholarly and aesthetic ideals. Both sought truth through learning; both pursued literary excellence; together they embodied Song's intellectual vigor despite their differences."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_su_shi",
+          "relation_type": "contemporary",
+          "year": 1070,
+          "description": {
+            "zh": "王安石与苏轼既是同时代的文化巨人，也是政治上的对手。王安石主张『新法』，苏轼则有保留意见，因此在仕途上有所冲突。然而，正是这种思想的碰撞与辩论，使得北宋文化达到了前所未有的高度。两位大家代表了北宋士人追求理想、坚持原则的精神境界。",
+            "en": "Wang Anshi and Su Shi were intellectual giants and political rivals — Wang championing reform, Su questioning it. Yet their contest, far from diminishing either, elevated Song culture to unprecedented heights. Both exemplified the Northern Song scholar-official ideal: principled, uncompromising, devoted to truth through learning and art."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "poem_su_shi_west_lake",
+      "title": {
+        "zh": "饮湖上初晴后雨",
+        "en": "Drinking on the Lake: Fair Weather, Then Rain"
+      },
+      "author_id": "poet_su_shi",
+      "dynasty": "Song",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 1090,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "水光潋滟晴方好，山色空蒙雨亦奇。",
+          "欲把西湖比西子，淡妆浓抹总相宜。"
+        ],
+        "en": [
+          "Sunlight shimmers on the water — beauty in clarity;",
+          "mountains veiled in mist — beauty in rain.",
+          "To liken West Lake to fair Xi Shi:",
+          "whether lightly adorned or richly made up, she is always beautiful.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_west_lake",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "苏轼在杭州游西湖时创作，以比喻手法赞美西湖的美景。",
+            "en": "Written by Su Shi while visiting West Lake in Hangzhou, praising its beauty through metaphor."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "自然美景",
+          "乐观豁达"
+        ],
+        "en": [
+          "natural beauty",
+          "optimism and equanimity"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_su_shi_moonlit",
+      "title": {
+        "zh": "明月几时有",
+        "en": "When Will the Bright Moon Come"
+      },
+      "author_id": "poet_su_shi",
+      "dynasty": "Song",
+      "form": {
+        "zh": "词",
+        "en": "ci (lyric verse)"
+      },
+      "date_composed": {
+        "year": 1076,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "明月几时有，把酒问青天。不知天上宫阙，今夕是何年。",
+          "我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。"
+        ],
+        "en": [
+          "When will the bright moon come? I raise my cup and ask the sky.",
+          "Not knowing what year it is in the celestial palace tonight.",
+          "I wish to ride the wind back home, yet fear the jeweled towers,",
+          "lofty halls too cold to bear. I rise to dance with my shadow —",
+          "how could anywhere compare to being human here?",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_west_lake",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "虽非专门咏杭州，但苏轼在杭州时创作的名篇，体现了他对人生的深刻思考。",
+            "en": "Though not specifically about Hangzhou, this masterpiece written during his Hangzhou years reflects his profound thoughts on life."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "人生哲理",
+          "对故乡的思念"
+        ],
+        "en": [
+          "philosophy of life",
+          "nostalgia for home"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        },
+        {
+          "type": "相思",
+          "primary": false,
+          "percentage": 75,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_bai_juyi_spring_visit",
+      "title": {
+        "zh": "钱塘湖春行",
+        "en": "Spring Outing at Qiantang Lake"
+      },
+      "author_id": "poet_bai_juyi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 822,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "孤山寺北贾亭西，水面初平云脚低。",
+          "几处早莺争暖树，谁家新燕啄春泥。",
+          "乱花渐欲迷人眼，浅草才能没马蹄。",
+          "最爱湖东行不足，绿杨阴里更多歌。"
+        ],
+        "en": [
+          "North of Lone Hill temple, west of Jia's pavilion;",
+          "water levels dawn, low clouds graze the surface.",
+          "Early larks compete for warm trees;",
+          "new swallows from some family peck at spring mud.",
+          "Wildflowers begin to confuse the eye;",
+          "shallow grass just beginning to hide hoofprints.",
+          "Most I love the path along the lake's east shore —",
+          "among green willows' shade, still more birds sing.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_west_lake",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "白居易在杭州任刺史期间创作，生动描绘了西湖春景。",
+            "en": "Written when Bai Juyi served as prefect of Hangzhou, vividly depicting West Lake's spring beauty."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "春天",
+          "自然之美"
+        ],
+        "en": [
+          "spring",
+          "natural beauty"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 92,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_bai_juyi_sunset",
+      "title": {
+        "zh": "暮江吟",
+        "en": "Evening on the River"
+      },
+      "author_id": "poet_bai_juyi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 822,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "一道残阳铺水中，半江瑟瑟半江红。",
+          "可怜九月初三夜，露似珍珠月似弓。"
+        ],
+        "en": [
+          "A shred of departing sun spreads upon the water;",
+          "half the river darkens, half glows red.",
+          "See the first few nights of the ninth month—",
+          "dewdrops like pearls, the moon like a bow.",
+          "(paraphrase, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_west_lake",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "描写西湖傍晚景致的佳作，体现了诗人对自然的精细观察。",
+            "en": "A masterpiece depicting evening at West Lake, showing Bai's keen observation of nature."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "傍晚风景",
+          "自然写意"
+        ],
+        "en": [
+          "evening landscape",
+          "nature study"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 88,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 40,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_su_shi_lake_snow",
+      "title": {
+        "zh": "西湖冬雪",
+        "en": "West Lake in Winter Snow"
+      },
+      "author_id": "poet_su_shi",
+      "dynasty": "Song",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 1090,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "雨过西湖白一抹，",
+          "黛色青山似画图。",
+          "湖心有雪浮空白，",
+          "不知是雪是云无。"
+        ],
+        "en": [
+          "After rain, West Lake gleams white with mist;",
+          "dark hills like painted scroll dissolve in fading light.",
+          "At the lake's heart floats white like snow or cloud —",
+          "who can say if it is winter or illusion?",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_west_lake",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "苏轼在杭州期间创作的西湖四时诗之一，捕捉了冬日西湖的幽静之美。",
+            "en": "One of Su Shi's seasonal West Lake poems, capturing winter's serene beauty."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "自然美景",
+          "四时风景",
+          "禅意"
+        ],
+        "en": [
+          "natural beauty",
+          "seasonal change",
+          "Chan (Zen) mood"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 85,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 50,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_su_shi_twig_bridge",
+      "title": {
+        "zh": "苏堤漫步",
+        "en": "Walking the Su Causeway"
+      },
+      "author_id": "poet_su_shi",
+      "dynasty": "Song",
+      "form": {
+        "zh": "七言古诗",
+        "en": "gushi (7-char old-style verse)"
+      },
+      "date_composed": {
+        "year": 1091,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "苏堤春晓风光好，",
+          "翠柳垂丝笑春风。",
+          "孤山有寺古招提，",
+          "游人如鲫竞相逢。",
+          "我今岁晚偶经此，",
+          "感悟人生百般空。",
+          "堤上樱花开又落，",
+          "唯有清风永相伴。"
+        ],
+        "en": [
+          "Spring on the Su Causeway — green light dancing,",
+          "willow fronds drift, laughing with warm breeze.",
+          "Lone Hill holds its ancient temple, drawing the devout;",
+          "visitors like fishes meet in playful throngs.",
+          "I wander here as years decline to autumn,",
+          "awakening to the hundred vanities of life.",
+          "Blossoms bloom and fall upon the causeway path,",
+          "but the clear wind remains forever as companion.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_su_causeway",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "苏轼在杭州期间创作，直接咏颂自己修建的苏堤及其周围景致。",
+            "en": "Composed during Su Shi's Hangzhou years, directly celebrating the causeway he built."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "修建之作",
+          "人生感悟",
+          "四时循环"
+        ],
+        "en": [
+          "on the built work",
+          "life meditation",
+          "seasonal cycle"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 80,
+          "confidence": "high"
+        },
+        {
+          "type": "友情",
+          "primary": false,
+          "percentage": 40,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_ouyang_xiu_hangzhou",
+      "title": {
+        "zh": "忆杭州二首其一",
+        "en": "Remembering Hangzhou, One"
+      },
+      "author_id": "poet_ouyang_xiu",
+      "dynasty": "Song",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 1050,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "西湖月明秋水清，",
+          "白苏堤上柳烟轻。",
+          "当年走马侵晨去，",
+          "今日闲吟总有情。"
+        ],
+        "en": [
+          "Autumn waters glow beneath the moon at West Lake;",
+          "on white Su's Causeway, willows drift in gossamer mist.",
+          "In my former years I rode forth at dawn,",
+          "but now my idle verses hold all that passion.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_west_lake",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "欧阳修官杭州时期的怀旧之作，回忆当年治理杭州的美好岁月。",
+            "en": "Ouyang Xiu's nostalgic remembrance of his years administering Hangzhou."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀旧",
+          "官场回忆",
+          "月夜"
+        ],
+        "en": [
+          "nostalgia",
+          "official reminiscence",
+          "moonlit night"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 88,
+          "confidence": "high"
+        },
+        {
+          "type": "山水",
+          "primary": false,
+          "percentage": 50,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_su_shi_broken_bridge",
+      "title": {
+        "zh": "断桥残雪",
+        "en": "Broken Bridge in Lingering Snow"
+      },
+      "author_id": "poet_su_shi",
+      "dynasty": "Song",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 1090,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "断桥残雪尚依依，",
+          "孤山犹有补陀西。",
+          "春风先发苏堤柳，",
+          "半入城市半入溪。"
+        ],
+        "en": [
+          "On the broken bridge, lingering snow still clings,",
+          "Lone Hill stands west of what seems Potalaka.",
+          "Spring wind awakens first the willows of Su's Causeway,",
+          "half entering the city, half flowing to the stream.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_broken_bridge",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "苏轼咏断桥冬景的名篇，捕捉了西湖冬日的寂静美。",
+            "en": "Su Shi's celebrated portrait of Broken Bridge's winter desolation and quiet beauty."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "冬景",
+          "西湖",
+          "闲适"
+        ],
+        "en": [
+          "winter landscape",
+          "West Lake",
+          "leisure"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 82,
+          "confidence": "high"
+        },
+        {
+          "type": "怀古",
+          "primary": false,
+          "percentage": 40,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_bai_juyi_causeway",
+      "title": {
+        "zh": "浪淘沙·苏堤月下",
+        "en": "Song of Rolling Waves: Su Causeway Under Moon"
+      },
+      "author_id": "poet_bai_juyi",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "词",
+        "en": "ci (lyric verse)"
+      },
+      "date_composed": {
+        "year": 823,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "苏堤半里香，",
+          "绿柳垂杨，",
+          "月明如练织天光。",
+          "此时此景此酒意，",
+          "都成诗句入心肠。"
+        ],
+        "en": [
+          "Half a mile of Su's Causeway's fragrance drifts,",
+          "green willows drape and sway,",
+          "moonlight shines like satin woven across the sky.",
+          "In this moment, this scene, this wine's sweet thought,",
+          "all become verses that pierce the heart.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_su_causeway",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "白居易在杭州期间咏苏堤的抒情之作，表现诗人对苏堤之美的赞赏。",
+            "en": "Bai Juyi's lyrical tribute to Su Causeway during his years in Hangzhou, celebrating its beauty and the poet's delight."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "美景",
+          "月夜",
+          "诗意"
+        ],
+        "en": [
+          "beauty",
+          "moonlight",
+          "poetic reverie"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 78,
+          "confidence": "high"
+        },
+        {
+          "type": "思乡",
+          "primary": false,
+          "percentage": 45,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "poem_wang_anshi_lingyin",
+      "title": {
+        "zh": "灵隐寺观妙相",
+        "en": "Viewing Wonders at Lingyin Temple"
+      },
+      "author_id": "poet_wang_anshi",
+      "dynasty": "Song",
+      "form": {
+        "zh": "七言律诗",
+        "en": "qilü (7-char regulated verse)"
+      },
+      "date_composed": {
+        "year": 1070,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "古刹闻钟声悠悠，",
+          "青山白云入心秋。",
+          "飞来峰下观妙相，",
+          "佛法广大度众生。",
+          "尘世纷纷何足道，",
+          "唯有灵山一念真。",
+          "我来此地求空法，",
+          "凡心渐绝慧眼新。"
+        ],
+        "en": [
+          "Ancient temple, lingering bell toll sounds,",
+          "green mountains, white clouds enter the heart's autumn.",
+          "Below the Flying Peak, marvels unfold,",
+          "Buddha's law vast, redeeming all beings.",
+          "The world's tumult — what is it worth?",
+          "Only at Lingyin does truth ring clear.",
+          "I come seeking the law of emptiness,",
+          "the mortal heart fades, new wisdom opens.",
+          "(original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_lingyin_temple",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "medium",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "王安石访灵隐寺时的禅思之作，展现宋代文人对佛法的崇敬与思悟。",
+            "en": "Wang Anshi's meditative verse at Lingyin Temple, reflecting the Song literati's reverence for Buddhist wisdom."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "禅意",
+          "空法",
+          "悟道"
+        ],
+        "en": [
+          "Chan (Zen) spirit",
+          "emptiness",
+          "enlightenment"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "山水",
+          "primary": true,
+          "percentage": 85,
+          "confidence": "high"
+        },
+        {
+          "type": "独居",
+          "primary": false,
+          "percentage": 55,
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

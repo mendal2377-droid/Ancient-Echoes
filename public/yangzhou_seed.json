@@ -1,0 +1,973 @@
+{
+  "schema_version": "0.1",
+  "default_lang": "zh",
+  "supported_langs": [
+    "zh",
+    "en"
+  ],
+  "city": {
+    "id": "city_yangzhou",
+    "name": {
+      "zh": "扬州",
+      "en": "Yangzhou"
+    },
+    "historical_names": {
+      "zh": [
+        "广陵",
+        "江都",
+        "维扬"
+      ],
+      "en": [
+        "Guangling",
+        "Jiangdu",
+        "Weiyang"
+      ]
+    }
+  },
+  "places": [
+    {
+      "id": "place_slender_west_lake",
+      "name": {
+        "zh": "瘦西湖",
+        "en": "Slender West Lake"
+      },
+      "coordinates": {
+        "lat": 32.404,
+        "lng": 119.41
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "今扬州城西北的国家5A级旅游景区，以狭长秀丽的湖面得名。湖畔垂柳依依，亭台楼阁倒映水中，四季皆有不同景致。其中五亭桥与钓鱼台是最具代表性的景观，被誉为扬州园林艺术的精华。每逢春日，桃红柳绿，烟雨迷蒙，宛如唐宋诗画中描绘的柔美江南。数百年来，此湖见证了无数诗人的感怀，承载着扬州最典雅的历史记忆。",
+        "en": "A national 5A scenic area northwest of modern Yangzhou, named for its slender, graceful lake. Willows trail in the water; pavilions reflect in its calm surface; each season brings its own splendor. The Five-Pavilion Bridge and Fishing Platform are its most celebrated landmarks, the essence of Yangzhou garden art. Each spring, peach blossoms and willows blur in misty rain — a living painting from Tang poetry. For centuries this lake has witnessed poets' meditations, bearing Yangzhou's most refined historical memory."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Slender_West_Lake_Yangzhou.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_twenty_four_bridges",
+      "name": {
+        "zh": "二十四桥",
+        "en": "Twenty-Four Bridges"
+      },
+      "coordinates": {
+        "lat": 32.396,
+        "lng": 119.418
+      },
+      "coord_precision": "approximate",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "杜牧诗句『二十四桥明月夜，玉人何处教吹箫』令此地名扬天下。今瘦西湖景区内有复建的单孔拱桥，以玉白大理石砌成，全长24米，宽2.4米，桥上24根栏柱，令人遥想唐代夜宴的风流雅致。月圆之夜，桥影倒映湖中，箫声仿佛仍在耳畔回响，千年诗意未曾散去。",
+        "en": "Du Mu's lines — 'The twenty-four bridges on a moonlit night: where is the beauty who teaches the flute to sound?' — made this place immortal. The park contains a reconstructed white marble arch bridge, 24 meters long with 24 railings — every number an echo of the poem. On full-moon nights, the bridge shimmers in the lake and the flute seems to linger. The Tang night lives in these stones."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Twenty_Four_Bridges_Yangzhou.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_daming_temple",
+      "name": {
+        "zh": "大明寺",
+        "en": "Daming Temple"
+      },
+      "coordinates": {
+        "lat": 32.4212,
+        "lng": 119.405
+      },
+      "coord_precision": "exact",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "建于南朝宋大明年间，历经唐宋明清，几经兴废，今存于蜀岗西峰之上。唐代高僧鉴真曾在此修行，六次东渡日本传播佛法，使大明寺名扬海内外。寺内古树参天，鉴真纪念堂庄严肃穆，平山堂依山而建，可远眺长江平原。寺院钟声悠远，令访者在城市喧嚣中找到片刻超脱。",
+        "en": "Founded in the Liu Song dynasty, Daming Temple has endured centuries of rise and fall on Shugang Hill. The Tang monk Jianzhen practiced here before his six attempts to sail to Japan, spreading dharma and culture eastward. Tall ancient trees shade the grounds; the Jianzhen Memorial Hall stands in solemn tribute; Pingshan Hall commands sweeping views. Temple bells sound through festivals; visitors find stillness amid the city's noise."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Daming_Temple_Yangzhou.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_sui_palace_ruins",
+      "name": {
+        "zh": "隋宫遗址",
+        "en": "Sui Palace Ruins"
+      },
+      "coordinates": {
+        "lat": 32.39,
+        "lng": 119.432
+      },
+      "coord_precision": "approximate",
+      "still_exists": false,
+      "modern_status": {
+        "zh": "隋炀帝三下江都，大兴土木，穷奢极欲，最终国破身亡于此。宫殿遗址今已湮没于扬州老城之下，仅存少量遗迹。然而正是这段历史给后世诗人留下无尽凭吊题材——江山如此多娇，因一人之淫逸而倾覆，令人扼腕。杜牧以隋炀帝为鉴，写下发人深省的咏史诗。今日在扬州老城漫步，青石板路之下，或许仍埋藏着那段盛极而衰的历史碎片。",
+        "en": "Emperor Yang of Sui descended on Jiangdu three times, raising lavish palaces, indulging every excess, and finally dying here as his dynasty collapsed. The ruins now lie buried beneath Yangzhou's old city. Yet this history gave later poets inexhaustible material for elegy: how great a realm, destroyed by one ruler's indulgence. Du Mu used the Sui Emperor as a moral mirror. Walking old Yangzhou's flagstone lanes, fragments of that magnificent, ruined empire may still lie just beneath your feet."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Sui_Ruins_Yangzhou.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    },
+    {
+      "id": "place_grand_canal_yangzhou",
+      "name": {
+        "zh": "扬州运河",
+        "en": "Yangzhou Grand Canal"
+      },
+      "coordinates": {
+        "lat": 32.392,
+        "lng": 119.44
+      },
+      "coord_precision": "approximate",
+      "still_exists": true,
+      "modern_status": {
+        "zh": "大运河扬州段，是隋炀帝开凿京杭大运河的核心段落之一。千年来，这条运河将扬州与北方连为一体，使扬州成为全国最繁华的商业都市之一。张若虚等诗人在运河旁观春江月色，写下传世佳篇。今日扬州运河仍然通航，两岸古老的码头与新建运河文化带相得益彰。2014年，京杭大运河被列入世界文化遗产名录，扬州段尤为重要。",
+        "en": "The Yangzhou section of the Grand Canal was among Emperor Yang's greatest achievements. For a millennium, this waterway made Yangzhou one of China's most prosperous cities. Zhang Ruoxu watched spring river moonlight here, composing immortal verse. Today the canal still flows; ancient docks and new cultural promenades line both banks. In 2014, the Grand Canal was inscribed as a UNESCO World Heritage Site — the Yangzhou section especially significant."
+      },
+      "modern_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/Grand_Canal_Yangzhou.jpg",
+      "modern_photo_credit": {
+        "zh": "图源：维基共享资源 / Wikimedia Commons",
+        "en": "Photo credit: Wikimedia Commons"
+      }
+    }
+  ],
+  "poets": [
+    {
+      "id": "poet_du_mu",
+      "name": {
+        "zh": "杜牧",
+        "en": "Du Mu"
+      },
+      "courtesy_name": {
+        "zh": "牧之",
+        "en": "Muzi"
+      },
+      "lifespan": {
+        "born": 803,
+        "died": 852
+      },
+      "epithet": {
+        "zh": "小杜",
+        "en": "Little Du"
+      },
+      "biography": {
+        "zh": "晚唐著名诗人，与杜甫并称大小杜。曾在扬州任淮南节度使幕府掌书记数年，留下无数描绘扬州风情的传世名篇。其诗风清新婉约，以咏史怀古见长，善将个人感伤与历史兴亡融为一炉。扬州十年是他创作最旺盛的时期，二十四桥、瘦西湖、隋宫遗址都留下了他沉思的足迹。晚年自称『十年一觉扬州梦』，以无限感慨回望那段繁华岁月。",
+        "en": "The brilliant late-Tang poet, paired with Du Fu as 'Little Du.' He served years in Yangzhou as secretary to the Huainan Military Commissioner, leaving immortal poems about the city. His refined, melancholy verse excels at meditating on history, fusing personal sorrow with dynastic rise and fall. His Yangzhou decade was his most creative period — the Twenty-Four Bridges, Slender West Lake, and Sui ruins all bear the imprint of his contemplation. In later life he recalled those years as 'ten years, waking from the Yangzhou dream.'"
+      },
+      "major_events": [
+        {
+          "year": 803,
+          "event": {
+            "zh": "生于京城长安，出身高门名族樊川杜氏，自幼聪慧好学",
+            "en": "Born in Chang'an to distinguished family; precocious and scholarly"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 828,
+          "event": {
+            "zh": "进士及第，入仕为官，开始大量创作怀古诗篇",
+            "en": "Passes examination; begins official life and major poetic composition"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 833,
+          "event": {
+            "zh": "赴扬州任淮南节度使幕府掌书记，开始长达数年的扬州岁月",
+            "en": "Arrives in Yangzhou as secretarial aide; begins celebrated years in the city"
+          },
+          "location": "扬州"
+        },
+        {
+          "year": 835,
+          "event": {
+            "zh": "在扬州创作『遣怀』，回望浮华，留下名句『十年一觉扬州梦』",
+            "en": "Writes 'Pouring Out My Feelings' in Yangzhou; immortal line 'ten years, I wake from the Yangzhou dream'"
+          },
+          "location": "扬州"
+        },
+        {
+          "year": 837,
+          "event": {
+            "zh": "创作『寄扬州韩绰判官』，写下『二十四桥明月夜，玉人何处教吹箫』",
+            "en": "Composes 'To Han Zhuo in Yangzhou'; famous lines about the Twenty-Four Bridges moonlit night"
+          },
+          "location": "扬州"
+        },
+        {
+          "year": 844,
+          "event": {
+            "zh": "为池州刺史，创作『泊秦淮』『赤壁』等传世名篇",
+            "en": "Prefect of Chizhou; composes masterworks including 'Mooring at Qinhuai'"
+          },
+          "location": "池州"
+        },
+        {
+          "year": 846,
+          "event": {
+            "zh": "南游金陵，凭吊六朝古迹，创作系列怀古诗篇",
+            "en": "Visits Jinling; contemplates dynastic ruins, composes elegies for lost glory"
+          },
+          "location": "金陵"
+        },
+        {
+          "year": 852,
+          "event": {
+            "zh": "病逝长安，终年49岁，留下近五百首诗篇，对后世影响深远",
+            "en": "Dies in Chang'an, age 49; leaves nearly five hundred poems, profound legacy"
+          },
+          "location": "长安"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_twenty_four_bridges",
+          "period": {
+            "zh": "833-837年（扬州任职期间）",
+            "en": "833-837 (Yangzhou posting)"
+          }
+        },
+        {
+          "place_id": "place_slender_west_lake",
+          "period": {
+            "zh": "833-837年（多次游览）",
+            "en": "833-837 (frequent visits)"
+          }
+        },
+        {
+          "place_id": "place_sui_palace_ruins",
+          "period": {
+            "zh": "833-837年（凭吊历史）",
+            "en": "833-837 (historical contemplation)"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_li_bai",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "杜牧深受李白浪漫精神影响，在咏怀与送别诗中延续了诗仙的感伤与洒脱。",
+            "en": "Du Mu absorbed Li Bai's romantic spirit, extending the Immortal's melancholy and ease into his own farewell and meditative verse."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          }
+        },
+        {
+          "target_poet_id": "poet_wang_wei",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "杜牧的细腻感觉与对自然美景的凝视，深受王维禅意山水诗风的影响，形成了清丽诗境。",
+            "en": "Du Mu's delicate sensibility drew deeply from Wang Wei's meditative landscape tradition, shaping his distinctive lyrical style."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_zhang_ruoxu",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "张若虚奠定了扬州月色意象的诗学基础，一百年后杜牧在同一片月光下写下『二十四桥明月夜』，延续并升华了这一传统。",
+            "en": "Zhang Ruoxu established the poetic tradition of Yangzhou moonlight; a century later, Du Mu wrote beneath the same moon, continuing and elevating that imagery."
+          },
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_zhang_ruoxu",
+      "name": {
+        "zh": "张若虚",
+        "en": "Zhang Ruoxu"
+      },
+      "lifespan": {
+        "born": 660,
+        "died": 720
+      },
+      "epithet": {
+        "zh": "孤篇盖全唐",
+        "en": "One Poem Above All Tang"
+      },
+      "biography": {
+        "zh": "初唐诗人，扬州人，与贺知章、张旭、包融并称『吴中四士』。仕宦经历平淡，一生并无大的政治成就。然其一首『春江花月夜』，被后世誉为『孤篇盖全唐』——以一篇之力，凌越整个唐代诗歌。此诗将江、月、春、花、夜五种意象交织为一，以宇宙的无限衬托人生的短暂，以月光的永恒映照离别的哀愁。每一联都是一幅画，每一句都包含哲思，令读者在音韵之美中体悟生命的本质。",
+        "en": "A poet of early Tang, born in Yangzhou, one of the 'Four Scholars of Wu.' His official career was unremarkable. Yet his single masterwork, 'Spring River Flowers Moon Night,' was celebrated by later ages as the poem that 'surpasses all of Tang.' The poem weaves five images — river, moon, spring, flowers, night — into a single cosmic vision: the universe's vastness against human transience, the moon's eternal light reflecting on the grief of separation. Every couplet is a painting; every line contains philosophy."
+      },
+      "major_events": [
+        {
+          "year": 660,
+          "event": {
+            "zh": "生于扬州（广陵），自幼浸润于江南水乡的诗情画意",
+            "en": "Born in Yangzhou; grows up in the poetic landscapes of Jiangnan water country"
+          },
+          "location": "扬州"
+        },
+        {
+          "year": 695,
+          "event": {
+            "zh": "与贺知章等在吴地结交，称『吴中四士』，诗名渐著",
+            "en": "Befriends He Zhizhang and others; the 'Four Scholars of Wu' gain literary renown"
+          },
+          "location": "吴地"
+        },
+        {
+          "year": 700,
+          "event": {
+            "zh": "任兖州兵曹参军，仕途平淡，但创作不辍，江南风物常萦心怀",
+            "en": "Serves as minor military official; modest career, but continues writing; heart drawn to Jiangnan"
+          },
+          "location": "兖州"
+        },
+        {
+          "year": 710,
+          "event": {
+            "zh": "创作『春江花月夜』，以扬州春江月色为题，写下震烁古今的千古名篇",
+            "en": "Composes 'Spring River Flowers Moon Night,' inspired by Yangzhou's spring waters; creates an immortal work"
+          },
+          "location": "扬州"
+        },
+        {
+          "year": 720,
+          "event": {
+            "zh": "约卒，生平事迹无详载，但其诗因后世传诵而名垂千古",
+            "en": "Dies approximately this year; biography largely lost, but the poem endures, acclaimed across centuries"
+          },
+          "location": "不详"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_grand_canal_yangzhou",
+          "period": {
+            "zh": "约710年（创作春江花月夜时）",
+            "en": "c. 710 (composing Spring River)"
+          }
+        },
+        {
+          "place_id": "place_slender_west_lake",
+          "period": {
+            "zh": "早年游历",
+            "en": "early years, travels"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_du_mu",
+          "relation_type": "influenced",
+          "description": {
+            "zh": "张若虚奠定了扬州月色意象的诗学传统，一百年后的杜牧在同一片月光下写下『二十四桥明月夜』，延续了这一意象。",
+            "en": "Zhang Ruoxu established the tradition of Yangzhou moonlight; a century later, Du Mu wrote beneath the same moon, continuing and deepening the imagery."
+          },
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_xu_ning",
+          "relation_type": "influenced",
+          "description": {
+            "zh": "张若虚的春江月色传统深深影响了徐凝，两人都以扬州月夜为题，共同构成了扬州月色诗学的两端。",
+            "en": "Zhang Ruoxu's spring-moon tradition deeply influenced Xu Ning; both poets made Yangzhou moonlight their subject, forming the two poles of this poetic tradition."
+          },
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poet_xu_ning",
+      "name": {
+        "zh": "徐凝",
+        "en": "Xu Ning"
+      },
+      "lifespan": {
+        "born": 785,
+        "died": 866
+      },
+      "epithet": {
+        "zh": null,
+        "en": null
+      },
+      "biography": {
+        "zh": "中唐诗人，以一首『忆扬州』留名青史。『天下三分明月夜，二分无赖是扬州』被誉为咏扬州最传神的两句诗，寥寥数字，将扬州月夜的柔情描绘得淋漓尽致。徐凝虽然传世作品不多，仕途也不显赫，但这两句诗已足以让他在唐诗史上占据一席之地。与白居易有一段著名的诗歌唱和，显示出其诗才在当时即已受到肯定。多次游历扬州，对这座城市的美丽有深刻体验与深情眷恋。",
+        "en": "A mid-Tang poet remembered for 'Remembering Yangzhou.' His couplet — 'In all the moonlit nights of the world, two parts unreasonably belong to Yangzhou' — is celebrated as the most evocative lines ever written about the city. Xu Ning's surviving work is modest and his career unspectacular, but these lines secure his place in Tang literary history. He exchanged poems with Bai Juyi, who recognized his talent. His repeated visits gave him deep feeling for Yangzhou's beauty."
+      },
+      "major_events": [
+        {
+          "year": 785,
+          "event": {
+            "zh": "生于和州（今安徽），少年才俊，习诗于江南",
+            "en": "Born in Hezhou (modern Anhui); talented youth, studies poetry in Jiangnan"
+          },
+          "location": "和州"
+        },
+        {
+          "year": 810,
+          "event": {
+            "zh": "游历扬州，被扬州繁华与月夜之美深深打动",
+            "en": "Visits Yangzhou; deeply moved by the city's splendor and moonlit nights"
+          },
+          "location": "扬州"
+        },
+        {
+          "year": 820,
+          "event": {
+            "zh": "进士及第，入仕为官，仕途平淡但笔耕不辍",
+            "en": "Passes examination; enters government service; modest career, but continues writing"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 825,
+          "event": {
+            "zh": "创作『忆扬州』，以无限思念写下对扬州月色的深情咏唱",
+            "en": "Composes 'Remembering Yangzhou,' a poem of longing for the city's moonlit beauty"
+          },
+          "location": "异地"
+        },
+        {
+          "year": 830,
+          "event": {
+            "zh": "与白居易诗歌唱和，其诗才得到当世大诗人的肯定",
+            "en": "Exchanges verses with Bai Juyi; his talent recognized by the era's great poet"
+          },
+          "location": "长安"
+        },
+        {
+          "year": 866,
+          "event": {
+            "zh": "约卒，以『忆扬州』一诗留名，让扬州月色在历史中永恒闪耀",
+            "en": "Dies approximately this year; 'Remembering Yangzhou' ensures the city's moonlight shines eternal in literature"
+          },
+          "location": "不详"
+        }
+      ],
+      "travel_locations": [
+        {
+          "place_id": "place_slender_west_lake",
+          "period": {
+            "zh": "810年游历时",
+            "en": "c. 810, travels"
+          }
+        },
+        {
+          "place_id": "place_twenty_four_bridges",
+          "period": {
+            "zh": "810年游历时",
+            "en": "c. 810, travels"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "target_poet_id": "poet_zhang_ruoxu",
+          "relation_type": "echoed",
+          "description": {
+            "zh": "张若虚以春江月色奠定诗学基础，徐凝延续了这一传统，以更凝练的语言将扬州月色写入心灵深处。",
+            "en": "Zhang Ruoxu established Yangzhou moonlight poetry; Xu Ning continued the tradition with more condensed language, writing the moonlight deep into the heart."
+          },
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          }
+        },
+        {
+          "target_poet_id": "poet_bai_juyi",
+          "relation_type": "contemporary",
+          "year": 830,
+          "description": {
+            "zh": "徐凝与白居易同处中唐，两人有诗歌唱和之情，白居易对徐凝的才华给予了认可。",
+            "en": "Contemporaries of mid-Tang, they exchanged poems; Bai Juyi recognized Xu Ning's poetic talent."
+          },
+          "reliability": {
+            "attribution": "medium",
+            "location": "medium",
+            "relation": "medium"
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "poem_ji_yangzhou_han",
+      "title": {
+        "zh": "寄扬州韩绰判官",
+        "en": "To Han Zhuo, Magistrate of Yangzhou"
+      },
+      "author_id": "poet_du_mu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 837,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "青山隐隐水迢迢，",
+          "秋尽江南草未凋。",
+          "二十四桥明月夜，",
+          "玉人何处教吹箫。"
+        ],
+        "en": [
+          "Blue mountains dimly visible, waters stretching far away;",
+          "autumn ends in Jiangnan, yet the grasses have not faded.",
+          "On the twenty-four bridges, a moonlit night —",
+          "where is the beauty who teaches the flute to sound?",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_twenty_four_bridges",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "写给任职扬州的友人韩绰，以二十四桥为核心意象，描写扬州秋夜的风流繁华。",
+            "en": "Written to his friend Han Zhuo serving in Yangzhou; the Twenty-Four Bridges are the poem's central image, evoking autumn night's elegant splendor."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "月夜",
+          "怀友",
+          "扬州风情"
+        ],
+        "en": [
+          "moonlit night",
+          "friendship",
+          "Yangzhou elegance"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 88,
+          "confidence": "high"
+        },
+        {
+          "type": "友情",
+          "primary": false,
+          "percentage": 60,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_qian_huai_yangzhou",
+      "title": {
+        "zh": "遣怀",
+        "en": "Pouring Out My Feelings"
+      },
+      "author_id": "poet_du_mu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 835,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "落魄江湖载酒行，",
+          "楚腰纤细掌中轻。",
+          "十年一觉扬州梦，",
+          "赢得青楼薄幸名。"
+        ],
+        "en": [
+          "Drifting through rivers and lakes, carrying wine;",
+          "slender waists like willows, light as feathers in the palm.",
+          "Ten years and suddenly I wake from the Yangzhou dream,",
+          "having earned only a reputation for fickleness.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_slender_west_lake",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "杜牧离开扬州后回顾岁月的名篇，瘦西湖畔正是其流连忘返之处。",
+            "en": "Written as Du Mu reflected on his Yangzhou years; Slender West Lake was the heart of his wanderings."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "怀旧",
+          "感伤",
+          "人生如梦"
+        ],
+        "en": [
+          "nostalgia",
+          "melancholy",
+          "transience"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "离别",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        },
+        {
+          "type": "相思",
+          "primary": false,
+          "percentage": 70,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_zeng_bie_yangzhou",
+      "title": {
+        "zh": "赠别·其一",
+        "en": "Farewell — Part One"
+      },
+      "author_id": "poet_du_mu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 836,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "娉娉袅袅十三余，",
+          "豆蔻梢头二月初。",
+          "春风十里扬州路，",
+          "卷上珠帘总不如。"
+        ],
+        "en": [
+          "Slender and graceful, just past thirteen;",
+          "like cardamom buds on branches in early February.",
+          "Along the spring-wind, ten-li road of Yangzhou —",
+          "roll up all the bead curtains: none can compare.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_grand_canal_yangzhou",
+          "relation": "written_here",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "写于杜牧离扬州前，在运河码头送别之作，描绘扬州十里春风的柔美。",
+            "en": "Written as Du Mu prepared to leave Yangzhou at the canal wharf, evoking the city's gentle spring beauty."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "送别",
+          "春日",
+          "扬州风情"
+        ],
+        "en": [
+          "farewell",
+          "spring",
+          "beauty"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "离别",
+          "primary": true,
+          "percentage": 95,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_chun_jiang_hua_yue_ye",
+      "title": {
+        "zh": "春江花月夜（节选）",
+        "en": "Spring River Flowers Moon Night (excerpt)"
+      },
+      "author_id": "poet_zhang_ruoxu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "乐府体长诗",
+        "en": "yuefu long poem"
+      },
+      "date_composed": {
+        "year": 710,
+        "precision": "circa",
+        "note": {
+          "zh": "被誉为『孤篇盖全唐』，选取开篇八句。",
+          "en": "Celebrated as 'one poem above all Tang'; opening eight lines selected here."
+        }
+      },
+      "body": {
+        "zh": [
+          "春江潮水连海平，",
+          "海上明月共潮生。",
+          "滟滟随波千万里，",
+          "何处春江无月明。",
+          "江流宛转绕芳甸，",
+          "月照花林皆似霰。",
+          "空里流霜不觉飞，",
+          "汀上白沙看不见。"
+        ],
+        "en": [
+          "The spring river rises to the level of the sea;",
+          "over the sea a bright moon is born with the tide.",
+          "It shimmers and glitters ten thousand li along the waves —",
+          "where is there a spring river without the moon's brightness?",
+          "The river winds and curves through fragrant meadows;",
+          "moonlight on blossoming trees falls like a dusting of snow.",
+          "Frost drifts through the air, invisible to the eye;",
+          "white sandbanks on the shore can no longer be seen.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_grand_canal_yangzhou",
+          "relation": "poet_present",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "张若虚在扬州一带的春江边创作此诗，扬州运河即古时春江月色的典型场景。",
+            "en": "Zhang Ruoxu composed this poem by Yangzhou's spring rivers; the Grand Canal embodies the 'spring river moonlight' he described."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "月夜",
+          "江水",
+          "思念",
+          "天地"
+        ],
+        "en": [
+          "moonlit night",
+          "river",
+          "longing",
+          "cosmos and transience"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "相思",
+          "primary": true,
+          "percentage": 88,
+          "confidence": "high"
+        },
+        {
+          "type": "思乡",
+          "primary": false,
+          "percentage": 70,
+          "confidence": "high"
+        },
+        {
+          "type": "山水",
+          "primary": false,
+          "percentage": 80,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_yi_yangzhou",
+      "title": {
+        "zh": "忆扬州",
+        "en": "Remembering Yangzhou"
+      },
+      "author_id": "poet_xu_ning",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 825,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "萧娘脸薄难胜泪，",
+          "桃叶眉长易觉愁。",
+          "天下三分明月夜，",
+          "二分无赖是扬州。"
+        ],
+        "en": [
+          "Xiaoniang's delicate face cannot hold back the tears;",
+          "Taoyeye's long brows easily show her sorrow.",
+          "In all the moonlit nights of the world, if divided in three,",
+          "two parts — outrageous, irresistible — belong to Yangzhou.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_twenty_four_bridges",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "medium",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "徐凝远离扬州时的思念之作，以月色二分之说将扬州月夜的美丽推向极致。",
+            "en": "Written from afar in memory of Yangzhou; the 'two parts of moonlight' conceit elevates the city's moonlit beauty to mythic status."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "月夜",
+          "怀旧",
+          "扬州风情"
+        ],
+        "en": [
+          "moonlit night",
+          "nostalgia",
+          "Yangzhou elegance"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "思乡",
+          "primary": true,
+          "percentage": 90,
+          "confidence": "high"
+        },
+        {
+          "type": "相思",
+          "primary": false,
+          "percentage": 75,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "poem_sui_gong_yangzhou",
+      "title": {
+        "zh": "隋宫",
+        "en": "The Sui Palace"
+      },
+      "author_id": "poet_du_mu",
+      "dynasty": "Tang",
+      "form": {
+        "zh": "七言绝句",
+        "en": "qijue (7-char quatrain)"
+      },
+      "date_composed": {
+        "year": 836,
+        "precision": "circa"
+      },
+      "body": {
+        "zh": [
+          "乘兴南游不戒严，",
+          "九重谁省谏书函。",
+          "春风举国裁宫锦，",
+          "半作障泥半作帆。"
+        ],
+        "en": [
+          "He set out south for pleasure without restraint;",
+          "in the imperial court, who heeded the memorials of remonstrance?",
+          "Spring wind cut palace brocade across the empire —",
+          "half became horse-blankets, half became sails.",
+          "(prose paraphrase, original translation, license: CC0)"
+        ]
+      },
+      "place_links": [
+        {
+          "place_id": "place_sui_palace_ruins",
+          "relation": "describes",
+          "is_primary": true,
+          "reliability": {
+            "attribution": "high",
+            "location": "high",
+            "relation": "high"
+          },
+          "note": {
+            "zh": "杜牧凭吊隋炀帝南游扬州、穷奢极欲终致亡国之历史，以史为鉴，警示后人。",
+            "en": "Du Mu meditates on Sui Yang Emperor's ruinous southern pleasure journeys to Yangzhou, using history as a moral mirror."
+          }
+        }
+      ],
+      "themes": {
+        "zh": [
+          "咏史",
+          "亡国",
+          "骄奢"
+        ],
+        "en": [
+          "meditation on history",
+          "dynastic fall",
+          "excess and ruin"
+        ]
+      },
+      "emotions": [
+        {
+          "type": "怀古",
+          "primary": true,
+          "percentage": 92,
+          "confidence": "high"
+        },
+        {
+          "type": "离别",
+          "primary": false,
+          "percentage": 40,
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}
