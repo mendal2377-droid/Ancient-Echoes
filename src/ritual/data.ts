@@ -7,19 +7,24 @@ export interface Poem {
   author: string
   dynasty: string
   lines: string[]
-  meaning: string
-  rgb: string   // the flower / glow tint for this poem
-  kw: string[]  // keywords used for rule-based matching
+  rgb: string       // the flower / glow tint for this poem
+  meaning?: string  // one-line gloss; shown only when the oracle gave no reason
+  kw?: string[]     // keywords for the offline fallback matcher
   // ── 诗后有人 · the human behind the line ──
   // A poem lands because a specific person, in a specific situation, had to say
   // it. These three fields restore that. Kept to one sentence each: the poem
   // must still arrive first, this is the whisper after it.
-  person: string   // 人 — who they were, that year
-  scene: string    // 境 — what was actually happening
-  echo: string     // 回声 — how the line travelled
+  //
+  // OPTIONAL, and that is the point. Every poem here has verified *text*; only
+  // some have verified *scholarship*, because biography is where invention
+  // hides best — a confident wrong year reads exactly like a right one. A poem
+  // without these shows a shorter card back rather than a fuller invented one.
+  person?: string   // 人 — who they were, that year
+  scene?: string    // 境 — what was actually happening
+  echo?: string     // 回声 — how the line travelled
   // Honesty rule (same discipline as the 印章 reliability seals): much poem
   // biography is tradition, not record. 'trad' = 相传/一说 — shown as a marker.
-  srcConfidence: 'high' | 'trad'
+  srcConfidence?: 'high' | 'trad'
 }
 
 export const POEMS: Record<string, Poem> = {
@@ -256,7 +261,7 @@ export const INTRO: IntroSlide[] = [
 export function matchPoems(text: string, tags: string[]): string[] {
   const hay = (text || '') + ' ' + (tags || []).join(' ')
   const scored = Object.keys(POEMS)
-    .map(id => ({ id, score: POEMS[id].kw.reduce((n, k) => n + (hay.indexOf(k) >= 0 ? 1 : 0), 0) }))
+    .map(id => ({ id, score: (POEMS[id].kw ?? []).reduce((n, k) => n + (hay.indexOf(k) >= 0 ? 1 : 0), 0) }))
     .filter(s => s.score > 0)
     .sort((a, b) => b.score - a.score)
   if (!scored.length) return DEFAULTS.slice()
@@ -265,6 +270,55 @@ export function matchPoems(text: string, tags: string[]): string[] {
     if (ids.indexOf(DEFAULTS[i]) < 0) ids.push(DEFAULTS[i])
   }
   return ids
+}
+
+// ── THE VERIFICATION POINT ────────────────────────────────────────────────
+// The oracle may name any poem in the tradition — it is not handed a menu, so
+// its range is the whole of 中国古典诗歌 rather than whatever we managed to
+// type in. What it names is resolved here, against this file. Anything that
+// does not resolve is dropped and never reaches a reader; anything that does
+// is rendered from the text *below*, never from the model's.
+//
+// So the model does the remembering and this file does the telling. The size
+// of this table is therefore the app's real ceiling: a poem we cannot verify
+// is a poem we cannot show, however well it answers.
+const strip = (s: string) => (s || '').replace(/[《》「」『』（）()\s,，。、.]/g, '')
+// 「·」 survives strip so a compound title can be split on it.
+const parts = (title: string) => strip(title).split(/[·・]/).filter(Boolean)
+
+export function resolvePoem(title: string, author: string): string | null {
+  const a = strip(author)
+  const want = parts(title)
+  if (!want.length || !a) return null
+
+  // Only ever consider this poet's work. A real title under the wrong name is
+  // misattribution — the single most common way a model gets 唐诗 wrong, and
+  // the one a reader would never catch.
+  const byPoet = Object.keys(POEMS).filter(id => strip(POEMS[id].author) === a)
+
+  const hits = byPoet.filter(id => {
+    // 水调歌头 / 水调歌头·明月几时有 — two naming habits, one poem. Whole parts
+    // must match, so 相思令 does not collect 《相思》.
+    if (parts(POEMS[id].title).some(h => want.includes(h))) return true
+    // 词 are as often cited by opening line as by tune name.
+    const first = strip(POEMS[id].lines[0] ?? '')
+    return first.length >= 4 && want.includes(first)
+  })
+
+  // Ambiguity is not resolution. 李商隐 wrote a shelf of 《无题》; if we cannot
+  // tell which one was meant, we show none of them.
+  return hits.length === 1 ? hits[0] : null
+}
+
+/** Does this prose quote a poem back at the reader? The oracle is told not to
+ *  — a 缘由 should be about the person's own words — and the rule matters for
+ *  more than style: quoted verse is the one place model-written poetry could
+ *  reach the page unverified. Five characters is the shortest classical line. */
+export function quotesVerse(text: string): boolean {
+  const t = strip(text)
+  if (!t) return false
+  return Object.keys(POEMS).some(id =>
+    POEMS[id].lines.some(l => { const s = strip(l); return s.length >= 5 && t.includes(s) }))
 }
 
 export interface Moment {

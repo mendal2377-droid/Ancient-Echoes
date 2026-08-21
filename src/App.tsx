@@ -783,18 +783,33 @@ function PoemScreen({ poems, kins, reasons, idx, onSelect, onTouched, onSkip }: 
                       <div style={{ font: `400 14px ${KAI}`, letterSpacing: '.14em', color: '#231d2b' }}>
                         {poem.title}　〔{poem.dynasty}〕{poem.author}
                       </div>
-                      <div style={{ marginTop: 14, font: `400 12.5px/1.85 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.72)' }}>{poem.person}</div>
-                      <div style={{ marginTop: 8, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.56)' }}>
-                        {poem.scene}
-                        {poem.srcConfidence === 'trad' && (
-                          <span style={{ marginLeft: 5, fontSize: 10, color: 'rgba(42,36,56,.34)' }}>〔相传〕</span>
-                        )}
-                      </div>
-                      <div style={{ width: 24, height: 1, margin: '16px auto 0', background: 'rgba(42,36,56,.18)' }} />
-                      <div style={{ marginTop: 14, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.52)' }}>
-                        <span style={{ marginRight: 6, fontSize: 10, letterSpacing: '.1em', color: 'rgba(168,58,42,.72)' }}>回声</span>
-                        {poem.echo}
-                      </div>
+                      {/* Every field below is optional. A poem whose text we
+                          trust but whose story we have not checked shows less
+                          — never a fuller invented one. An empty half-card is
+                          honest; a confident wrong year is not. */}
+                      {poem.person && (
+                        <div style={{ marginTop: 14, font: `400 12.5px/1.85 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.72)' }}>{poem.person}</div>
+                      )}
+                      {poem.scene && (
+                        <div style={{ marginTop: 8, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.56)' }}>
+                          {poem.scene}
+                          {poem.srcConfidence === 'trad' && (
+                            <span style={{ marginLeft: 5, fontSize: 10, color: 'rgba(42,36,56,.34)' }}>〔相传〕</span>
+                          )}
+                        </div>
+                      )}
+                      {poem.echo && <>
+                        <div style={{ width: 24, height: 1, margin: '16px auto 0', background: 'rgba(42,36,56,.18)' }} />
+                        <div style={{ marginTop: 14, font: `400 11.5px/1.9 ${SONG}`, letterSpacing: '.03em', color: 'rgba(42,36,56,.52)' }}>
+                          <span style={{ marginRight: 6, fontSize: 10, letterSpacing: '.1em', color: 'rgba(168,58,42,.72)' }}>回声</span>
+                          {poem.echo}
+                        </div>
+                      </>}
+                      {!poem.person && !poem.scene && !poem.echo && (
+                        <div style={{ marginTop: 20, font: `400 11px/1.9 ${SONG}`, letterSpacing: '.06em', color: 'rgba(42,36,56,.36)' }}>
+                          这首诗的来历，我们还没有考订清楚。<br />先把诗给你。
+                        </div>
+                      )}
                       {kin && (
                         <div style={{ marginTop: 16, padding: '12px 14px 13px', borderRadius: 5, background: 'rgba(168,58,42,.035)', boxShadow: 'inset 0 0 0 1px rgba(168,58,42,.16)', textAlign: 'left' }}>
                           <div style={{ font: `400 10px ${SONG}`, letterSpacing: '.3em', textIndent: '.3em', color: 'rgba(168,58,42,.72)' }}>隔 世 应 答</div>

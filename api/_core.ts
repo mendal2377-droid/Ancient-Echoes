@@ -17,7 +17,7 @@
 // POEMS before it leaves this file, and again on the client. The guarantee is
 // preserved; it just lives in code now rather than in the API contract.
 
-import { POEMS } from '../src/ritual/data.js'   // .js is required — see the note in oracle.ts
+import { POEMS, resolvePoem, quotesVerse } from '../src/ritual/data.js'   // .js is required — see the note in oracle.ts
 
 export interface OraclePick {
   id: string
@@ -28,30 +28,32 @@ const ENDPOINT = 'https://api.deepseek.com/chat/completions'
 const MODEL = 'deepseek-chat'
 const TIMEOUT_MS = 20000
 
-const IDS = Object.keys(POEMS)
+// What we can currently render, as 题·作者. Not a menu the model must choose
+// from — a shelf it should prefer, because these are the poems whose text we
+// can put on the page. It may name anything outside it; that pick simply has
+// to survive resolvePoem. Stable across requests, so DeepSeek's automatic
+// context caching bills this prefix at a discount.
+const SHELF = Object.keys(POEMS).map(id => `${POEMS[id].title}·${POEMS[id].author}`).join('　')
 
-// Compact corpus index. Stable across every request, so DeepSeek's automatic
-// context caching bills the repeated prefix at a discount.
-const INDEX = IDS.map(id => {
-  const p = POEMS[id]
-  return `${id} | ${p.title}·${p.author} | ${p.lines[0]} | ${p.meaning} | ${p.kw.join(' ')}`
-}).join('\n')
-
-const SYSTEM = `你是「此时此地」的司签人。有人把此刻的一点心事投入水中，你要从下面这份诗单里，挑出三首真正回应了它的诗。
+const SYSTEM = `你是「此时此地」的司签人。有人把此刻的一点心事投入水中，你要从中国古典诗词里，挑出三首真正回应了它的诗。
 
 规则：
-- 只能从诗单里选，只给 id。id 必须是诗单里出现过的，一个字都不能改。
+- 从整个中国古典诗词里选，不限于任何清单。给出准确的篇名和作者。
+- 你必须真的记得这首诗。宁可少给，也不要给一首你不确定的、或是拼凑出来的诗。
 - 不是关键词匹配。要听的是处境和心境：有人说「加班到深夜一个人走回家」，答他的未必是写「夜」的诗，而是写「独」的诗。
 - 三首要有层次：第一首最贴，后两首给另一种角度，不要三首都是同一种回答。
 - reason 是写给这个人看的一句话，三十字以内：把他说的话，和这首诗接上。
-  不要复述诗句，不要解释诗的意思，不要用「这首诗表达了」这类句式，不要安慰他。
+  绝对不要引用诗句原文——诗就在他眼前，他自己会读。
+  不要解释诗的意思，不要用「这首诗表达了」这类句式，不要安慰他。
+  ✗ 千山鸟飞绝，万径人踪灭，你走的路也是这般寂寂无人。（复述了诗句）
+  ✓ 千山万径只剩你一人，这趟夜路也像一场独钓。
 - 用中文。安静、克制，像一个不多话的人递过来一张纸。
 
 只输出 JSON，不要任何其它文字，格式：
-{"picks":[{"id":"诗单里的id","reason":"一句话"},{"id":"...","reason":"..."},{"id":"...","reason":"..."}]}
+{"picks":[{"title":"篇名","author":"作者","reason":"一句话"},{"title":"...","author":"...","reason":"..."},{"title":"...","author":"...","reason":"..."}]}
 
-诗单（id | 题·作者 | 首句 | 意 | 关键词）：
-${INDEX}`
+以下这些我们手边有善本，若其中有真正贴切的，优先选它：
+${SHELF}`
 
 /** Ask DeepSeek which poems answer this moment. Throws on any failure — the
  *  caller falls back to the local keyword matcher. */
@@ -97,15 +99,34 @@ export async function runOracle(text: string, tags: string[]): Promise<OraclePic
   // json_object mode should return bare JSON, but strip a ```json fence if one
   // slips through rather than throwing the whole answer away.
   const payload = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')
-  const parsed = JSON.parse(payload) as { picks?: Array<{ id?: unknown; reason?: unknown }> }
+  const parsed = JSON.parse(payload) as {
+    picks?: Array<{ title?: unknown; author?: unknown; id?: unknown; reason?: unknown }>
+  }
 
-  // THE enforcement point: nothing that isn't a real corpus id gets out.
+  // THE enforcement point. The model chose from the whole tradition; here every
+  // pick has to come back down to a poem this app can actually vouch for.
+  // Unresolved picks are dropped in silence — a poem we cannot verify is a poem
+  // we do not show, however well it answered.
   const seen = new Set<string>()
-  const picks: OraclePick[] = (parsed.picks ?? [])
-    .filter((p): p is { id: string; reason: unknown } =>
-      typeof p?.id === 'string' && !!POEMS[p.id] && !seen.has(p.id) && !!seen.add(p.id))
-    .slice(0, 3)
-    .map(p => ({ id: p.id, reason: typeof p.reason === 'string' ? p.reason.trim() : '' }))
+  const picks: OraclePick[] = []
+  for (const p of parsed.picks ?? []) {
+    // `id` is still honoured if it appears: harmless, and it keeps an older
+    // response shape working.
+    const id = typeof p?.id === 'string' && POEMS[p.id]
+      ? p.id
+      : resolvePoem(String(p?.title ?? ''), String(p?.author ?? ''))
+    if (!id || seen.has(id)) continue
+    seen.add(id)
+
+    // A 缘由 that quotes verse is either restating the poem beside it or, worse,
+    // reciting one from memory that nothing has checked. Drop the line, keep
+    // the poem — the card falls back to our own gloss.
+    let reason = typeof p.reason === 'string' ? p.reason.trim() : ''
+    if (reason && quotesVerse(reason)) reason = ''
+
+    picks.push({ id, reason })
+    if (picks.length === 3) break
+  }
 
   if (!picks.length) throw new Error('no usable picks')
   return picks
