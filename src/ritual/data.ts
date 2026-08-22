@@ -1714,19 +1714,31 @@ export function resolvePoem(title: string, author: string): string | null {
   // the one a reader would never catch.
   const byPoet = Object.keys(POEMS).filter(id => strip(POEMS[id].author) === a)
 
-  const hits = byPoet.filter(id => {
+  // Score rather than filter. A plain filter treats 「遣悲怀三首·其一」 as
+  // matching all three 遣悲怀 equally — they share that first part — and the
+  // ambiguity rule below then discards the very poem that was named. Counting
+  // matched parts separates the sibling that was asked for from the ones that
+  // merely share its series title.
+  const scored = byPoet.map(id => {
+    const names = [POEMS[id].title, ...(POEMS[id].alias ?? [])]
+    let score = 0
     // 水调歌头 / 水调歌头·明月几时有 — two naming habits, one poem. Whole parts
     // must match, so 相思令 does not collect 《相思》.
-    const names = [POEMS[id].title, ...(POEMS[id].alias ?? [])]
-    if (names.some(n => parts(n).some(h => want.includes(h)))) return true
-    // 词 are as often cited by opening line as by tune name.
+    for (const n of names) for (const h of parts(n)) if (want.includes(h)) score++
+    // 词 are as often cited by opening line as by tune name, and an opening
+    // line is far more specific than a shared series title.
     const first = strip(POEMS[id].lines[0] ?? '')
-    return first.length >= 4 && want.includes(first)
-  })
+    if (first.length >= 4 && want.includes(first)) score += 2
+    return { id, score }
+  }).filter(s => s.score > 0)
 
-  // Ambiguity is not resolution. 李商隐 wrote a shelf of 《无题》; if we cannot
-  // tell which one was meant, we show none of them.
-  return hits.length === 1 ? hits[0] : null
+  if (!scored.length) return null
+  const best = Math.max(...scored.map(s => s.score))
+  const top = scored.filter(s => s.score === best)
+
+  // Ambiguity is still not resolution. 李商隐 wrote a shelf of 《无题》; where
+  // nothing distinguishes them, we show none of them.
+  return top.length === 1 ? top[0].id : null
 }
 
 // Every line in the corpus, punctuation removed, long enough to be a quotation
