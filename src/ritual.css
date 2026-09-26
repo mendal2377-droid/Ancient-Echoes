@@ -92,6 +92,24 @@ body {
 @keyframes hnFlutter { 0% { transform: translate(0,0) rotate(-5deg); } 50% { transform: translate(18px,-24px) rotate(7deg); } 100% { transform: translate(38px,6px) rotate(-5deg); } }
 @keyframes hnBoat { 0%,100% { transform: translateX(-30%) translateY(0) rotate(-1deg); } 50% { transform: translateX(-30%) translateY(-3px) rotate(1deg); } }
 
+/* 写 — a column of verse arrives the way it was made: the brush travels down
+   it. A wipe, not a fade and not a typewriter; typing is printing, and this
+   poetry was never printed first. Columns are staggered right-to-left by the
+   caller, which is the direction the hand moves across the page. */
+@keyframes hnWrite {
+  from { clip-path: inset(0 0 100% 0); opacity: .25; }
+  to   { clip-path: inset(0 0 0 0);    opacity: 1; }
+}
+
+/* 落款 — the seal is pressed, not printed. Overshoot and a half-degree of
+   crookedness, because a hand did it. */
+@keyframes hnStamp {
+  0%   { transform: scale(1.34) rotate(-5deg); opacity: 0; }
+  55%  { transform: scale(.94)  rotate(1.6deg); opacity: 1; }
+  78%  { transform: scale(1.03) rotate(-.6deg); }
+  100% { transform: scale(1)    rotate(0deg);   opacity: 1; }
+}
+
 /* Respect reduced-motion: still up (opacity), but hold still. */
 @media (prefers-reduced-motion: reduce) {
   .hn-stage *,

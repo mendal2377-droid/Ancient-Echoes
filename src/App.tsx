@@ -17,9 +17,17 @@ import {
 } from './ritual/data'
 import { askOracle } from './ritual/oracle'
 import { sharePoster, drawPosterTo, BACKGROUNDS, type PosterBackground, type PosterInput } from './ritual/poster'
+import { Moon } from './ritual/Moon'
+import { moonOf, termOf, isMidAutumn, type Moon as MoonData, type Term } from './ritual/sky'
+import Ink from './ritual/Ink'
 
 const KAI = "var(--hn-kai)"
 const SONG = "'Noto Serif SC',serif"
+
+// A single short pulse at the two moments that are decisions: letting the
+// moment go, and putting your seal on a poem. Phones only; desktop has no
+// vibrator and older iOS Safari has no API, so both fail silently by design.
+const buzz = (ms: number) => { try { navigator.vibrate?.(ms) } catch { /* not a phone */ } }
 const WATER_SECONDS = 3.5
 
 type Screen = 'splash' | 'intro' | 'reunion' | 'home' | 'water' | 'poem' | 'plant' | 'planted' | 'share' | 'path'
@@ -43,6 +51,21 @@ export default function App() {
   // Empty when the local matcher answered; the poem's own gloss stands in.
   const [reasons, setReasons] = useState<Record<string, string>>({})
   const castToken = useRef(0)
+
+  // 天时 — read once per open. The moon is tonight's, the 节气 is today's, and
+  // the one line under the moon appears only when the sky has something to say:
+  // 中秋 outranks a full moon, which outranks the day a 节气 begins. On every
+  // other day it says nothing, which is most days and is the point.
+  const sky = useMemo(() => {
+    const moon = moonOf()
+    const term = termOf()
+    const line = isMidAutumn() ? '今夜中秋 · 千里共婵娟'
+      : moon.isFull ? '今月曾经照古人'
+      : term.entersToday ? `今日 · ${term.name}`
+      : ''
+    return { moon, term, line }
+  }, [])
+
   const [moments, setMoments] = useState<Moment[]>(() => loadMoments())
   const [lastMomentId, setLastMomentId] = useState<string | null>(null)
 
@@ -134,8 +157,10 @@ export default function App() {
   const offer = () => {
     clearTimeout(waterTimer.current)
     // 此地 and the photo's scene guess are ordinary context — the oracle reads
-    // them as part of the moment, alongside the chips.
-    const allTags = [...tags, place, sceneGuess].filter(Boolean)
+    // them as part of the moment, alongside the chips. 节气 joins them: the
+    // same sentence written at 霜降 and at 清明 is not quite the same sentence,
+    // and this is real context rather than invented personalisation.
+    const allTags = [...tags, place, sceneGuess, sky.term.name].filter(Boolean)
     setChoices(matchPoems(draftText, allTags))   // fallback already in place
     setReasons({})
     setChoiceIdx(0)
@@ -230,6 +255,7 @@ export default function App() {
             sceneGuess={sceneGuess} onSceneGuess={setSceneGuess}
             place={place} onOpenPlace={() => setPlaceOpen(true)} onClearPlace={() => setPlace('')}
             onOffer={offer}
+            sky={sky}
             cur={screen} onNav={go} onReplayIntro={startIntro}
           />
         )}
@@ -568,12 +594,22 @@ function HomeScreen(props: {
   sceneGuess: string; onSceneGuess: (t: string) => void
   place: string; onOpenPlace: () => void; onClearPlace: () => void
   onOffer: () => void
+  sky: { moon: MoonData; term: Term; line: string }
   cur: Screen; onNav: (s: Screen) => void; onReplayIntro: () => void
 }) {
   return (
     <div style={{ position: 'absolute', inset: 0, animation: 'hnBloom .8s ease both', background: 'radial-gradient(64% 40% at 50% 8%,rgba(216,176,114,.12),transparent 60%),radial-gradient(120% 80% at 50% 128%,#1b1526 0%,transparent 60%),linear-gradient(180deg,#09090f 0%,#120e1c 58%,#171120 100%)' }}>
       {props.starField}
-      <div style={{ position: 'absolute', top: 70, left: '50%', transform: 'translateX(-50%)', width: 52, height: 52, borderRadius: '50%', background: 'radial-gradient(circle at 38% 36%,#f6ecd0,#e0c184 62%,#c9a86a)', boxShadow: '0 0 34px 10px rgba(235,205,140,.32)', pointerEvents: 'none', animation: 'hnMoon 7s ease-in-out infinite' }} />
+      {/* The real moon, tonight. 「今月曾经照古人」 is the app's central claim
+          and it was being made by a fixed gradient — now the disc above is the
+          one outside the window, and on a 新月 there is almost nothing there,
+          which is the truth and is better. */}
+      <Moon size={52} moon={props.sky.moon} style={{ position: 'absolute', top: 62, left: '50%', transform: 'translateX(-50%)' }} />
+      {props.sky.line && (
+        <div style={{ position: 'absolute', top: 126, left: 0, right: 0, textAlign: 'center', font: `400 11px ${SONG}`, letterSpacing: '.22em', textIndent: '.22em', color: 'rgba(235,205,140,.62)', pointerEvents: 'none', animation: 'hnRise 1.6s 1.1s both' }}>
+          {props.sky.line}
+        </div>
+      )}
       <div style={{ position: 'absolute', left: '-22%', right: '-22%', top: '60%', height: 150, background: 'radial-gradient(56% 100% at 50% 50%,rgba(216,176,114,.08),transparent 74%)', filter: 'blur(18px)', pointerEvents: 'none', animation: 'hnMist 30s ease-in-out infinite alternate' }} />
       <div style={{ position: 'absolute', inset: 'auto 0 0', height: 220, background: 'linear-gradient(0deg,rgba(9,8,14,.92),transparent)', pointerEvents: 'none' }} />
 
@@ -583,7 +619,7 @@ function HomeScreen(props: {
         <span style={{ font: `400 10px ${SONG}`, letterSpacing: '.12em', color: 'rgba(243,238,228,.5)', padding: '2px 8px', border: '1px solid rgba(243,238,228,.2)', borderRadius: 10 }}>EN</span>
       </div>
 
-      <div style={{ position: 'absolute', top: 146, left: 28, right: 28, textAlign: 'center', font: `400 21px ${SONG}`, letterSpacing: '.14em', color: '#f3eee4', pointerEvents: 'none', animation: 'hnRise 1.1s .2s both' }}>今天发生了什么？</div>
+      <div style={{ position: 'absolute', top: 154, left: 28, right: 28, textAlign: 'center', font: `400 21px ${SONG}`, letterSpacing: '.14em', color: '#f3eee4', pointerEvents: 'none', animation: 'hnRise 1.1s .2s both' }}>今天发生了什么？</div>
 
       {/* ── the composing column ──
           These used to be five absolutely-positioned blocks at fixed tops, which
@@ -654,7 +690,7 @@ function HomeScreen(props: {
         </div>
       )}
 
-      <div onClick={props.onOffer} style={{ marginTop: 30, marginLeft: 60, marginRight: 60, textAlign: 'center', padding: '15px 0', borderRadius: 30, background: 'radial-gradient(120% 140% at 50% 0%,rgba(235,205,140,.22),rgba(216,176,114,.1))', boxShadow: 'inset 0 0 0 1px rgba(216,176,114,.6),0 0 26px rgba(235,205,140,.14)', color: '#ebcd8c', font: `500 15px ${SONG}`, letterSpacing: '.34em', textIndent: '.34em', cursor: 'pointer', animation: 'hnRise 1.1s .95s both' }}>投入水中</div>
+      <div onClick={() => { buzz(18); props.onOffer() }} style={{ marginTop: 30, marginLeft: 60, marginRight: 60, textAlign: 'center', padding: '15px 0', borderRadius: 30, background: 'radial-gradient(120% 140% at 50% 0%,rgba(235,205,140,.22),rgba(216,176,114,.1))', boxShadow: 'inset 0 0 0 1px rgba(216,176,114,.6),0 0 26px rgba(235,205,140,.14)', color: '#ebcd8c', font: `500 15px ${SONG}`, letterSpacing: '.34em', textIndent: '.34em', cursor: 'pointer', animation: 'hnRise 1.1s .95s both' }}>投入水中</div>
 
       <div style={{ marginTop: 20, textAlign: 'center', font: `italic 400 12px var(--hn-en)`, letterSpacing: '.06em', color: 'rgba(243,238,228,.34)', pointerEvents: 'none' }}>let this moment fall into water</div>
       </div>
@@ -671,6 +707,10 @@ function WaterScreen({ petalField }: { petalField: JSX.Element }) {
   return (
     <div style={{ position: 'absolute', inset: 0, animation: 'hnBloom 1s ease both', background: 'radial-gradient(90% 60% at 50% 78%,#141a2a 0%,#0b0d16 60%,#08080d 100%)' }}>
       {petalField}
+      {/* 墨入水 — seeded where the 投入水中 button stood, so the words appear to
+          fall from the reader's own hand into this water. It finishes well
+          inside WATER_SECONDS and costs the ritual nothing. */}
+      <Ink originX={0.5} originY={0.63} seconds={2.8} />
       <div style={{ position: 'absolute', top: 92, left: '50%', transform: 'translateX(-50%)', width: 70, height: 70, borderRadius: '50%', background: 'radial-gradient(circle at 40% 36%,#f6ecd0,#e0c184 60%,rgba(201,168,106,.4))', boxShadow: '0 0 52px 16px rgba(235,205,140,.26)', pointerEvents: 'none', animation: 'hnMoon 6s ease-in-out infinite' }} />
       <div style={{ position: 'absolute', bottom: 0, left: '50%', width: 76, height: 340, background: 'linear-gradient(180deg,rgba(235,205,140,.28),rgba(235,205,140,.02) 70%,transparent)', filter: 'blur(7px)', pointerEvents: 'none', animation: 'hnShimmer 4s ease-in-out infinite' }} />
 
@@ -728,7 +768,20 @@ function PoemScreen({ poems, kins, reasons, idx, onSelect, onTouched, onSkip }: 
   onSkip: () => void
 }) {
   const [flipped, setFlipped] = useState<Record<number, boolean>>({})
+  const [choosing, setChoosing] = useState(false)
   const down = useRef<{ x: number; y: number } | null>(null)
+  const leave = useRef<ReturnType<typeof setTimeout>>()
+  useEffect(() => () => clearTimeout(leave.current), [])
+
+  // 落款 — choosing a poem is the act of putting your name to it, so the seal
+  // is pressed at that moment and the screen waits for it. Without the pause
+  // the stamp would play to nobody: the tap used to leave immediately.
+  const choose = () => {
+    if (choosing) return
+    setChoosing(true)
+    buzz(14)
+    leave.current = setTimeout(onTouched, 430)
+  }
 
   const tint = `rgba(${poems[idx]?.rgb ?? '216,176,114'},.4)`
   const paper = 'linear-gradient(180deg,#f7f1e5,#f1e9db)'
@@ -776,7 +829,19 @@ function PoemScreen({ poems, kins, reasons, idx, onSelect, onTouched, onSkip }: 
                       {cols.map((c, k) => <div key={k} style={c.style}>{c.text}</div>)}
                     </div>
 
-                    <span style={{ position: 'absolute', bottom: 16, left: 16, display: 'grid', gridTemplateColumns: '1fr 1fr', placeItems: 'center', width: 32, height: 32, borderRadius: 5, background: '#a83a2a', color: '#f6ece0', font: `600 11px/1 ${SONG}`, boxShadow: '0 1px 5px rgba(168,58,42,.35)' }}>
+                    {/* 落款印 — pressed after the last column is written, and
+                        pressed again, harder, when this is the poem you keep.
+                        The element is positioned with bottom/left, never with
+                        transform, so animating transform here is safe. */}
+                    <span style={{
+                      position: 'absolute', bottom: 16, left: 16, display: 'grid', gridTemplateColumns: '1fr 1fr', placeItems: 'center',
+                      width: 32, height: 32, borderRadius: 5, background: '#a83a2a', color: '#f6ece0', font: `600 11px/1 ${SONG}`,
+                      boxShadow: choosing && i === idx ? '0 0 0 6px rgba(168,58,42,.16),0 2px 10px rgba(168,58,42,.5)' : '0 1px 5px rgba(168,58,42,.35)',
+                      transition: 'box-shadow .3s ease',
+                      animation: choosing && i === idx
+                        ? 'hnStamp .42s cubic-bezier(.3,1.5,.5,1) both'
+                        : `hnStamp .5s cubic-bezier(.3,1.4,.5,1) ${writeEnds(poem.lines.length).toFixed(2)}s both`,
+                    }}>
                       <span>此</span><span>时</span><span>此</span><span>地</span>
                     </span>
 
@@ -849,7 +914,7 @@ function PoemScreen({ poems, kins, reasons, idx, onSelect, onTouched, onSkip }: 
 
       <div style={{ position: 'absolute', top: 88 + CARD_H + 44, left: 0, right: 0, textAlign: 'center', font: `400 13px ${SONG}`, letterSpacing: '.3em', color: 'rgba(42,36,56,.62)', pointerEvents: 'none', animation: 'hnRise 1.3s 2.4s both' }}>你并不孤单</div>
 
-      <div onClick={onTouched} style={{ position: 'absolute', bottom: 74, left: 24, right: 24, textAlign: 'center', padding: '13px 0', borderRadius: 24, background: '#c9a86a', font: `500 13px ${SONG}`, letterSpacing: '.14em', color: '#231b10', cursor: 'pointer', animation: 'hnRise 1.2s 2.6s both' }}>这一句触动了我</div>
+      <div onClick={choose} style={{ position: 'absolute', bottom: 74, left: 24, right: 24, textAlign: 'center', padding: '13px 0', borderRadius: 24, background: choosing ? '#b8955a' : '#c9a86a', font: `500 13px ${SONG}`, letterSpacing: '.14em', color: '#231b10', cursor: 'pointer', transition: 'background .2s', animation: 'hnRise 1.2s 2.6s both' }}>这一句触动了我</div>
       <div onClick={onSkip} style={{ position: 'absolute', bottom: 34, left: 0, right: 0, textAlign: 'center', font: `400 12px ${SONG}`, letterSpacing: '.16em', color: 'rgba(42,36,56,.42)', cursor: 'pointer' }}>暂时不种</div>
     </div>
   )
@@ -871,13 +936,22 @@ const COL_GAP = 5
 const COL_RATIO = 1.5    // a vertical column is ~1.5× the glyph wide
 const CHAR_RATIO = 1.2   // a glyph advances ~1.2× its size at letter-spacing .24em
 
+// 写 · the timing of the hand. A column takes WRITE_DUR to come down, and the
+// next begins WRITE_STAGGER later — right to left, the direction of the page.
+// The old delays were 0.4s apart, which was fine for the four columns of a
+// 绝句 and takes three and a half seconds for a 律诗.
+const WRITE_LEAD = 0.5
+const WRITE_STAGGER = 0.09
+const WRITE_DUR = 0.58
+const writeEnds = (lines: number) => WRITE_LEAD + WRITE_STAGGER * Math.max(0, lines - 1) + WRITE_DUR
+
 function buildCols(poem: Poem, color: string): Col[] {
   const col = (text: string, size: number, ls: string, op: number, ml: string, delay: number): Col => ({
     text,
     style: {
       writingMode: 'vertical-rl', textOrientation: 'upright', fontFamily: KAI,
       fontSize: `${size.toFixed(1)}px`, letterSpacing: ls, opacity: op, marginLeft: ml, color,
-      animation: `hnRise 1.2s ${delay}s both`,
+      animation: `hnWrite ${WRITE_DUR}s cubic-bezier(.33,.8,.4,1) ${delay}s both`,
     },
   })
 
@@ -889,10 +963,10 @@ function buildCols(poem: Poem, color: string): Col[] {
   const verse = Math.min(22, widthFit, heightFit)
 
   const cols = [
-    col(poem.title, verse * 0.82, '.14em', .92, '9px', .5),
-    col(`〔${poem.dynasty}〕${poem.author}`, verse * 0.52, '.1em', .5, '12px', .7),
+    col(poem.title, verse * 0.82, '.14em', .92, '9px', 0.18),
+    col(`〔${poem.dynasty}〕${poem.author}`, verse * 0.52, '.1em', .5, '12px', 0.32),
   ]
-  poem.lines.forEach((l, i) => cols.push(col(l, verse, '.24em', 1, '0px', 1.0 + 0.4 * i)))
+  poem.lines.forEach((l, i) => cols.push(col(l, verse, '.24em', 1, '0px', WRITE_LEAD + WRITE_STAGGER * i)))
   return cols
 }
 
