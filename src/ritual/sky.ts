@@ -51,18 +51,22 @@ export function moonOf(date = new Date()): Moon {
  * SVG path for the LIT part of a moon of radius r, centred on (0,0).
  *
  * Outer edge is a semicircle on the lit limb; inner edge is the terminator,
- * a half-ellipse whose width is r·|cos θ|. It bulges away from the lit side
- * when gibbous and into it when crescent, which is the whole reason a
- * crescent looks like a crescent.
+ * a half-ellipse whose width is r·|cos θ|, bulging away from the lit side when
+ * gibbous and into it when crescent — which is the whole reason a crescent
+ * looks like a crescent.
  *
- * The construction is checked by area: the figure works out to exactly
- * π·r²·illum for every phase, which is what "lit fraction" means.
+ * SVG's y axis points down, so sweep=1 is clockwise ON SCREEN. Going from the
+ * bottom of the disc back to the top, clockwise passes down the LEFT side.
+ * Getting that backwards makes both arcs curve the same way and the figure
+ * collapses to a half-disc — which is what shipped, and which no amount of
+ * checking the area FORMULA would have caught, because the formula was never
+ * what was being drawn. Verify this with getBBox on a rendered path.
  */
 export function moonPath(r: number, m: Moon): string {
   const a = r * Math.abs(Math.cos(2 * Math.PI * m.phase))
   const gibbous = m.illum > 0.5
-  const outer = m.waxing ? 1 : 0          // sweep of the lit semicircle
-  const inner = m.waxing ? (gibbous ? 0 : 1) : (gibbous ? 1 : 0)
+  const outer = m.waxing ? 1 : 0          // lit limb: right when waxing
+  const inner = m.waxing ? (gibbous ? 1 : 0) : (gibbous ? 0 : 1)
   return `M 0 ${-r} A ${r} ${r} 0 0 ${outer} 0 ${r} A ${a} ${r} 0 0 ${inner} 0 ${-r} Z`
 }
 
